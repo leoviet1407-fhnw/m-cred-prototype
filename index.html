@@ -589,6 +589,58 @@ input,textarea,select{font:inherit;color:inherit}
 .orig-verify-section h2{font-size:68px;line-height:.98;letter-spacing:-.02em;font-weight:400;color:var(--paper);margin:16px 0 28px}
 .orig-verify-section h2 em{font-style:italic;color:#E8A77A}
 .orig-verify-section p{color:rgba(246,243,236,.7);font-size:17px;line-height:1.55;max-width:500px}
+/* Role switcher */
+.role-switcher{display:flex;align-items:center;gap:8px;padding:6px 12px;background:var(--white);border:1px solid var(--line);border-radius:8px;font-size:13px}
+.role-switcher select{border:none;outline:none;background:transparent;font-size:13px;font-family:inherit;color:var(--ink);cursor:pointer;padding-right:4px}
+.role-badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.role-badge.lecturer{background:var(--sage-soft);color:var(--sage)}
+.role-badge.secretariat{background:var(--amber-soft);color:var(--amber)}
+.role-badge.admin{background:var(--ember-soft);color:var(--ember)}
+.role-badge.developer{background:var(--blue-soft);color:var(--blue)}
+.disabled-action{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;background:var(--paper-2);border:1.5px dashed var(--line);border-radius:10px}
+.disabled-action .da-icon{width:32px;height:32px;border-radius:8px;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;color:var(--mute);flex-shrink:0}
+.disabled-action .da-label{font-size:13px;font-weight:500;color:var(--mute);margin-bottom:2px}
+.disabled-action .da-reason{font-size:11px;color:var(--mute);line-height:1.4}
+.role-banner{display:flex;align-items:center;gap:14px;padding:13px 18px;border-radius:10px;margin-bottom:28px;border:1px solid}
+.role-banner.lecturer{background:var(--sage-soft);border-color:rgba(60,110,71,.2)}
+.role-banner.secretariat{background:var(--amber-soft);border-color:rgba(184,138,43,.2)}
+.role-banner.admin{background:var(--ember-soft);border-color:rgba(200,66,30,.2)}
+.role-banner.developer{background:var(--blue-soft);border-color:rgba(37,99,235,.2)}
+.role-banner .rb-icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:15px;font-weight:600;color:#fff}
+.role-banner.lecturer .rb-icon{background:var(--sage)}
+.role-banner.secretariat .rb-icon{background:var(--amber)}
+.role-banner.admin .rb-icon{background:var(--ember)}
+.role-banner.developer .rb-icon{background:var(--blue)}
+.role-banner .rb-title{font-size:13px;font-weight:600;margin-bottom:1px}
+.role-banner .rb-desc{font-size:11.5px;color:var(--mute)}
+.completion-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px}
+.completion-badge.completed{background:var(--sage-soft);color:var(--sage)}
+.completion-badge.not-completed{background:var(--ember-soft);color:var(--ember)}
+.completion-badge.in-progress{background:var(--amber-soft);color:var(--amber)}
+.approval-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:12px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.approval-card .ac-title{font-size:17px;font-weight:500;margin-bottom:4px}
+.approval-card .ac-sub{font-size:12px;color:var(--mute)}
+.approval-card .ac-actions{display:flex;gap:8px;flex-shrink:0}
+/* Log page */
+.log-row{cursor:pointer;transition:background .1s}
+.log-row:hover{background:var(--paper-2)}
+.log-action-tag{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;letter-spacing:.03em;white-space:nowrap}
+.log-action-tag.credential{background:var(--sage-soft);color:var(--sage)}
+.log-action-tag.course{background:var(--blue-soft);color:var(--blue)}
+.log-action-tag.student{background:var(--amber-soft);color:var(--amber)}
+.log-action-tag.user{background:var(--ember-soft);color:var(--ember)}
+.log-action-tag.class{background:rgba(139,92,246,.1);color:#7C3AED}
+.log-action-tag.settings,.log-action-tag.institution-profile,.log-action-tag.layout,.log-action-tag.template{background:var(--paper);color:var(--mute);border:1px solid var(--line)}
+.log-immutable-notice{display:flex;align-items:center;gap:10px;padding:11px 16px;background:var(--ink);color:var(--paper);border-radius:8px;font-size:12px;margin-bottom:20px}
+.log-immutable-notice .notice-badge{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--ember);color:#fff;padding:2px 7px;border-radius:3px;flex-shrink:0}
+.log-val-cell{font-family:monospace;font-size:11px;color:var(--mute);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.log-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.log-detail-field{padding:14px 16px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px}
+.log-detail-field .ldf-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.log-detail-field .ldf-value{font-size:13px;color:var(--ink);font-weight:500;line-height:1.4}
+.log-detail-field .ldf-value.mono{font-family:monospace;font-size:12px;color:var(--ink-3);word-break:break-all}
+.log-filter-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.log-filter-row select{padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;background:var(--white);color:var(--ink);outline:none;cursor:pointer}
 </style>
 </head>
 <body>
@@ -649,6 +701,147 @@ const FAQ_ITEMS = [
   { q:'What data does the public verifier see?', a:'Public verifiers see the credential title, student name, issuing institution, issue date, expiry date, status, skills, and learning outcomes. Private information such as email addresses, student IDs, or internal notes is never shown.' },
   { q:'Is M-CRED compliant with open standards?', a:'Yes. M-CRED supports W3C Verifiable Credentials and is aligned with the European Qualifications Framework (EQF) and the ECTS credit transfer system.' },
 ];
+
+const CMS_USERS = [
+  { id:'USR-001', name:'Prof. Dr. Anna Steiner', email:'a.steiner@bfh.ch', role:'Lecturer', dept:'Business', courses:'Digital Marketing Fundamentals', status:'Active', lastLogin:'Today, 09:14' },
+  { id:'USR-002', name:'Dr. Klaus Brönnimann', email:'k.broennimann@bfh.ch', role:'Lecturer', dept:'Business', courses:'Sustainable Business Management', status:'Active', lastLogin:'Yesterday, 16:22' },
+  { id:'USR-003', name:'Prof. Reto Hasler', email:'r.hasler@bfh.ch', role:'Lecturer', dept:'ICT', courses:'Data Analytics for Business', status:'Active', lastLogin:'2 days ago' },
+  { id:'USR-004', name:'Dr. Priya Sharma', email:'p.sharma@bfh.ch', role:'Lecturer', dept:'ICT', courses:'AI Literacy for Professionals', status:'Active', lastLogin:'Today, 11:05' },
+  { id:'USR-005', name:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', dept:'Administration', courses:'All', status:'Active', lastLogin:'Today, 08:30' },
+  { id:'USR-006', name:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', dept:'Administration', courses:'All', status:'Active', lastLogin:'Yesterday, 09:00' },
+  { id:'USR-007', name:'Dev Account', email:'dev@m-cred.ch', role:'Developer', dept:'System', courses:'All', status:'Active', lastLogin:'Today, 10:58' },
+];
+
+const SCORES = [
+  { id:'SC-001', studentId:'STU-2026-001', studentName:'Sarah Keller', classId:'CL001', className:'Digital Marketing — Spring 2026', courseTitle:'Digital Marketing Fundamentals', score:'87/100', grade:'A', completion:'Completed', comment:'Excellent portfolio work. Strong understanding of analytics.', readyForCredential:true },
+  { id:'SC-002', studentId:'STU-2026-002', studentName:'Luca Meier', classId:'CL001', className:'Digital Marketing — Spring 2026', courseTitle:'Digital Marketing Fundamentals', score:'74/100', grade:'B', completion:'Completed', comment:'Good grasp of fundamentals, room to improve in campaign planning.', readyForCredential:true },
+  { id:'SC-003', studentId:'STU-2026-006', studentName:'Tobias Weber', classId:'CL001', className:'Digital Marketing — Spring 2026', courseTitle:'Digital Marketing Fundamentals', score:'61/100', grade:'C', completion:'Completed', comment:'Passed. Recommended to revisit SEO module.', readyForCredential:true },
+  { id:'SC-004', studentId:'STU-2026-003', studentName:'Amélie Dubois', classId:'CL002', className:'Sustainable Business — Spring 2026', courseTitle:'Sustainable Business Management', score:'—', grade:'—', completion:'Not completed', comment:'', readyForCredential:false },
+  { id:'SC-005', studentId:'STU-2026-004', studentName:'Minh Nguyen', classId:'CL003', className:'Data Analytics — Spring 2026', courseTitle:'Data Analytics for Business', score:'79/100', grade:'B+', completion:'Completed', comment:'Strong data visualisation skills demonstrated.', readyForCredential:true },
+  { id:'SC-006', studentId:'STU-2026-005', studentName:'Noa Schneider', classId:'CL004', className:'AI Literacy — Q1 2026', courseTitle:'AI Literacy for Professionals', score:'91/100', grade:'A+', completion:'Completed', comment:'Outstanding performance. Excellent ethics reflection.', readyForCredential:true },
+  { id:'SC-007', studentId:'STU-2026-007', studentName:'Léa Müller', classId:'CL003', className:'Data Analytics — Spring 2026', courseTitle:'Data Analytics for Business', score:'—', grade:'—', completion:'In progress', comment:'', readyForCredential:false },
+];
+
+const LOG_ENTRIES = [
+  { id:'LOG-2026-0041', ts:'2026-05-14 11:30:02', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Credential Issued', objectType:'Credential', objectName:'MCRED-BFH-2026-00482', objectId:'MCRED-BFH-2026-00482', prevValue:null, newValue:'{"student":"Sarah Keller","course":"Digital Marketing Fundamentals","status":"Issued"}', status:'Success', reason:null, sessionId:'sess_9f2a1b3c', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0040', ts:'2026-05-14 11:29:47', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Credential Issued', objectType:'Credential', objectName:'MCRED-BFH-2026-00471', objectId:'MCRED-BFH-2026-00471', prevValue:null, newValue:'{"student":"Tobias Weber","course":"Digital Marketing Fundamentals","status":"Issued"}', status:'Success', reason:null, sessionId:'sess_9f2a1b3c', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0039', ts:'2026-05-14 11:29:31', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Credential Issued', objectType:'Credential', objectName:'MCRED-BFH-2026-00483', objectId:'MCRED-BFH-2026-00483', prevValue:null, newValue:'{"student":"Luca Meier","course":"Digital Marketing Fundamentals","status":"Issued"}', status:'Success', reason:null, sessionId:'sess_9f2a1b3c', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0038', ts:'2026-05-14 11:15:44', user:'Prof. Dr. Anna Steiner', email:'a.steiner@bfh.ch', role:'Lecturer', action:'Completion Status Changed', objectType:'Student', objectName:'Luca Meier', objectId:'STU-2026-002', prevValue:'In Progress', newValue:'Completed', status:'Success', reason:'All assignments submitted and portfolio reviewed.', sessionId:'sess_4c8d2e1f', ip:'85.0.103.42', scope:'lecturer' },
+  { id:'LOG-2026-0037', ts:'2026-05-14 11:12:18', user:'Prof. Dr. Anna Steiner', email:'a.steiner@bfh.ch', role:'Lecturer', action:'Score Entered', objectType:'Student', objectName:'Tobias Weber', objectId:'STU-2026-006', prevValue:null, newValue:'{"score":"61/100","grade":"C","completion":"Completed"}', status:'Success', reason:'Passed. Recommended to revisit SEO module.', sessionId:'sess_4c8d2e1f', ip:'85.0.103.42', scope:'lecturer' },
+  { id:'LOG-2026-0036', ts:'2026-05-14 11:08:55', user:'Prof. Dr. Anna Steiner', email:'a.steiner@bfh.ch', role:'Lecturer', action:'Score Entered', objectType:'Student', objectName:'Luca Meier', objectId:'STU-2026-002', prevValue:null, newValue:'{"score":"74/100","grade":"B","completion":"Completed"}', status:'Success', reason:'Good grasp of fundamentals.', sessionId:'sess_4c8d2e1f', ip:'85.0.103.42', scope:'lecturer' },
+  { id:'LOG-2026-0035', ts:'2026-05-14 11:02:11', user:'Prof. Dr. Anna Steiner', email:'a.steiner@bfh.ch', role:'Lecturer', action:'Score Entered', objectType:'Student', objectName:'Sarah Keller', objectId:'STU-2026-001', prevValue:null, newValue:'{"score":"87/100","grade":"A","completion":"Completed"}', status:'Success', reason:'Excellent portfolio work.', sessionId:'sess_4c8d2e1f', ip:'85.0.103.42', scope:'lecturer' },
+  { id:'LOG-2026-0034', ts:'2026-05-14 10:42:30', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Student Added to Class', objectType:'Student', objectName:'Sarah Keller → Digital Marketing — Spring 2026', objectId:'STU-2026-001', prevValue:null, newValue:'CL001', status:'Success', reason:null, sessionId:'sess_7e1f4a2b', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0033', ts:'2026-05-14 10:40:12', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Student Import', objectType:'Student', objectName:'Batch import — 12 records', objectId:'IMPORT-20260514', prevValue:null, newValue:'12 students added to CL001, CL003', status:'Success', reason:null, sessionId:'sess_7e1f4a2b', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0032', ts:'2026-05-14 09:20:11', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Course Created', objectType:'Course', objectName:'Digital Marketing Fundamentals', objectId:'C001', prevValue:null, newValue:'{"title":"Digital Marketing Fundamentals","dept":"Business","eqf":5,"ects":3}', status:'Success', reason:null, sessionId:'sess_7e1f4a2b', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0031', ts:'2026-05-13 14:55:09', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'Credential Revoked', objectType:'Credential', objectName:'MCRED-BFH-2026-00479', objectId:'MCRED-BFH-2026-00479', prevValue:'Issued', newValue:'Revoked', status:'Success', reason:'Plagiarism confirmed by academic integrity committee.', sessionId:'sess_2a9c7d4e', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0030', ts:'2026-05-13 14:11:00', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'Course Approved', objectType:'Course', objectName:'AI Literacy for Professionals', objectId:'C004', prevValue:'Pending', newValue:'Active', status:'Success', reason:'Curriculum reviewed and approved by academic board.', sessionId:'sess_2a9c7d4e', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0029', ts:'2026-05-13 11:30:00', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'User Role Changed', objectType:'User', objectName:'marie.brunner@bfh.ch', objectId:'USR-005', prevValue:'Lecturer', newValue:'Secretariat', status:'Success', reason:'Promoted to administrative role following departmental restructure.', sessionId:'sess_2a9c7d4e', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0028', ts:'2026-05-13 09:10:00', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'User Invited', objectType:'User', objectName:'dev@m-cred.ch', objectId:'USR-007', prevValue:null, newValue:'{"role":"Developer","dept":"System"}', status:'Success', reason:null, sessionId:'sess_2a9c7d4e', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0027', ts:'2026-05-12 16:40:22', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Lecturer Assigned to Class', objectType:'Class', objectName:'Digital Marketing — Spring 2026', objectId:'CL001', prevValue:null, newValue:'Prof. Dr. Anna Steiner', status:'Success', reason:null, sessionId:'sess_5b3e8c1a', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0026', ts:'2026-05-12 16:20:04', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Class Created', objectType:'Class', objectName:'Digital Marketing — Spring 2026', objectId:'CL001', prevValue:null, newValue:'{"course":"C001","mode":"Online","students":24}', status:'Success', reason:null, sessionId:'sess_5b3e8c1a', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0025', ts:'2026-05-12 15:00:00', user:'Dr. Priya Sharma', email:'p.sharma@bfh.ch', role:'Lecturer', action:'Course Proposed', objectType:'Course', objectName:'AI in Healthcare Management', objectId:'PROP-2026-003', prevValue:null, newValue:'{"dept":"ICT","eqf":6,"ects":4,"status":"Pending"}', status:'Pending', reason:'New course combining AI tools with healthcare workflows.', sessionId:'sess_6d4f1e2c', ip:'85.0.103.55', scope:'lecturer' },
+  { id:'LOG-2026-0024', ts:'2026-05-11 13:22:18', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'Certificate Template Changed', objectType:'Template', objectName:'Default Template', objectId:'TPL-001', prevValue:'Clean White', newValue:'Bold Dark', status:'Success', reason:'Brand refresh Q2 2026.', sessionId:'sess_1c7a3b9d', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0023', ts:'2026-05-11 12:45:00', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'Institution Profile Updated', objectType:'Institution Profile', objectName:'Bern University of Applied Sciences', objectId:'INST-BFH', prevValue:'{"tagline":"Applied Sciences."}', newValue:'{"tagline":"Applied Sciences. Applied Impact."}', status:'Success', reason:null, sessionId:'sess_1c7a3b9d', ip:'10.0.1.15', scope:'admin' },
+  { id:'LOG-2026-0022', ts:'2026-05-10 10:01:44', user:'Dr. Priya Sharma', email:'p.sharma@bfh.ch', role:'Lecturer', action:'Completion Status Changed', objectType:'Student', objectName:'Noa Schneider', objectId:'STU-2026-005', prevValue:'In Progress', newValue:'Completed', status:'Success', reason:'Outstanding performance. All requirements met.', sessionId:'sess_6d4f1e2c', ip:'85.0.103.55', scope:'lecturer' },
+  { id:'LOG-2026-0021', ts:'2026-05-10 09:55:30', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Credential Issued', objectType:'Credential', objectName:'MCRED-BFH-2026-00484', objectId:'MCRED-BFH-2026-00484', prevValue:null, newValue:'{"student":"Noa Schneider","course":"AI Literacy for Professionals","status":"Issued"}', status:'Success', reason:null, sessionId:'sess_8a2c5f1e', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0020', ts:'2026-05-08 14:20:00', user:'Prof. Reto Hasler', email:'r.hasler@bfh.ch', role:'Lecturer', action:'Score Entered', objectType:'Student', objectName:'Minh Nguyen', objectId:'STU-2026-004', prevValue:null, newValue:'{"score":"79/100","grade":"B+","completion":"Completed"}', status:'Success', reason:'Strong data visualisation skills demonstrated.', sessionId:'sess_3e8b2a7c', ip:'85.0.103.48', scope:'lecturer' },
+  { id:'LOG-2026-0019', ts:'2026-05-05 09:30:00', user:'Dev Account', email:'dev@m-cred.ch', role:'Developer', action:'Settings Changed', objectType:'Settings', objectName:'Global Platform Settings', objectId:'SETTINGS-001', prevValue:'{"credentialValidity":"2 years"}', newValue:'{"credentialValidity":"3 years"}', status:'Success', reason:'Updated default per policy revision.', sessionId:'sess_dev_f9c4a2', ip:'127.0.0.1', scope:'developer' },
+  { id:'LOG-2026-0018', ts:'2026-05-02 16:01:11', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Verification Link Copied', objectType:'Credential', objectName:'MCRED-BFH-2026-00482', objectId:'MCRED-BFH-2026-00482', prevValue:null, newValue:'Link generated for sharing', status:'Success', reason:null, sessionId:'sess_8a2c5f1e', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0017', ts:'2026-05-02 15:45:00', user:'Marie Brunner', email:'m.brunner@bfh.ch', role:'Secretariat', action:'Certificate PDF Generated', objectType:'Credential', objectName:'MCRED-BFH-2026-00482', objectId:'MCRED-BFH-2026-00482', prevValue:null, newValue:'PDF generated', status:'Success', reason:null, sessionId:'sess_8a2c5f1e', ip:'195.148.127.84', scope:'operational' },
+  { id:'LOG-2026-0016', ts:'2026-05-01 11:00:00', user:'Dr. Hans Zimmermann', email:'h.zimmermann@bfh.ch', role:'Admin', action:'Layout Changed', objectType:'Layout', objectName:'Certificate Layout', objectId:'LAYOUT-001', prevValue:'{"showQR":false}', newValue:'{"showQR":true}', status:'Success', reason:'QR code now required on all certificates.', sessionId:'sess_2a9c7d4e', ip:'10.0.1.15', scope:'admin' },
+];
+
+const ROLE_CONFIG = {
+  lecturer: {
+    label:'Lecturer', name:'Prof. Dr. Anna Steiner', initial:'A', color:'#3C6E47', dept:'Business · Digital Marketing',
+    nav:[
+      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
+      { label:'Teaching', items:[
+        { id:'my-courses', label:'My Courses', icon:'book' },
+        { id:'course-proposals', label:'Course Proposals', icon:'edit' },
+        { id:'my-classes', label:'My Classes', icon:'classes' },
+        { id:'students', label:'Students', icon:'users' },
+        { id:'scores', label:'Scores / Completion', icon:'star' },
+      ]},
+      { label:'Credentials', items:[{ id:'credentials', label:'Issued Credentials', icon:'shield' }]},
+      { label:'Account', items:[{ id:'profile', label:'Profile', icon:'user' },{ id:'log', label:'Log', icon:'eye' }]},
+    ],
+  },
+  secretariat: {
+    label:'Secretariat', name:'Marie Brunner', initial:'M', color:'#B88A2B', dept:'Academic Administration',
+    nav:[
+      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
+      { label:'Academic', items:[
+        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
+        { id:'import-students', label:'Import Students', icon:'import' },
+      ]},
+      { label:'Credentials', items:[
+        { id:'issue-credential', label:'Issue Credential', icon:'award' },
+        { id:'credentials', label:'All Credentials', icon:'shield', count:CREDENTIALS.length },
+      ]},
+      { label:'Help', items:[
+        { id:'faq', label:'FAQ', icon:'help' },
+        { id:'profile', label:'Profile', icon:'user' },
+        { id:'log', label:'Log', icon:'eye' },
+      ]},
+    ],
+  },
+  admin: {
+    label:'Admin', name:'Dr. Hans Zimmermann', initial:'H', color:'#C8421E', dept:'Institution Administration',
+    nav:[
+      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
+      { label:'Management', items:[
+        { id:'users-roles', label:'Users & Roles', icon:'users' },
+        { id:'course-approvals', label:'Course Approvals', icon:'verify' },
+      ]},
+      { label:'Academic', items:[
+        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
+        { id:'credentials', label:'Credentials', icon:'shield', count:CREDENTIALS.length },
+      ]},
+      { label:'Institution', items:[
+        { id:'profile', label:'Institution Profile', icon:'user' },
+        { id:'design', label:'Design', icon:'palette' },
+        { id:'layout', label:'Certificate Layout', icon:'layout' },
+        { id:'settings', label:'Settings', icon:'settings' },
+        { id:'log', label:'Log', icon:'eye' },
+      ]},
+    ],
+  },
+  developer: {
+    label:'Developer', name:'Dev Account', initial:'D', color:'#2563EB', dept:'System · Full Access',
+    nav:[
+      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
+      { label:'Platform Views', items:[
+        { id:'dev-public', label:'Public Website', icon:'eye' },
+        { id:'dev-wallet', label:'Learner Wallet', icon:'wallet' },
+      ]},
+      { label:'Academic', items:[
+        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
+        { id:'issue-credential', label:'Issue Credential', icon:'award' },
+        { id:'credentials', label:'Credentials', icon:'shield', count:CREDENTIALS.length },
+      ]},
+      { label:'Institution', items:[
+        { id:'users-roles', label:'Users & Roles', icon:'users' },
+        { id:'profile', label:'Institution Profile', icon:'user' },
+        { id:'design', label:'Design', icon:'palette' },
+        { id:'layout', label:'Certificate Layout', icon:'layout' },
+        { id:'settings', label:'Settings', icon:'settings' },
+      ]},
+      { label:'Developer', items:[
+        { id:'integrations', label:'Integrations', icon:'link' },
+        { id:'system-logs', label:'System Logs', icon:'eye' },
+        { id:'schema', label:'Schema Import / Export', icon:'import' },
+        { id:'log', label:'Log', icon:'eye' },
+      ]},
+    ],
+  },
+};
 
 // ────────────────────────────────────────────────
 // HELPERS
@@ -735,14 +928,36 @@ function QRCode({ size=100 }) {
 }
 
 // ────────────────────────────────────────────────
-// MODE BAR
+// MOUNTAIN LOGO MARK
+// ────────────────────────────────────────────────
+function MountainMark({ size = 32 }) {
+  const h = Math.round(size * 0.78);
+  return (
+    <svg width={size} height={h} viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Two-peak mountain forming an M */}
+      <path d="M0 31 L13 4 L20.5 17 L28 4 L40 31 Z" fill="#C8421E"/>
+      {/* White inner notch between peaks */}
+      <path d="M13 4 L20.5 17 L28 4 L22 13 L20.5 10 L19 13 Z" fill="white"/>
+    </svg>
+  );
+}
+
+function BrandLogo({ size = 30, textColor = '#fff', textSize = 17 }) {
+  return (
+    <div style={{display:'flex',alignItems:'center',gap:10,flexShrink:0}}>
+      <MountainMark size={size}/>
+      <span style={{color:textColor,fontSize:textSize,fontWeight:600,letterSpacing:'-0.01em'}}>M-CRED</span>
+    </div>
+  );
+}
+
+
 // ────────────────────────────────────────────────
 function ModeBar({ mode, setMode, setCmsPage, setWalletPage, setPublicPage }) {
   return (
     <div className="mode-bar">
-      <div className="pub-brand" style={{color:'var(--paper)',fontSize:16}}>
-        <div style={{width:26,height:26,borderRadius:7,background:'var(--ember)',display:'grid',placeItems:'center',fontStyle:'italic',fontSize:14,fontWeight:700,color:'#fff',flexShrink:0}}>m</div>
-        M-CRED
+      <div style={{cursor:'pointer'}} onClick={()=>{setMode('public');setPublicPage('landing')}}>
+        <BrandLogo size={28} textColor="var(--paper)" textSize={16}/>
       </div>
       <div className="mode-tabs">
         <button className={`mode-tab${mode==='public'?' active':''}`} onClick={()=>{setMode('public');setPublicPage('landing')}}>Public Site</button>
@@ -774,9 +989,8 @@ function PublicHeader({ publicPage, setPublicPage, setMode, setCmsPage }) {
   return (
     <div className="pub-header">
       <div className="pub-header-inner">
-        <div className="pub-brand" onClick={()=>setPublicPage('landing')} style={{cursor:'pointer'}}>
-          <div className="pub-brand-mark">m</div>
-          M-CRED
+        <div style={{cursor:'pointer'}} onClick={()=>setPublicPage('landing')}>
+          <BrandLogo size={30} textColor="var(--ink)" textSize={18}/>
         </div>
         <div className="pub-nav">
           <div className={`pub-nav-item${publicPage==='for-institutions'?' active':''}`} onClick={()=>setPublicPage('for-institutions')}>For Institutions</div>
@@ -896,10 +1110,7 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
 
       {/* Footer */}
       <footer style={{background:'var(--ink-2)',padding:'48px',color:'rgba(246,243,236,.5)',fontSize:13,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-        <div style={{display:'flex',alignItems:'center',gap:10,color:'var(--paper)',fontWeight:700}}>
-          <div style={{width:22,height:22,borderRadius:6,background:'var(--ember)',display:'grid',placeItems:'center',fontStyle:'italic',fontSize:12,color:'#fff',fontWeight:700}}>m</div>
-          M-CRED
-        </div>
+        <BrandLogo size={26} textColor="var(--paper)" textSize={15}/>
         <div>© 2026 M-CRED. Digital credential infrastructure for Swiss institutions.</div>
         <div style={{display:'flex',gap:20}}>
           <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--paper)'} onMouseLeave={e=>e.target.style.color=''}>Privacy</span>
@@ -1062,45 +1273,64 @@ function VerificationResult({ setMode, setCmsPage, setWalletPage }) {
 // ────────────────────────────────────────────────
 // CMS SHELL
 // ────────────────────────────────────────────────
-function CMSApp({ cmsPage, setCmsPage, setMode, setPublicPage, setWalletPage, selectedCredId, setSelectedCredId, selectedCourseId, setSelectedCourseId, selectedStudentId, setSelectedStudentId, selectedClassId, setSelectedClassId }) {
-  const navSections = [
-    { label:'Overview', items:[
-      { id:'dashboard', label:'Dashboard', icon:'grid' },
-    ]},
-    { label:'Academic', items:[
-      { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
-      { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
-      { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
-    ]},
-    { label:'Credentials', items:[
-      { id:'issue-credential', label:'Issue Credential', icon:'award' },
-      { id:'credentials', label:'All Credentials', icon:'shield', count:CREDENTIALS.length },
-    ]},
-    { label:'Institution', items:[
-      { id:'profile', label:'Institution Profile', icon:'user' },
-      { id:'design', label:'Design', icon:'palette' },
-      { id:'layout', label:'Certificate Layout', icon:'layout' },
-      { id:'settings', label:'Settings', icon:'settings' },
-      { id:'faq', label:'FAQ', icon:'help' },
-    ]},
-  ];
+function RoleBanner({ role }) {
+  const cfg = ROLE_CONFIG[role];
+  const desc = {
+    lecturer:'You can view your assigned courses and classes, enter scores, and view credentials issued from your classes.',
+    secretariat:'You can manage courses, classes, students, and issue credentials. You cannot edit institution settings.',
+    admin:'You have full institution management access including user roles, approvals, design, and settings.',
+    developer:'Full platform access including all pages, system logs, integrations, and schema tools.',
+  };
+  return (
+    <div className={`role-banner ${role}`}>
+      <div className="rb-icon">{cfg.initial}</div>
+      <div>
+        <div className="rb-title">{cfg.label} View — {cfg.name}</div>
+        <div className="rb-desc">{desc[role]}</div>
+      </div>
+      <span className={`role-badge ${role}`} style={{marginLeft:'auto',flexShrink:0}}>{cfg.label}</span>
+    </div>
+  );
+}
 
-  const crumbMap = { dashboard:'Dashboard', courses:'Courses', 'course-detail':'Course Detail', 'create-course':'Create Course', classes:'Classes', 'class-detail':'Class Detail', 'create-class':'Create Class', students:'Students', 'student-detail':'Student Detail', 'issue-credential':'Issue Credential', 'issue-success':'Issue Success', credentials:'All Credentials', 'credential-detail':'Credential Detail', profile:'Institution Profile', design:'Design', layout:'Certificate Layout', settings:'Settings', faq:'FAQ' };
+function DisabledAction({ icon, label, reason }) {
+  return (
+    <div className="disabled-action">
+      <div className="da-icon"><Icon n={icon} size={15}/></div>
+      <div>
+        <div className="da-label">{label}</div>
+        <div className="da-reason">🔒 {reason}</div>
+      </div>
+    </div>
+  );
+}
+
+function CMSApp({ cmsRole, setCmsRole, cmsPage, setCmsPage, setMode, setPublicPage, setWalletPage, selectedCredId, setSelectedCredId, selectedCourseId, setSelectedCourseId, selectedStudentId, setSelectedStudentId, selectedClassId, setSelectedClassId }) {
+  const cfg = ROLE_CONFIG[cmsRole];
+  const [selectedLogId, setSelectedLogId] = useState(LOG_ENTRIES[0]?.id);
+
+  const crumbMap = { dashboard:'Dashboard', courses:'Courses', 'my-courses':'My Courses', 'course-proposals':'Course Proposals', 'course-approvals':'Course Approvals', 'course-detail':'Course Detail', 'create-course':'Create Course', classes:'Classes', 'my-classes':'My Classes', 'class-detail':'Class Detail', 'create-class':'Create Class', students:'Students', 'student-detail':'Student Detail', 'issue-credential':'Issue Credential', 'issue-success':'Issue Success', credentials:'All Credentials', 'credential-detail':'Credential Detail', profile:'Institution Profile', design:'Design', layout:'Certificate Layout', settings:'Settings', faq:'FAQ', 'users-roles':'Users & Roles', scores:'Scores / Completion', 'import-students':'Import Students', integrations:'Integrations', 'system-logs':'System Logs', schema:'Schema Import / Export', 'dev-public':'Public Website', 'dev-wallet':'Learner Wallet', log:'Log', 'log-detail':'Log Entry' };
+
+  function handleNav(id) {
+    if (id === 'dev-public') { setMode('public'); setPublicPage('landing'); return; }
+    if (id === 'dev-wallet') { setMode('wallet'); setWalletPage('dashboard'); return; }
+    setCmsPage(id);
+  }
 
   return (
     <div className="cms-app">
       <div className="cms-sidebar">
-        <div className="brand"><div className="brand-mark">m</div> M-CRED</div>
+        <div className="brand" style={{padding:'8px 8px 24px',borderBottom:'1px solid rgba(246,243,236,.1)'}}><BrandLogo size={28} textColor="var(--paper)" textSize={16}/></div>
         <div className="cms-user">
-          <div className="avatar">A</div>
-          <div><div className="name">Admin User</div><div className="role">Institution Admin · BFH</div></div>
+          <div className="avatar" style={{background:`linear-gradient(135deg,${cfg.color},${cfg.color}99)`}}>{cfg.initial}</div>
+          <div><div className="name">{cfg.name}</div><div className="role">{cfg.dept}</div></div>
         </div>
         <div className="cms-nav">
-          {navSections.map(sec=>(
+          {cfg.nav.map(sec=>(
             <div key={sec.label}>
               <div className="sec-head">{sec.label}</div>
               {sec.items.map(item=>(
-                <button key={item.id} className={`${cmsPage===item.id||cmsPage===item.id+'-detail'?' active':''}`} onClick={()=>setCmsPage(item.id)}>
+                <button key={item.id} className={cmsPage===item.id||cmsPage===item.id+'-detail'?' active':''} onClick={()=>handleNav(item.id)}>
                   <Icon n={item.icon}/> {item.label}
                   {item.count!==undefined&&<span className="count">{item.count}</span>}
                 </button>
@@ -1123,32 +1353,53 @@ function CMSApp({ cmsPage, setCmsPage, setMode, setPublicPage, setWalletPage, se
           <div className="right">
             <div className="cms-search">
               <Icon n="eye" size={14}/>
-              <input placeholder="Search courses, students, credentials…"/>
+              <input placeholder="Search…"/>
             </div>
-            <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={13}/> Issue Credential</button>
-            <div style={{width:36,height:36,borderRadius:'50%',background:'linear-gradient(135deg,var(--ember),#E8A77A)',display:'grid',placeItems:'center',fontStyle:'italic',fontSize:16,color:'#fff',cursor:'pointer'}}>A</div>
+            <div className="role-switcher">
+              <Icon n="users" size={13}/>
+              <select value={cmsRole} onChange={e=>{setCmsRole(e.target.value);setCmsPage('dashboard')}}>
+                <option value="lecturer">Lecturer View</option>
+                <option value="secretariat">Secretariat View</option>
+                <option value="admin">Admin View</option>
+                <option value="developer">Developer View</option>
+              </select>
+            </div>
+            {(cmsRole==='secretariat'||cmsRole==='developer')&&<button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={13}/> Issue Credential</button>}
+            <div style={{width:36,height:36,borderRadius:'50%',background:`linear-gradient(135deg,${cfg.color},${cfg.color}99)`,display:'grid',placeItems:'center',fontSize:15,fontWeight:600,color:'#fff',cursor:'pointer',flexShrink:0}}>{cfg.initial}</div>
           </div>
         </div>
 
         <div className="cms-body">
-          {cmsPage==='dashboard' && <CMSDashboard setCmsPage={setCmsPage} setSelectedCredId={setSelectedCredId}/>}
-          {cmsPage==='courses' && <CMSCourses setCmsPage={setCmsPage} setSelectedCourseId={setSelectedCourseId}/>}
+          {cmsPage==='dashboard' && <CMSDashboard role={cmsRole} setCmsPage={setCmsPage} setSelectedCredId={setSelectedCredId}/>}
+          {cmsPage==='courses' && <CMSCourses role={cmsRole} setCmsPage={setCmsPage} setSelectedCourseId={setSelectedCourseId}/>}
+          {cmsPage==='my-courses' && <CMSCourses role={cmsRole} setCmsPage={setCmsPage} setSelectedCourseId={setSelectedCourseId} myOnly/>}
+          {cmsPage==='course-proposals' && <CMSCourseProposals role={cmsRole} setCmsPage={setCmsPage}/>}
+          {cmsPage==='course-approvals' && <CMSCourseApprovals setCmsPage={setCmsPage}/>}
           {cmsPage==='course-detail' && <CMSCourseDetail courseId={selectedCourseId} setCmsPage={setCmsPage}/>}
           {cmsPage==='create-course' && <CMSCreateCourse setCmsPage={setCmsPage}/>}
-          {cmsPage==='classes' && <CMSClasses setCmsPage={setCmsPage} setSelectedClassId={setSelectedClassId}/>}
+          {cmsPage==='classes' && <CMSClasses role={cmsRole} setCmsPage={setCmsPage} setSelectedClassId={setSelectedClassId}/>}
+          {cmsPage==='my-classes' && <CMSClasses role={cmsRole} setCmsPage={setCmsPage} setSelectedClassId={setSelectedClassId} myOnly/>}
           {cmsPage==='class-detail' && <CMSClassDetail classId={selectedClassId} setCmsPage={setCmsPage}/>}
           {cmsPage==='create-class' && <CMSCreateClass setCmsPage={setCmsPage}/>}
-          {cmsPage==='students' && <CMSStudents setCmsPage={setCmsPage} setSelectedStudentId={setSelectedStudentId}/>}
+          {cmsPage==='students' && <CMSStudents role={cmsRole} setCmsPage={setCmsPage} setSelectedStudentId={setSelectedStudentId}/>}
           {cmsPage==='student-detail' && <CMSStudentDetail studentId={selectedStudentId} setCmsPage={setCmsPage} setSelectedCredId={setSelectedCredId}/>}
-          {cmsPage==='issue-credential' && <CMSIssueCredential setCmsPage={setCmsPage}/>}
+          {cmsPage==='scores' && <CMSScores role={cmsRole} setCmsPage={setCmsPage}/>}
+          {cmsPage==='import-students' && <CMSImportStudents setCmsPage={setCmsPage}/>}
+          {cmsPage==='issue-credential' && <CMSIssueCredential role={cmsRole} setCmsPage={setCmsPage}/>}
           {cmsPage==='issue-success' && <CMSIssueSuccess setCmsPage={setCmsPage} setMode={setMode} setWalletPage={setWalletPage} setPublicPage={setPublicPage}/>}
-          {cmsPage==='credentials' && <CMSCredentials setCmsPage={setCmsPage} setSelectedCredId={setSelectedCredId}/>}
+          {cmsPage==='credentials' && <CMSCredentials role={cmsRole} setCmsPage={setCmsPage} setSelectedCredId={setSelectedCredId}/>}
           {cmsPage==='credential-detail' && <CMSCredentialDetail credId={selectedCredId} setCmsPage={setCmsPage}/>}
-          {cmsPage==='profile' && <CMSProfile/>}
-          {cmsPage==='design' && <CMSDesign/>}
-          {cmsPage==='layout' && <CMSLayout/>}
-          {cmsPage==='settings' && <CMSSettings/>}
+          {cmsPage==='users-roles' && <CMSUsersRoles role={cmsRole}/>}
+          {cmsPage==='profile' && <CMSProfile role={cmsRole}/>}
+          {cmsPage==='design' && <CMSDesign role={cmsRole}/>}
+          {cmsPage==='layout' && <CMSLayout role={cmsRole}/>}
+          {cmsPage==='settings' && <CMSSettings role={cmsRole}/>}
           {cmsPage==='faq' && <CMSFaq/>}
+          {cmsPage==='integrations' && <CMSIntegrations/>}
+          {cmsPage==='system-logs' && <CMSSystemLogs/>}
+          {cmsPage==='schema' && <CMSSchema/>}
+          {cmsPage==='log' && <CMSLog role={cmsRole} setCmsPage={setCmsPage} setSelectedLogId={setSelectedLogId}/>}
+          {cmsPage==='log-detail' && <CMSLogDetail logId={selectedLogId} role={cmsRole} setCmsPage={setCmsPage}/>}
         </div>
       </div>
     </div>
@@ -1157,18 +1408,187 @@ function CMSApp({ cmsPage, setCmsPage, setMode, setPublicPage, setWalletPage, se
 
 // ── CMS PAGES ──
 
-function CMSDashboard({ setCmsPage, setSelectedCredId }) {
+function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
+  const cfg = ROLE_CONFIG[role];
+
+  const dashContent = {
+    lecturer: (
+      <div>
+        <RoleBanner role={role}/>
+        <div className="kpi-row">
+          <div className="kpi"><div className="label">My Courses</div><div className="value">2</div><div className="delta">This semester</div></div>
+          <div className="kpi"><div className="label">My Classes</div><div className="value">3</div><div className="delta">Active</div></div>
+          <div className="kpi"><div className="label">Students</div><div className="value">24</div><div className="delta">Across all classes</div></div>
+          <div className="kpi"><div className="label">Scores Pending</div><div className="value">2</div><div className="delta neg">Need entry</div></div>
+        </div>
+        <div className="dash-grid">
+          <div className="panel">
+            <div className="panel-head"><h3>Scores to Enter</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('scores')}>Open Scores</button></div>
+            <div className="panel-body">
+              {SCORES.filter(s=>!s.readyForCredential).map((s,i)=>(
+                <div key={i} className="activity-row">
+                  <div className="ava">{s.studentName[0]}</div>
+                  <div className="msg">{s.studentName}<div className="sub">{s.className}</div></div>
+                  <span className={`completion-badge ${s.completion.toLowerCase().replace(' ','-')}`}>{s.completion}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            <div className="panel" style={{padding:20}}>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('scores')}><Icon n="star" size={14}/> Enter Scores / Completion</button>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Propose New Course</button>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('my-classes')}><Icon n="classes" size={14}/> View My Classes</button>
+              </div>
+            </div>
+            <DisabledAction icon="award" label="Issue Credential" reason="Only Secretariat and above can issue credentials. Mark students as completed first, then notify the Secretariat."/>
+            <DisabledAction icon="settings" label="Institution Settings" reason="Only Admins can modify institution settings."/>
+          </div>
+        </div>
+      </div>
+    ),
+    secretariat: (
+      <div>
+        <RoleBanner role={role}/>
+        <div className="kpi-row">
+          <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
+          <div className="kpi"><div className="label">Ready to Issue</div><div className="value">{SCORES.filter(s=>s.readyForCredential&&!CREDENTIALS.find(c=>c.studentId===s.studentId)).length}</div><div className="delta">Awaiting issuance</div></div>
+          <div className="kpi"><div className="label">All Students</div><div className="value">{STUDENTS.length}</div><div className="delta">Across institution</div></div>
+          <div className="kpi"><div className="label">Verifications (30d)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
+        </div>
+        <div className="dash-grid">
+          <div className="panel">
+            <div className="panel-head"><h3>Ready to Issue</h3><button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}>Issue Credential</button></div>
+            <div className="panel-body">
+              {SCORES.filter(s=>s.readyForCredential).map((s,i)=>(
+                <div key={i} className="activity-row">
+                  <div className="ava">{s.studentName[0]}</div>
+                  <div className="msg">{s.studentName}<div className="sub">{s.courseTitle} · {s.grade}</div></div>
+                  <span className="completion-badge completed">Ready</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            <div className="panel" style={{padding:20}}>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                {[['Issue Credential','award','issue-credential'],['Add Students','users','students'],['Import CSV','import','import-students'],['All Credentials','shield','credentials']].map(([t,ic,pg])=>(
+                  <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
+                ))}
+              </div>
+            </div>
+            <DisabledAction icon="settings" label="Institution Settings" reason="Only Admins can modify institution settings, branding, and credential rules."/>
+            <DisabledAction icon="users" label="Manage Users & Roles" reason="Only Admins can invite users, assign roles, or deactivate accounts."/>
+          </div>
+        </div>
+      </div>
+    ),
+    admin: (
+      <div>
+        <RoleBanner role={role}/>
+        <div className="kpi-row">
+          <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
+          <div className="kpi"><div className="label">Active Users</div><div className="value">{CMS_USERS.filter(u=>u.status==='Active').length}</div><div className="delta">Across all roles</div></div>
+          <div className="kpi"><div className="label">Pending Approvals</div><div className="value">2</div><div className="delta neg">Courses awaiting review</div></div>
+          <div className="kpi"><div className="label">Verifications (30d)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
+        </div>
+        <div className="dash-grid">
+          <div className="panel">
+            <div className="panel-head"><h3>Pending Course Approvals</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('course-approvals')}>View all</button></div>
+            <div className="panel-body">
+              {[{name:'AI in Healthcare Management',lecturer:'Dr. Priya Sharma',dept:'ICT',date:'Today'},
+                {name:'Circular Economy Fundamentals',lecturer:'Dr. Klaus Brönnimann',dept:'Business',date:'Yesterday'}].map((c,i)=>(
+                <div key={i} className="activity-row">
+                  <div className="ava">{c.lecturer[0]}</div>
+                  <div className="msg">{c.name}<div className="sub">{c.dept} · Proposed by {c.lecturer}</div></div>
+                  <div style={{display:'flex',gap:6,flexShrink:0}}>
+                    <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff',padding:'5px 12px'}}>Approve</button>
+                    <button className="btn btn-ghost btn-sm">Reject</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            <div className="panel" style={{padding:20}}>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Admin Actions</div>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                {[['Manage Users & Roles','users','users-roles'],['Course Approvals','verify','course-approvals'],['Institution Profile','user','profile'],['Settings','settings','settings']].map(([t,ic,pg])=>(
+                  <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
+                ))}
+              </div>
+            </div>
+            <div className="panel" style={{padding:20}}>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Users by Role</div>
+              {Object.entries({Lecturer:4,Secretariat:1,Admin:1,Developer:1}).map(([role,count])=>(
+                <div key={role} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'7px 0',borderBottom:'1px solid var(--line-2)',fontSize:13}}>
+                  <span className={`role-badge ${role.toLowerCase()}`}>{role}</span>
+                  <span style={{fontWeight:600}}>{count}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    developer: (
+      <div>
+        <RoleBanner role={role}/>
+        <div className="kpi-row">
+          <div className="kpi"><div className="label">Credentials</div><div className="value">482</div><div className="delta">Total issued</div></div>
+          <div className="kpi"><div className="label">Users</div><div className="value">{CMS_USERS.length}</div><div className="delta">Across all roles</div></div>
+          <div className="kpi"><div className="label">API Calls (24h)</div><div className="value">1,204</div><div className="delta">↑ +18%</div></div>
+          <div className="kpi"><div className="label">Uptime</div><div className="value">99.8%</div><div className="delta">Last 30 days</div></div>
+        </div>
+        <div className="dash-grid">
+          <div className="panel">
+            <div className="panel-head"><h3>System Log (Recent)</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('system-logs')}>View logs</button></div>
+            <div className="panel-body">
+              {[
+                {type:'INFO',msg:'Credential MCRED-BFH-2026-00482 issued',time:'09:14:22'},
+                {type:'INFO',msg:'Student import: 12 records processed',time:'08:52:01'},
+                {type:'WARN',msg:'Rate limit approached on /verify endpoint',time:'08:31:44'},
+                {type:'INFO',msg:'Course proposal submitted: AI in Healthcare',time:'07:55:12'},
+                {type:'INFO',msg:'Admin login: h.zimmermann@bfh.ch',time:'07:30:00'},
+              ].map((l,i)=>(
+                <div key={i} className="activity-row">
+                  <div className="ava" style={{fontSize:9,fontWeight:700,background:l.type==='WARN'?'var(--amber-soft)':'var(--paper)',color:l.type==='WARN'?'var(--amber)':'var(--mute)'}}>{l.type}</div>
+                  <div className="msg">{l.msg}<div className="sub" style={{fontFamily:'monospace'}}>{l.time}</div></div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            <div className="panel" style={{padding:20}}>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Developer Tools</div>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                {[['System Logs','eye','system-logs'],['Integrations','link','integrations'],['Schema Import / Export','import','schema'],['Users & Roles','users','users-roles']].map(([t,ic,pg])=>(
+                  <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  };
+
   return (
     <div>
       <div className="page-head">
         <div className="left">
           <h1>Dashboard</h1>
-          <p>Welcome back. Here's what's happening at Bern University of Applied Sciences.</p>
+          <p>Welcome back, {cfg.name}.</p>
         </div>
-        <div className="right">
-          <button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Issue Credential</button>
-        </div>
+        {(role==='secretariat'||role==='developer')&&<div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Issue Credential</button></div>}
       </div>
+      {dashContent[role]}
+    </div>
+  );
+}
 
       <div className="kpi-row">
         <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
@@ -1190,63 +1610,21 @@ function CMSDashboard({ setCmsPage, setSelectedCredId }) {
               { av:'T', name:'Tobias Weber', msg:'Credential issued', cred:'Digital Marketing Fundamentals', time:'2 min ago' },
               { av:'N', name:'Noa Schneider', msg:'Credential issued', cred:'AI Literacy for Professionals', time:'3 days ago' },
               { av:'A', name:'Amélie Dubois', msg:'Credential revoked', cred:'Sustainable Business Management', time:'5 days ago' },
-            ].map((r,i)=>(
-              <div key={i} className="activity-row">
-                <div className="ava">{r.av}</div>
-                <div className="msg">{r.name} — {r.msg}<div className="sub">{r.cred}</div></div>
-                <div className="when">{r.time}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{display:'flex',flexDirection:'column',gap:20}}>
-          <div className="panel" style={{padding:20}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
-            <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              {[
-                ['Issue Credential','Start issuing to students','award','issue-credential'],
-                ['Add Course','Create a new course','book','create-course'],
-                ['Import Students','Upload a student list','import','students'],
-                ['View Credentials','Manage issued credentials','shield','credentials'],
-              ].map(([t,d,ic,pg])=>(
-                <button key={t} onClick={()=>setCmsPage(pg)} style={{display:'flex',alignItems:'center',gap:12,padding:'10px 14px',background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:10,cursor:'pointer',textAlign:'left',transition:'all .12s'}} onMouseEnter={e=>e.currentTarget.style.borderColor='var(--ink-3)'} onMouseLeave={e=>e.currentTarget.style.borderColor='var(--line)'}>
-                  <div style={{width:32,height:32,borderRadius:8,background:'var(--white)',border:'1px solid var(--line)',display:'grid',placeItems:'center',color:'var(--ember)',flexShrink:0}}><Icon n={ic} size={14}/></div>
-                  <div><div style={{fontSize:13,fontWeight:600}}>{t}</div><div style={{fontSize:11,color:'var(--mute)'}}>{d}</div></div>
-                  <div style={{marginLeft:'auto',color:'var(--mute)'}}><Icon n="arrow" size={14}/></div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="panel" style={{padding:20}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Recent Credentials</div>
-            {CREDENTIALS.slice(0,3).map((c,i)=>(
-              <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 0',borderBottom:i<2?'1px solid var(--line-2)':'none'}}>
-                <div>
-                  <div style={{fontSize:13,fontWeight:500}}>{c.student}</div>
-                  <div style={{fontSize:11,color:'var(--mute)',marginTop:2}}>{c.title}</div>
-                </div>
-                <StatusPill status={c.status}/>
-              </div>
-            ))}
-            <button className="btn btn-ghost btn-sm" style={{marginTop:12,width:'100%',justifyContent:'center'}} onClick={()=>setCmsPage('credentials')}>View all credentials</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function CMSCourses({ setCmsPage, setSelectedCourseId }) {
+function CMSCourses({ role, setCmsPage, setSelectedCourseId, myOnly }) {
+  const canCreate = role==='secretariat'||role==='admin'||role==='developer';
+  const courses = myOnly ? COURSES.slice(0,2) : COURSES;
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Courses</h1><p>Official courses used as the basis for classes and credentials.</p></div>
-        <div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('create-course')}><Icon n="plus" size={14}/> Add Course</button></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'My Courses':'Courses'}</h1><p>{myOnly?'Courses you are assigned to teach.':'Official courses used as the basis for classes and credentials.'}</p></div>
+        <div className="right">
+          {canCreate ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-course')}><Icon n="plus" size={14}/> Add Course</button>
+          : <button className="btn btn-ghost" onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Propose Course</button>}
+        </div>
       </div>
+      {myOnly&&<RoleBanner role={role}/>}
       <div className="course-grid">
-        {COURSES.map(c=>(
+        {courses.map(c=>(
           <div key={c.id} className="course-card" onClick={()=>{setSelectedCourseId(c.id);setCmsPage('course-detail')}}>
             <div className={`course-cover ${c.color}`}>
               <div className="seal">{c.title[0]}</div>
@@ -1261,17 +1639,15 @@ function CMSCourses({ setCmsPage, setSelectedCourseId }) {
             </div>
           </div>
         ))}
-        <div className="add-card" onClick={()=>setCmsPage('create-course')}>
+        {canCreate && <div className="add-card" onClick={()=>setCmsPage('create-course')}>
           <div className="plus">+</div>
           <h4>Add Course</h4>
           <p>Create a new official course</p>
-        </div>
+        </div>}
       </div>
     </div>
   );
-}
-
-function CMSCourseDetail({ courseId, setCmsPage }) {
+}({ courseId, setCmsPage }) {
   const c = COURSES.find(x=>x.id===courseId)||COURSES[0];
   const cls = CLASSES.filter(x=>x.course===c.id);
   return (
@@ -1375,18 +1751,26 @@ function CMSCreateCourse({ setCmsPage }) {
   );
 }
 
-function CMSClasses({ setCmsPage, setSelectedClassId }) {
+function CMSClasses({ role, setCmsPage, setSelectedClassId, myOnly }) {
+  const canCreate = role==='secretariat'||role==='admin'||role==='developer';
+  // Lecturer sees only their assigned classes
+  const lecturerClasses = ['CL001']; // Prof. Dr. Anna Steiner's classes
+  const classes = (role==='lecturer'||myOnly) ? CLASSES.filter(c=>lecturerClasses.includes(c.id)) : CLASSES;
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Classes</h1><p>Manage class cohorts linked to official courses.</p></div>
-        <div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('create-class')}><Icon n="plus" size={14}/> Add Class</button></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'My Classes':'Classes'}</h1><p>{role==='lecturer'?'Classes you are assigned to teach.':'Manage class cohorts linked to official courses.'}</p></div>
+        <div className="right">
+          {canCreate
+            ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-class')}><Icon n="plus" size={14}/> Add Class</button>
+            : <DisabledAction icon="plus" label="Add Class" reason="Only Secretariat and above can create classes."/>}
+        </div>
       </div>
       <div className="panel">
         <table className="data-table">
           <thead><tr><th>Class Name</th><th>Course</th><th>Lecturer</th><th>Period</th><th>Students</th><th>Mode</th><th>Status</th><th></th></tr></thead>
           <tbody>
-            {CLASSES.map(cl=>(
+            {classes.map(cl=>(
               <tr key={cl.id} style={{cursor:'pointer'}} onClick={()=>{setSelectedClassId(cl.id);setCmsPage('class-detail')}}>
                 <td className="fw">{cl.name}</td>
                 <td style={{maxWidth:180,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{cl.courseTitle}</td>
@@ -1471,14 +1855,19 @@ function CMSCreateClass({ setCmsPage }) {
   );
 }
 
-function CMSStudents({ setCmsPage, setSelectedStudentId }) {
+function CMSStudents({ role, setCmsPage, setSelectedStudentId }) {
+  const canAdd = role==='secretariat'||role==='admin'||role==='developer';
+  const myClassIds = ['CL001'];
+  const students = role==='lecturer' ? STUDENTS.filter(s=>s.classes.some(c=>myClassIds.includes(c))) : STUDENTS;
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Students</h1><p>All enrolled students across your institution.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Students</h1><p>{role==='lecturer'?'Students enrolled in your assigned classes.':'All enrolled students across your institution.'}</p></div>
         <div className="right">
-          <button className="btn btn-ghost btn-sm"><Icon n="import" size={13}/> Import CSV</button>
-          <button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={14}/> Add Student</button>
+          {canAdd ? <>
+            <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('import-students')}><Icon n="import" size={13}/> Import CSV</button>
+            <button className="btn btn-ember"><Icon n="plus" size={14}/> Add Student</button>
+          </> : <span style={{fontSize:12,color:'var(--mute)',display:'flex',alignItems:'center',gap:6}}><Icon n="eye" size={13}/> Read-only — your assigned students</span>}
         </div>
       </div>
       <div className="toolbar">
@@ -1496,7 +1885,7 @@ function CMSStudents({ setCmsPage, setSelectedStudentId }) {
         <table className="data-table">
           <thead><tr><th>Student ID</th><th>Name</th><th>Email</th><th>Classes</th><th>Credentials</th><th>Wallet</th><th></th></tr></thead>
           <tbody>
-            {STUDENTS.map((s,i)=>(
+            {students.map((s,i)=>(
               <tr key={s.id} style={{cursor:'pointer'}} onClick={()=>{setSelectedStudentId(s.id);setCmsPage('student-detail')}}>
                 <td className="mono">{s.id}</td>
                 <td><div style={{display:'flex',alignItems:'center',gap:10}}><div style={{width:32,height:32,borderRadius:'50%',background:s.color,display:'grid',placeItems:'center',fontSize:13,fontStyle:'italic',color:'#fff',flexShrink:0}}>{s.first[0]}</div><span className="fw">{s.first} {s.last}</span></div></td>
@@ -1560,7 +1949,7 @@ function CMSStudentDetail({ studentId, setCmsPage, setSelectedCredId }) {
 }
 
 // ── ISSUE CREDENTIAL WIZARD ──
-function CMSIssueCredential({ setCmsPage }) {
+function CMSIssueCredential({ role, setCmsPage }) {
   const [step, setStep] = useState(1);
   const [selCourse, setSelCourse] = useState(null);
   const [selClass, setSelClass] = useState(null);
@@ -1571,7 +1960,11 @@ function CMSIssueCredential({ setCmsPage }) {
   const stepLabels = ['Select Course','Select Class','Select Students','Choose Template','Preview','Confirm & Issue'];
 
   const filteredClasses = CLASSES.filter(c=>c.course===selCourse);
-  const filteredStudents = selClass ? STUDENTS.filter(s=>s.classes.includes(selClass)) : [];
+  // Only show students who are marked as ready for credential issuance
+  const completedStudentIds = SCORES.filter(s=>s.readyForCredential&&s.classId===selClass).map(s=>s.studentId);
+  const filteredStudents = selClass ? STUDENTS.filter(s=>s.classes.includes(selClass)&&completedStudentIds.includes(s.id)) : [];
+  const allStudentsInClass = selClass ? STUDENTS.filter(s=>s.classes.includes(selClass)) : [];
+  const pendingCount = allStudentsInClass.length - filteredStudents.length;
 
   function toggleStudent(id) {
     setSelStudents(prev=>prev.includes(id)?prev.filter(x=>x!==id):[...prev,id]);
@@ -1677,11 +2070,13 @@ function CMSIssueCredential({ setCmsPage }) {
           <>
             <div className="wizard-card-head">
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
-                <div><h2>Select Students</h2><p>Choose which students in {cls?.name} will receive this credential.</p></div>
+                <div><h2>Select Students</h2><p>Only students marked as <strong>Ready for Credential</strong> by their lecturer are shown.</p></div>
                 <button className="btn btn-ghost btn-sm" onClick={()=>setSelStudents(filteredStudents.map(s=>s.id))}>Select All</button>
               </div>
             </div>
             <div className="wizard-card-body">
+              {pendingCount>0&&<div style={{padding:'10px 14px',background:'var(--amber-soft)',border:'1px solid rgba(184,138,43,.25)',borderRadius:8,fontSize:12,color:'var(--amber)',marginBottom:16}}><Icon n="star" size={13}/> <strong>{pendingCount} student{pendingCount>1?'s':''}</strong> in this class {pendingCount>1?'are':'is'} not yet marked as completed by the lecturer and cannot receive a credential.</div>}
+              {filteredStudents.length===0&&<div className="empty-state"><h3>No students ready</h3><p>The lecturer must mark students as completed in Scores / Completion first.</p></div>}
               <div className="student-list-sel">
                 {filteredStudents.length>0?filteredStudents.map((s,i)=>(
                   <div key={s.id} className={`student-sel-item${selStudents.includes(s.id)?' selected':''}`} onClick={()=>toggleStudent(s.id)}>
@@ -1861,26 +2256,30 @@ function CMSIssueSuccess({ setCmsPage, setMode, setWalletPage, setPublicPage }) 
   );
 }
 
-function CMSCredentials({ setCmsPage, setSelectedCredId }) {
+function CMSCredentials({ role, setCmsPage, setSelectedCredId }) {
+  const canIssue = role==='secretariat'||role==='admin'||role==='developer';
+  const canRevoke = role==='admin'||role==='developer';
+  // Lecturer sees only credentials from their own classes
+  const myStudentIds = ['STU-2026-001','STU-2026-002','STU-2026-006']; // Anna Steiner's CL001 students
+  const creds = role==='lecturer' ? CREDENTIALS.filter(c=>myStudentIds.includes(c.studentId)) : CREDENTIALS;
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>All Credentials</h1><p>View and manage all credentials issued by your institution.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{role==='lecturer'?'Issued Credentials':'All Credentials'}</h1><p>{role==='lecturer'?'Credentials issued to students in your classes.':'View and manage all credentials issued by your institution.'}</p></div>
         <div className="right">
-          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export</button>
-          <button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={14}/> Issue Credential</button>
+          {canIssue && <><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export</button><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={14}/> Issue Credential</button></>}
         </div>
       </div>
 
       <div className="creds-stats">
-        {[['Total Issued',CREDENTIALS.length],['Valid',CREDENTIALS.filter(c=>c.status==='Issued').length],['Revoked',CREDENTIALS.filter(c=>c.status==='Revoked').length],['Total Verifications',CREDENTIALS.reduce((a,c)=>a+c.verifications,0)],['Active Learners',CREDENTIALS.filter(c=>c.status==='Issued').length]].map(([l,v])=>(
+        {[['Total',creds.length],['Valid',creds.filter(c=>c.status==='Issued').length],['Revoked',creds.filter(c=>c.status==='Revoked').length],['Verifications',creds.reduce((a,c)=>a+c.verifications,0)],['Learners',creds.filter(c=>c.status==='Issued').length]].map(([l,v])=>(
           <div key={l} className="creds-stat"><div className="sv">{v}</div><div className="sl">{l}</div></div>
         ))}
       </div>
 
       <div className="toolbar">
         <div className="left">
-          {['All','Issued','Revoked','Expired','Draft'].map(f=>(
+          {['All','Issued','Revoked','Expired'].map(f=>(
             <div key={f} className={`filter-chip${f==='All'?' active':''}`}>{f}</div>
           ))}
         </div>
@@ -1894,18 +2293,12 @@ function CMSCredentials({ setCmsPage, setSelectedCredId }) {
         <table className="data-table">
           <thead>
             <tr>
-              <th>Credential ID</th>
-              <th>Student Name</th>
-              <th>Credential Title</th>
-              <th>Issue Date</th>
-              <th>Expiry Date</th>
-              <th>Status</th>
-              <th>Verifications</th>
-              <th>Actions</th>
+              <th>Credential ID</th><th>Student Name</th><th>Credential Title</th>
+              <th>Issue Date</th><th>Expiry Date</th><th>Status</th><th>Verifications</th><th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {CREDENTIALS.map(c=>(
+            {creds.map(c=>(
               <tr key={c.id}>
                 <td className="mono" style={{fontSize:11}}>{c.id}</td>
                 <td className="fw">{c.student}</td>
@@ -1919,7 +2312,7 @@ function CMSCredentials({ setCmsPage, setSelectedCredId }) {
                     <button className="btn btn-ghost btn-sm" onClick={()=>{setSelectedCredId(c.id);setCmsPage('credential-detail')}}><Icon n="eye" size={12}/></button>
                     <button className="btn btn-ghost btn-sm"><Icon n="copy" size={12}/></button>
                     <button className="btn btn-ghost btn-sm"><Icon n="download" size={12}/></button>
-                    {c.status==='Issued'&&<button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}><Icon n="slash" size={12}/></button>}
+                    {canRevoke&&c.status==='Issued'&&<button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}><Icon n="slash" size={12}/></button>}
                   </div>
                 </td>
               </tr>
@@ -2128,6 +2521,558 @@ function CMSFaq() {
             {open===i&&<div className="faq-a">{item.a}</div>}
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+// ── NEW CMS PAGES ──
+
+function CMSUsersRoles({ role }) {
+  const roleColors = { Lecturer:'#3C6E47', Secretariat:'#B88A2B', Admin:'#C8421E', Developer:'#2563EB' };
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Users & Roles</h1><p>Manage who has access to the M-CRED CMS and what they can do.</p></div>
+        <div className="right">
+          <button className="btn btn-ember"><Icon n="plus" size={14}/> Invite User</button>
+        </div>
+      </div>
+      <div className="panel">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Role</th>
+              <th>Department</th>
+              <th>Assigned To</th>
+              <th>Last Login</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CMS_USERS.map(u=>(
+              <tr key={u.id}>
+                <td>
+                  <div style={{display:'flex',alignItems:'center',gap:10}}>
+                    <div style={{width:34,height:34,borderRadius:'50%',background:`linear-gradient(135deg,${roleColors[u.role]||'#9AA0AA'},${roleColors[u.role]||'#9AA0AA'}88)`,display:'grid',placeItems:'center',fontSize:13,fontWeight:600,color:'#fff',flexShrink:0}}>{u.name[0]}</div>
+                    <div>
+                      <div style={{fontSize:13,fontWeight:500}}>{u.name}</div>
+                      <div style={{fontSize:11,color:'var(--mute)'}}>{u.email}</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span className={`role-badge ${u.role.toLowerCase()}`}>{u.role}</span></td>
+                <td style={{color:'var(--mute)',fontSize:13}}>{u.dept}</td>
+                <td style={{fontSize:12,color:'var(--mute)',maxWidth:180}}>{u.courses}</td>
+                <td style={{fontSize:12,color:'var(--mute)'}}>{u.lastLogin}</td>
+                <td><StatusPill status={u.status}/></td>
+                <td>
+                  <div className="actions-cell">
+                    <button className="btn btn-ghost btn-sm">Change Role</button>
+                    <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Deactivate</button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div style={{marginTop:24,padding:20,background:'var(--white)',border:'1px solid var(--line)',borderRadius:12}}>
+        <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:16}}>Role Permissions Summary</div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16}}>
+          {[
+            {role:'Lecturer',color:'#3C6E47',perms:['View assigned courses & classes','Enter scores & grades','View own credential history']},
+            {role:'Secretariat',color:'#B88A2B',perms:['Create & edit courses/classes','Import students (CSV)','Issue credentials','View all credentials']},
+            {role:'Admin',color:'#C8421E',perms:['Manage users & roles','Approve courses','Configure institution','Revoke/reissue credentials']},
+            {role:'Developer',color:'#2563EB',perms:['Full platform access','System logs & integrations','Schema import/export','Debug & developer tools']},
+          ].map(({role:r,color,perms})=>(
+            <div key={r} style={{padding:16,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:10}}>
+              <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+                <div style={{width:10,height:10,borderRadius:'50%',background:color,flexShrink:0}}/>
+                <span style={{fontSize:13,fontWeight:600}}>{r}</span>
+              </div>
+              {perms.map(p=><div key={p} style={{fontSize:12,color:'var(--mute)',padding:'4px 0',borderBottom:'1px solid var(--line-2)'}}>{p}</div>)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CMSScores({ role, setCmsPage }) {
+  const [scores, setScores] = useState(SCORES.map(s=>({...s})));
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Scores / Completion</h1><p>Enter student scores and mark completion status before credentials can be issued.</p></div>
+        <div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Issue Credentials</button></div>
+      </div>
+      <RoleBanner role={role}/>
+      <div style={{padding:14,background:'var(--amber-soft)',border:'1px solid rgba(184,138,43,.25)',borderRadius:10,marginBottom:20,fontSize:13,color:'var(--amber)',display:'flex',alignItems:'center',gap:10}}>
+        <Icon n="star" size={15}/> <strong>Workflow:</strong> Mark students as "Completed" and set readiness for credential issuing. The Secretariat will then be able to issue credentials for completed students.
+      </div>
+      <div className="panel">
+        <table className="data-table">
+          <thead>
+            <tr><th>Student</th><th>Class</th><th>Course</th><th>Score / Grade</th><th>Completion</th><th>Lecturer Comment</th><th>Ready for Credential</th></tr>
+          </thead>
+          <tbody>
+            {scores.map((s,i)=>(
+              <tr key={s.id}>
+                <td className="fw">{s.studentName}</td>
+                <td style={{color:'var(--mute)',fontSize:12}}>{s.className}</td>
+                <td style={{color:'var(--mute)',fontSize:12}}>{s.courseTitle}</td>
+                <td><span style={{fontFamily:'monospace',fontSize:13}}>{s.score}</span> <span style={{fontSize:11,color:'var(--mute)'}}>{s.grade&&s.grade!=='—'?`(${s.grade})`:''}</span></td>
+                <td>
+                  <span className={`completion-badge ${s.completion.toLowerCase().replace(' ','-').replace('_','-')}`}>{s.completion}</span>
+                </td>
+                <td style={{fontSize:12,color:'var(--mute)',maxWidth:200}}>{s.comment||<span style={{fontStyle:'italic',color:'var(--mute)'}}>—</span>}</td>
+                <td>
+                  {s.readyForCredential
+                    ? <span className="pill pill-issued"><span className="pill-dot" style={{background:'#3C6E47'}}/> Ready</span>
+                    : <button className="btn btn-ghost btn-sm" style={{fontSize:11}} onClick={()=>{const ns=[...scores];ns[i]={...ns[i],completion:'Completed',readyForCredential:true};setScores(ns);}}>Mark Ready</button>
+                  }
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function CMSCourseProposals({ role, setCmsPage }) {
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Course Proposals</h1><p>Propose new courses for review and approval by an Admin.</p></div>
+        <div className="right"><button className="btn btn-ember"><Icon n="plus" size={14}/> New Proposal</button></div>
+      </div>
+      <RoleBanner role={role}/>
+      {[
+        {title:'AI in Healthcare Management',dept:'ICT',status:'Pending',submitted:'Today',notes:'New interdisciplinary course combining AI tools with healthcare workflows.'},
+        {title:'Circular Economy Fundamentals',dept:'Business',status:'Pending',submitted:'Yesterday',notes:'Covers lifecycle assessment, material flows, and Swiss regulatory context.'},
+        {title:'Advanced Data Visualisation',dept:'ICT',status:'Rejected',submitted:'2 weeks ago',notes:'Admin feedback: overlaps with existing Data Analytics for Business course.'},
+      ].map((p,i)=>(
+        <div key={i} className="approval-card">
+          <div style={{flex:1}}>
+            <div className="ac-title">{p.title}</div>
+            <div className="ac-sub">{p.dept} · Submitted {p.submitted}</div>
+            <div style={{fontSize:12,color:'var(--mute)',marginTop:8,maxWidth:560}}>{p.notes}</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end',gap:8,flexShrink:0}}>
+            <StatusPill status={p.status==='Pending'?'Pending':p.status==='Rejected'?'Revoked':'Active'}/>
+            <div className="ac-actions">
+              <button className="btn btn-ghost btn-sm"><Icon n="edit" size={12}/> Edit</button>
+              {p.status==='Pending'&&<button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Withdraw</button>}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CMSCourseApprovals({ setCmsPage }) {
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Course Approvals</h1><p>Review and approve course proposals submitted by lecturers.</p></div>
+      </div>
+      <div style={{padding:14,background:'var(--ember-soft)',border:'1px solid rgba(200,66,30,.2)',borderRadius:10,marginBottom:20,fontSize:13,display:'flex',alignItems:'center',gap:10}}>
+        <Icon n="verify" size={15}/><span style={{color:'var(--ember)'}}><strong>2 proposals</strong> awaiting your review.</span>
+      </div>
+      {[
+        {title:'AI in Healthcare Management',lecturer:'Dr. Priya Sharma',dept:'ICT',eqf:6,ects:4,submitted:'Today',notes:'New interdisciplinary course combining AI tools with healthcare workflows.'},
+        {title:'Circular Economy Fundamentals',lecturer:'Dr. Klaus Brönnimann',dept:'Business',eqf:5,ects:3,submitted:'Yesterday',notes:'Covers lifecycle assessment, material flows, and Swiss regulatory context.'},
+      ].map((p,i)=>(
+        <div key={i} className="approval-card" style={{flexDirection:'column',alignItems:'stretch'}}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:12}}>
+            <div>
+              <div className="ac-title">{p.title}</div>
+              <div className="ac-sub">Proposed by {p.lecturer} · {p.dept} · EQF {p.eqf} · {p.ects} ECTS · Submitted {p.submitted}</div>
+            </div>
+            <StatusPill status="Pending"/>
+          </div>
+          <p style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.6}}>{p.notes}</p>
+          <div className="ac-actions">
+            <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff'}}><Icon n="check" size={13}/> Approve</button>
+            <button className="btn btn-ghost btn-sm">Request Changes</button>
+            <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Reject</button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CMSImportStudents({ setCmsPage }) {
+  return (
+    <div style={{maxWidth:720}}>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Import Students</h1><p>Upload a CSV file to add multiple students at once.</p></div>
+      </div>
+      <div className="panel" style={{padding:28,marginBottom:20}}>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:16}}>Upload CSV File</div>
+        <div style={{border:'2px dashed var(--line)',borderRadius:12,padding:40,textAlign:'center',cursor:'pointer',background:'var(--paper-2)'}}>
+          <Icon n="import" size={32}/>
+          <div style={{fontSize:15,fontWeight:600,marginTop:14,marginBottom:6}}>Drag & drop your CSV file here</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16}}>or click to browse — max 5 MB</div>
+          <button className="btn btn-ghost">Browse Files</button>
+        </div>
+      </div>
+      <div className="panel" style={{padding:28}}>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>CSV Format Requirements</div>
+        <div style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,color:'var(--ink-3)',lineHeight:1.8}}>
+          first_name, last_name, email, student_id, class_id<br/>
+          Sarah, Keller, sarah.keller@student.bfh.ch, STU-2026-001, CL001<br/>
+          Luca, Meier, luca.meier@student.bfh.ch, STU-2026-002, CL001
+        </div>
+        <div style={{marginTop:16,display:'flex',gap:12}}>
+          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Download Template</button>
+          <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('students')}><Icon n="users" size={13}/> View All Students</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CMSIntegrations() {
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Integrations</h1><p>Connect M-CRED with external platforms and services.</p></div>
+      </div>
+      {[
+        {name:'LinkedIn',desc:'Allow learners to add credentials directly to their LinkedIn profile.',icon:'linkedin',status:'Connected'},
+        {name:'Campusonline',desc:'Sync student and course data from Campusonline.',icon:'link',status:'Connected'},
+        {name:'Microsoft Teams',desc:'Send credential notifications directly via Teams.',icon:'mail',status:'Not connected'},
+        {name:'Zapier',desc:'Automate credential workflows with Zapier triggers.',icon:'rotate',status:'Not connected'},
+        {name:'REST API',desc:'Use the M-CRED REST API to integrate with your own systems.',icon:'link',status:'Active'},
+        {name:'Webhook',desc:'Receive event-based notifications for credential lifecycle events.',icon:'share',status:'Not connected'},
+      ].map((int,i)=>(
+        <div key={i} className="panel" style={{padding:22,marginBottom:12,display:'flex',alignItems:'center',gap:20}}>
+          <div style={{width:44,height:44,borderRadius:12,background:'var(--paper)',border:'1px solid var(--line)',display:'grid',placeItems:'center',color:'var(--ember)',flexShrink:0}}><Icon n={int.icon} size={20}/></div>
+          <div style={{flex:1}}>
+            <div style={{fontSize:15,fontWeight:600,marginBottom:3}}>{int.name}</div>
+            <div style={{fontSize:13,color:'var(--mute)'}}>{int.desc}</div>
+          </div>
+          <StatusPill status={int.status==='Connected'||int.status==='Active'?'Active':'Draft'}/>
+          <button className="btn btn-ghost btn-sm">{int.status==='Connected'||int.status==='Active'?'Configure':'Connect'}</button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CMSSystemLogs() {
+  const logs = [
+    {level:'INFO',msg:'Credential MCRED-BFH-2026-00482 issued to STU-2026-001',ts:'2026-04-25 09:14:22',user:'m.brunner@bfh.ch'},
+    {level:'INFO',msg:'Student import completed: 12 records processed, 0 errors',ts:'2026-04-25 08:52:01',user:'m.brunner@bfh.ch'},
+    {level:'WARN',msg:'Rate limit approached on /verify endpoint (90/100)',ts:'2026-04-25 08:31:44',user:'system'},
+    {level:'INFO',msg:'Course proposal submitted: AI in Healthcare Management',ts:'2026-04-25 07:55:12',user:'p.sharma@bfh.ch'},
+    {level:'INFO',msg:'Admin login: h.zimmermann@bfh.ch',ts:'2026-04-25 07:30:00',user:'system'},
+    {level:'INFO',msg:'Credential MCRED-BFH-2026-00479 revoked',ts:'2026-04-24 14:11:05',user:'h.zimmermann@bfh.ch'},
+    {level:'ERROR',msg:'Webhook delivery failed: endpoint timeout (ms-teams)',ts:'2026-04-24 13:42:18',user:'system'},
+    {level:'INFO',msg:'LinkedIn credential share: STU-2026-001',ts:'2026-04-24 12:00:33',user:'student'},
+  ];
+  const colors = {INFO:'var(--sage)',WARN:'var(--amber)',ERROR:'var(--ember)'};
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>System Logs</h1><p>Full audit trail of platform events and system activity.</p></div>
+        <div className="right"><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export Logs</button></div>
+      </div>
+      <div className="panel">
+        <table className="data-table">
+          <thead><tr><th>Level</th><th>Message</th><th>User</th><th>Timestamp</th></tr></thead>
+          <tbody>
+            {logs.map((l,i)=>(
+              <tr key={i}>
+                <td><span style={{fontFamily:'monospace',fontSize:11,fontWeight:700,color:colors[l.level],background:l.level==='INFO'?'var(--sage-soft)':l.level==='WARN'?'var(--amber-soft)':'var(--ember-soft)',padding:'2px 8px',borderRadius:4}}>{l.level}</span></td>
+                <td style={{fontFamily:'monospace',fontSize:12}}>{l.msg}</td>
+                <td style={{fontSize:12,color:'var(--mute)'}}>{l.user}</td>
+                <td style={{fontSize:12,fontFamily:'monospace',color:'var(--mute)',whiteSpace:'nowrap'}}>{l.ts}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function CMSSchema() {
+  return (
+    <div style={{maxWidth:760}}>
+      <div className="page-head">
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Schema Import / Export</h1><p>Import or export credential schemas, course templates, and data definitions.</p></div>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:20}}>
+        <div className="panel" style={{padding:24}}>
+          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Import Schema</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Upload a JSON or YAML credential schema file to use as a template for new courses.</div>
+          <div style={{border:'2px dashed var(--line)',borderRadius:10,padding:24,textAlign:'center',marginBottom:12,cursor:'pointer'}}>
+            <Icon n="import" size={24}/>
+            <div style={{fontSize:13,marginTop:8,color:'var(--mute)'}}>Drop JSON / YAML here</div>
+          </div>
+          <button className="btn btn-ghost btn-sm" style={{width:'100%',justifyContent:'center'}}>Browse Files</button>
+        </div>
+        <div className="panel" style={{padding:24}}>
+          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Export Schema</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Export current credential schemas and course data for backup or migration.</div>
+          {[['Credential Schema (JSON)','json'],['Course Data (CSV)','csv'],['All Platform Data (ZIP)','zip']].map(([label,fmt])=>(
+            <button key={fmt} className="btn btn-ghost btn-sm" style={{display:'flex',justifyContent:'space-between',width:'100%',marginBottom:8}}>
+              <span><Icon n="download" size={13}/> {label}</span>
+              <span style={{fontFamily:'monospace',fontSize:10,color:'var(--mute)'}}>.{fmt}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="panel" style={{padding:24}}>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>Current Credential Schema</div>
+        <pre style={{fontFamily:'monospace',fontSize:11,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,overflowX:'auto',color:'var(--ink-3)',lineHeight:1.7}}>{`{
+  "@context": ["https://www.w3.org/2018/credentials/v1"],
+  "type": ["VerifiableCredential", "MicrocredentialCertificate"],
+  "issuer": "https://credentials.m-cred.ch/bfh",
+  "credentialSubject": {
+    "id": "did:example:learner",
+    "achievement": {
+      "type": "Microcredential",
+      "name": "Digital Marketing Fundamentals",
+      "eqfLevel": 5,
+      "ects": 3,
+      "skills": ["SEO Basics", "Campaign Analytics"],
+      "outcomes": ["Understand digital marketing channels"]
+    }
+  }
+}`}</pre>
+      </div>
+    </div>
+  );
+}
+
+function CMSLog({ role, setCmsPage, setSelectedLogId }) {
+  const [search, setSearch] = useState('');
+  const [filterRole, setFilterRole] = useState('All');
+  const [filterType, setFilterType] = useState('All');
+  const [filterAction, setFilterAction] = useState('All');
+
+  // Role-based scope filtering
+  const scopeFilter = { lecturer:'lecturer', secretariat:'operational', admin:null, developer:null };
+  const allowedScope = scopeFilter[role];
+
+  const filtered = LOG_ENTRIES.filter(e => {
+    if (allowedScope && e.scope !== allowedScope && !(role==='secretariat'&&e.scope==='operational')) return false;
+    if (filterRole !== 'All' && e.role !== filterRole) return false;
+    if (filterType !== 'All' && e.objectType !== filterType) return false;
+    if (filterAction !== 'All' && !e.action.toLowerCase().includes(filterAction.toLowerCase())) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      return e.user.toLowerCase().includes(q) || e.objectName.toLowerCase().includes(q) || e.id.toLowerCase().includes(q) || e.action.toLowerCase().includes(q) || e.objectId.toLowerCase().includes(q);
+    }
+    return true;
+  });
+
+  const typeColors = { Credential:'credential', Course:'course', Student:'student', User:'user', Class:'class', Settings:'settings', 'Institution Profile':'institution-profile', Layout:'layout', Template:'template' };
+  const canExport = role === 'admin' || role === 'developer';
+  const showTechMeta = role === 'developer';
+
+  const objectTypes = ['All','Credential','Course','Class','Student','User','Template','Institution Profile','Layout','Settings'];
+  const actionGroups = ['All','Issued','Created','Edited','Revoked','Added','Changed','Approved','Invited'];
+
+  return (
+    <div>
+      <div className="page-head">
+        <div className="page-title-block">
+          <h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Log</h1>
+          <p>Immutable audit trail of all institutional actions in M-CRED.</p>
+        </div>
+        <div className="right">
+          {canExport && <>
+            <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export CSV</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="pdf" size={13}/> Export PDF</button>
+          </>}
+        </div>
+      </div>
+
+      <div className="log-immutable-notice">
+        <span className="notice-badge">Immutable</span>
+        <span>Log entries cannot be edited, deleted, or cleared. This record is permanent and tamper-evident.
+          {role==='lecturer'&&' You are viewing entries related to your assigned courses and students only.'}
+          {role==='secretariat'&&' You are viewing operational entries for courses, classes, students, and credentials.'}
+        </span>
+      </div>
+
+      {/* Filters */}
+      <div className="log-filter-row">
+        <div className="cms-search" style={{width:280,flexShrink:0}}>
+          <Icon n="eye" size={14}/>
+          <input placeholder="Search by user, student, action, ID…" value={search} onChange={e=>setSearch(e.target.value)}/>
+        </div>
+        {(role==='admin'||role==='developer')&&(
+          <select value={filterRole} onChange={e=>setFilterRole(e.target.value)}>
+            <option>All</option><option>Lecturer</option><option>Secretariat</option><option>Admin</option><option>Developer</option>
+          </select>
+        )}
+        <select value={filterType} onChange={e=>setFilterType(e.target.value)}>
+          {objectTypes.map(t=><option key={t}>{t}</option>)}
+        </select>
+        <select value={filterAction} onChange={e=>setFilterAction(e.target.value)}>
+          {actionGroups.map(a=><option key={a}>{a}</option>)}
+        </select>
+        <span style={{fontSize:12,color:'var(--mute)',marginLeft:'auto'}}>{filtered.length} entr{filtered.length===1?'y':'ies'}</span>
+      </div>
+
+      <div className="panel">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Action</th>
+              <th>Object Type</th>
+              <th>Object</th>
+              <th>Prev Value</th>
+              <th>New Value</th>
+              <th>Status</th>
+              {showTechMeta && <th>Session / IP</th>}
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.length === 0 && (
+              <tr><td colSpan={showTechMeta?11:10} style={{textAlign:'center',padding:'40px',color:'var(--mute)',fontSize:13}}>No log entries match your filters.</td></tr>
+            )}
+            {filtered.map(e=>(
+              <tr key={e.id} className="log-row" onClick={()=>{setSelectedLogId(e.id);setCmsPage('log-detail')}}>
+                <td style={{fontFamily:'monospace',fontSize:11,color:'var(--mute)',whiteSpace:'nowrap'}}>{e.ts}</td>
+                <td>
+                  <div style={{fontSize:13,fontWeight:500}}>{e.user}</div>
+                  <div style={{fontSize:11,color:'var(--mute)'}}>{e.email}</div>
+                </td>
+                <td><span className={`role-badge ${e.role.toLowerCase()}`}>{e.role}</span></td>
+                <td style={{fontSize:13,fontWeight:500,whiteSpace:'nowrap'}}>{e.action}</td>
+                <td><span className={`log-action-tag ${(typeColors[e.objectType]||'settings')}`}>{e.objectType}</span></td>
+                <td>
+                  <div style={{fontSize:12,fontWeight:500,maxWidth:180,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{e.objectName}</div>
+                  <div style={{fontSize:10,fontFamily:'monospace',color:'var(--mute)'}}>{e.objectId}</div>
+                </td>
+                <td className="log-val-cell">{e.prevValue ? (e.prevValue.length>30?e.prevValue.slice(0,30)+'…':e.prevValue) : <span style={{color:'var(--line)',fontFamily:'monospace'}}>—</span>}</td>
+                <td className="log-val-cell">{e.newValue ? (e.newValue.length>30?e.newValue.slice(0,30)+'…':e.newValue) : <span style={{color:'var(--line)',fontFamily:'monospace'}}>—</span>}</td>
+                <td><StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/></td>
+                {showTechMeta && <td style={{fontSize:10,fontFamily:'monospace',color:'var(--mute)'}}>{e.sessionId}<br/>{e.ip}</td>}
+                <td><button className="btn btn-ghost btn-sm" onClick={ev=>{ev.stopPropagation();setSelectedLogId(e.id);setCmsPage('log-detail');}}>Detail</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function CMSLogDetail({ logId, role, setCmsPage }) {
+  const e = LOG_ENTRIES.find(x=>x.id===logId) || LOG_ENTRIES[0];
+  const showTechMeta = role === 'developer';
+  const typeColors = { Credential:'credential', Course:'course', Student:'student', User:'user', Class:'class', Settings:'settings', 'Institution Profile':'institution-profile', Layout:'layout', Template:'template' };
+
+  return (
+    <div style={{maxWidth:800}}>
+      <div className="back-btn" onClick={()=>setCmsPage('log')}><Icon n="back" size={14}/> Back to Log</div>
+
+      <div style={{display:'flex',alignItems:'flex-start',justifyContent:'space-between',marginBottom:24,gap:20}}>
+        <div>
+          <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8,fontFamily:'monospace'}}>{e.id}</div>
+          <h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:36,letterSpacing:"-0.02em",margin:"0 0 6px",lineHeight:1}}>{e.action}</h1>
+          <div style={{display:'flex',alignItems:'center',gap:10}}>
+            <span className={`log-action-tag ${typeColors[e.objectType]||'settings'}`}>{e.objectType}</span>
+            <StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/>
+          </div>
+        </div>
+        <div className="log-immutable-notice" style={{margin:0,width:'auto',flexShrink:0}}>
+          <span className="notice-badge">Immutable</span>
+          <span style={{fontSize:11}}>Entry cannot be modified</span>
+        </div>
+      </div>
+
+      <div style={{display:'flex',flexDirection:'column',gap:16}}>
+
+        <div className="panel" style={{overflow:'visible'}}>
+          <div className="panel-head"><h3>Event Details</h3></div>
+          <div style={{padding:20}}>
+            <div className="log-detail-grid">
+              <div className="log-detail-field"><div className="ldf-label">Log ID</div><div className="ldf-value mono">{e.id}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Timestamp</div><div className="ldf-value mono">{e.ts}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Action</div><div className="ldf-value">{e.action}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Status</div><div className="ldf-value"><StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Object Type</div><div className="ldf-value"><span className={`log-action-tag ${typeColors[e.objectType]||'settings'}`}>{e.objectType}</span></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Object ID</div><div className="ldf-value mono">{e.objectId}</div></div>
+            </div>
+            <div className="log-detail-field" style={{marginTop:12}}>
+              <div className="ldf-label">Object Name</div>
+              <div className="ldf-value">{e.objectName}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="panel" style={{overflow:'visible'}}>
+          <div className="panel-head"><h3>Actor</h3></div>
+          <div style={{padding:20}}>
+            <div className="log-detail-grid">
+              <div className="log-detail-field"><div className="ldf-label">User Name</div><div className="ldf-value">{e.user}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">User Email</div><div className="ldf-value mono">{e.email}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Role</div><div className="ldf-value"><span className={`role-badge ${e.role.toLowerCase()}`}>{e.role}</span></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Scope</div><div className="ldf-value" style={{textTransform:'capitalize'}}>{e.scope}</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="panel" style={{overflow:'visible'}}>
+          <div className="panel-head"><h3>Change Record</h3></div>
+          <div style={{padding:20,display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
+            <div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>Previous Value</div>
+              <pre style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,margin:0,lineHeight:1.6,color:e.prevValue?'var(--ember)':'var(--mute)',whiteSpace:'pre-wrap',wordBreak:'break-word',minHeight:80}}>
+                {e.prevValue || '— (no previous value)'}
+              </pre>
+            </div>
+            <div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>New Value</div>
+              <pre style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,margin:0,lineHeight:1.6,color:e.newValue?'var(--sage)':'var(--mute)',whiteSpace:'pre-wrap',wordBreak:'break-word',minHeight:80}}>
+                {e.newValue || '—'}
+              </pre>
+            </div>
+          </div>
+          {e.reason && (
+            <div style={{padding:'0 20px 20px'}}>
+              <div className="log-detail-field">
+                <div className="ldf-label">Reason / Comment</div>
+                <div className="ldf-value">{e.reason}</div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {showTechMeta && (
+          <div className="panel" style={{overflow:'visible'}}>
+            <div className="panel-head"><h3>Technical Metadata <span className={`role-badge developer`} style={{marginLeft:8}}>Developer Only</span></h3></div>
+            <div style={{padding:20}}>
+              <div className="log-detail-grid">
+                <div className="log-detail-field"><div className="ldf-label">Session ID</div><div className="ldf-value mono">{e.sessionId}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">IP Address</div><div className="ldf-value mono">{e.ip}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">System Event ID</div><div className="ldf-value mono">EVT-{e.id.replace('LOG-','')}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">Platform Version</div><div className="ldf-value mono">v2.4.1</div></div>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
@@ -2405,6 +3350,7 @@ function App() {
   const [mode, setMode] = useState('public');
   const [publicPage, setPublicPage] = useState('landing');
   const [cmsPage, setCmsPage] = useState('dashboard');
+  const [cmsRole, setCmsRole] = useState('admin');
   const [walletPage, setWalletPage] = useState('dashboard');
   const [selectedCredId, setSelectedCredId] = useState(CREDENTIALS[0]?.id);
   const [selectedCourseId, setSelectedCourseId] = useState(COURSES[0]?.id);
@@ -2415,7 +3361,7 @@ function App() {
     <div>
       <ModeBar mode={mode} setMode={setMode} setCmsPage={setCmsPage} setWalletPage={setWalletPage} setPublicPage={setPublicPage}/>
       {mode==='public'&&<PublicSite publicPage={publicPage} setPublicPage={setPublicPage} setMode={setMode} setCmsPage={setCmsPage} setWalletPage={setWalletPage}/>}
-      {mode==='cms'&&<CMSApp cmsPage={cmsPage} setCmsPage={setCmsPage} setMode={setMode} setPublicPage={setPublicPage} setWalletPage={setWalletPage} selectedCredId={selectedCredId} setSelectedCredId={setSelectedCredId} selectedCourseId={selectedCourseId} setSelectedCourseId={setSelectedCourseId} selectedStudentId={selectedStudentId} setSelectedStudentId={setSelectedStudentId} selectedClassId={selectedClassId} setSelectedClassId={setSelectedClassId}/>}
+      {mode==='cms'&&<CMSApp cmsRole={cmsRole} setCmsRole={setCmsRole} cmsPage={cmsPage} setCmsPage={setCmsPage} setMode={setMode} setPublicPage={setPublicPage} setWalletPage={setWalletPage} selectedCredId={selectedCredId} setSelectedCredId={setSelectedCredId} selectedCourseId={selectedCourseId} setSelectedCourseId={setSelectedCourseId} selectedStudentId={selectedStudentId} setSelectedStudentId={setSelectedStudentId} selectedClassId={selectedClassId} setSelectedClassId={setSelectedClassId}/>}
       {mode==='wallet'&&<WalletApp walletPage={walletPage} setWalletPage={setWalletPage} setMode={setMode} setPublicPage={setPublicPage}/>}
     </div>
   );

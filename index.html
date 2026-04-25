@@ -1590,26 +1590,6 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
   );
 }
 
-      <div className="kpi-row">
-        <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
-        <div className="kpi"><div className="label">Active Courses</div><div className="value">4</div><div className="delta">↑ +1 this semester</div></div>
-        <div className="kpi"><div className="label">Enrolled Students</div><div className="value">115</div><div className="delta">↑ +18 this month</div></div>
-        <div className="kpi"><div className="label">Verifications (30d)</div><div className="value">37</div><div className="delta">↑ +12 vs last month</div></div>
-      </div>
-
-      <div className="dash-grid">
-        <div className="panel">
-          <div className="panel-head">
-            <h3>Recent Activity</h3>
-            <button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('credentials')}>View all</button>
-          </div>
-          <div className="panel-body">
-            {[
-              { av:'S', name:'Sarah Keller', msg:'Credential issued', cred:'Digital Marketing Fundamentals', time:'2 min ago' },
-              { av:'L', name:'Luca Meier', msg:'Credential issued', cred:'Digital Marketing Fundamentals', time:'2 min ago' },
-              { av:'T', name:'Tobias Weber', msg:'Credential issued', cred:'Digital Marketing Fundamentals', time:'2 min ago' },
-              { av:'N', name:'Noa Schneider', msg:'Credential issued', cred:'AI Literacy for Professionals', time:'3 days ago' },
-              { av:'A', name:'Amélie Dubois', msg:'Credential revoked', cred:'Sustainable Business Management', time:'5 days ago' },
 function CMSCourses({ role, setCmsPage, setSelectedCourseId, myOnly }) {
   const canCreate = role==='secretariat'||role==='admin'||role==='developer';
   const courses = myOnly ? COURSES.slice(0,2) : COURSES;
@@ -1647,7 +1627,9 @@ function CMSCourses({ role, setCmsPage, setSelectedCourseId, myOnly }) {
       </div>
     </div>
   );
-}({ courseId, setCmsPage }) {
+}
+
+function CMSCourseDetail({ courseId, setCmsPage }) {
   const c = COURSES.find(x=>x.id===courseId)||COURSES[0];
   const cls = CLASSES.filter(x=>x.course===c.id);
   return (

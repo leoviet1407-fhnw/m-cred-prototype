@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=1440"/>
-<title>M-CRED — Digital Credential Platform</title>
+<title>M-CRED — Nền tảng Chứng chỉ Số</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -852,7 +852,8 @@ function avatarColor(idx) { return ['#C8421E','#3C6E47','#B88A2B','#2563EB','#8B
 function StatusPill({ status }) {
   const map = { Issued:'pill-issued', Draft:'pill-draft', Revoked:'pill-revoked', Expired:'pill-expired', Valid:'pill-valid', Pending:'pill-pending', Active:'pill-active', Completed:'pill-completed', 'Not registered':'pill-draft' };
   const dot = { Issued:'#3C6E47', Draft:'#9AA0AA', Revoked:'#C8421E', Expired:'#B88A2B', Valid:'#3C6E47', Pending:'#2563EB', Active:'#3C6E47', Completed:'#fff', 'Not registered':'#9AA0AA' };
-  return <span className={`pill ${map[status]||'pill-draft'}`}><span className="pill-dot" style={{background:dot[status]||'#9AA0AA'}}></span>{status}</span>;
+  const displayNames = { Issued:'Đã cấp', Draft:'Bản nháp', Revoked:'Thu hồi', Expired:'Hết hạn', Valid:'Hợp lệ', Pending:'Chờ duyệt', Active:'Đang hoạt động', Completed:'Hoàn thành', 'Not registered':'Chưa đăng ký' };
+  return <span className={`pill ${map[status]||'pill-draft'}`}><span className="pill-dot" style={{background:dot[status]||'#9AA0AA'}}></span>{displayNames[status]||status}</span>;
 }
 
 function Icon({ n, size=16 }) {
@@ -960,11 +961,11 @@ function ModeBar({ mode, setMode, setCmsPage, setWalletPage, setPublicPage }) {
         <BrandLogo size={28} textColor="var(--paper)" textSize={16}/>
       </div>
       <div className="mode-tabs">
-        <button className={`mode-tab${mode==='public'?' active':''}`} onClick={()=>{setMode('public');setPublicPage('landing')}}>Public Site</button>
-        <button className={`mode-tab${mode==='cms'?' active':''}`} onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Institution CMS</button>
-        <button className={`mode-tab${mode==='wallet'?' active':''}`} onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}>Learner Wallet</button>
+        <button className={`mode-tab${mode==='public'?' active':''}`} onClick={()=>{setMode('public');setPublicPage('landing')}}>Trang công khai</button>
+        <button className={`mode-tab${mode==='cms'?' active':''}`} onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>CMS Tổ chức</button>
+        <button className={`mode-tab${mode==='wallet'?' active':''}`} onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}>Ví học viên</button>
       </div>
-      <div className="badge-demo">Interactive Demo</div>
+      <div className="badge-demo">Demo tương tác</div>
     </div>
   );
 }
@@ -993,13 +994,13 @@ function PublicHeader({ publicPage, setPublicPage, setMode, setCmsPage }) {
           <BrandLogo size={30} textColor="var(--ink)" textSize={18}/>
         </div>
         <div className="pub-nav">
-          <div className={`pub-nav-item${publicPage==='for-institutions'?' active':''}`} onClick={()=>setPublicPage('for-institutions')}>For Institutions</div>
-          <div className={`pub-nav-item${publicPage==='for-learners'?' active':''}`} onClick={()=>setPublicPage('for-learners')}>For Learners</div>
-          <div className={`pub-nav-item${publicPage==='verify'?' active':''}`} onClick={()=>setPublicPage('verify')}>Verify Credential</div>
+          <div className={`pub-nav-item${publicPage==='for-institutions'?' active':''}`} onClick={()=>setPublicPage('for-institutions')}>Dành cho Tổ chức</div>
+          <div className={`pub-nav-item${publicPage==='for-learners'?' active':''}`} onClick={()=>setPublicPage('for-learners')}>Dành cho Học viên</div>
+          <div className={`pub-nav-item${publicPage==='verify'?' active':''}`} onClick={()=>setPublicPage('verify')}>Xác minh Chứng chỉ</div>
         </div>
         <div style={{display:'flex',gap:10,alignItems:'center'}}>
-          <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Institution Login</button>
-          <button className="btn btn-ember btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Request Demo</button>
+          <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Đăng nhập Tổ chức</button>
+          <button className="btn btn-ember btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Yêu cầu Demo</button>
         </div>
       </div>
     </div>
@@ -1014,17 +1015,17 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
         <div className="hero">
           <div className="hero-grid">
             <div>
-              <div className="hero-eyebrow"><Icon n="shield" size={12}/> Trusted by Swiss Universities</div>
-              <h1>Issue. Store.<br/><em>Verify.</em></h1>
-              <p className="hero-lede">M-CRED is the digital credential infrastructure for trusted institutions. Issue verifiable microcredentials, give learners a lifelong wallet, and let employers verify in seconds — no account required.</p>
+              <div className="hero-eyebrow"><Icon n="shield" size={12}/> Được tin dùng bởi các trường đại học Thụy Sĩ</div>
+              <h1>Cấp phát. Lưu trữ.<br/><em>Xác minh.</em></h1>
+              <p className="hero-lede">M-CRED là hạ tầng chứng chỉ số cho các tổ chức uy tín. Cấp phát vi chứng chỉ có thể xác minh, trao cho học viên ví suốt đời, và cho phép nhà tuyển dụng xác minh trong vài giây — không cần tài khoản.</p>
               <div className="hero-ctas">
-                <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}><Icon n="arrow" size={14}/> Open Institution CMS</button>
-                <button className="btn btn-ghost btn-lg" onClick={()=>setPublicPage('verify')}><Icon n="verify" size={14}/> Verify a Credential</button>
+                <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}><Icon n="arrow" size={14}/> Mở CMS Tổ chức</button>
+                <button className="btn btn-ghost btn-lg" onClick={()=>setPublicPage('verify')}><Icon n="verify" size={14}/> Xác minh Chứng chỉ</button>
               </div>
               <div className="hero-stats">
-                <div className="hero-stat"><span className="n">12,400+</span><span className="l">Credentials Issued</span></div>
-                <div className="hero-stat"><span className="n">48</span><span className="l">Partner Institutions</span></div>
-                <div className="hero-stat"><span className="n">99.8%</span><span className="l">Uptime</span></div>
+                <div className="hero-stat"><span className="n">12.400+</span><span className="l">Chứng chỉ đã cấp</span></div>
+                <div className="hero-stat"><span className="n">48</span><span className="l">Đối tác</span></div>
+                <div className="hero-stat"><span className="n">99,8%</span><span className="l">Thời gian hoạt động</span></div>
               </div>
             </div>
             <div className="hero-art">
@@ -1033,22 +1034,22 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
                   <div className="issuer-seal">B</div>
                   <div>
                     <div className="issuer-name">Bern University of Applied Sciences</div>
-                    <div style={{fontSize:10,color:'var(--mute)',letterSpacing:'.08em',textTransform:'uppercase',marginTop:2}}>Official Microcredential</div>
+                    <div style={{fontSize:10,color:'var(--mute)',letterSpacing:'.08em',textTransform:'uppercase',marginTop:2}}>Vi chứng chỉ chính thức</div>
                   </div>
                 </div>
                 <h4>Digital Marketing Fundamentals</h4>
-                <div className="student-name">Awarded to Sarah Keller</div>
+                <div className="student-name">Trao cho Sarah Keller</div>
                 <div className="tags">
                   {['SEO Basics','Campaign Analytics','Content Strategy','Paid Media'].map(t=><div key={t} className="tag">{t}</div>)}
                 </div>
                 <div className="cred-footer">
                   <span className="cred-id-text">MCRED-BFH-2026-00482</span>
-                  <span className="verify-mini"><Icon n="verify" size={12}/> Verified</span>
+                  <span className="verify-mini"><Icon n="verify" size={12}/> Đã xác minh</span>
                 </div>
               </div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
-                <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}} style={{justifyContent:'center'}}><Icon n="wallet" size={13}/> Open Wallet</button>
-                <button className="btn btn-ghost btn-sm" onClick={()=>setPublicPage('verify')} style={{justifyContent:'center'}}><Icon n="qr" size={13}/> Verify</button>
+                <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}} style={{justifyContent:'center'}}><Icon n="wallet" size={13}/> Mở Ví</button>
+                <button className="btn btn-ghost btn-sm" onClick={()=>setPublicPage('verify')} style={{justifyContent:'center'}}><Icon n="qr" size={13}/> Xác minh</button>
               </div>
             </div>
           </div>
@@ -1057,7 +1058,7 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
 
       {/* Trust band */}
       <div className="trust-band">
-        <div className="trust-label">Trusted by leading Swiss institutions</div>
+        <div className="trust-label">Được tin dùng bởi các tổ chức hàng đầu Thụy Sĩ</div>
         <div className="logo-row">
           {[['BFH','Bern University of Applied Sciences'],['ZHAW','Zurich UAS'],['FHNW','Fachhochschule NW-CH'],['HES-SO','HES Western Switzerland'],['OST','OST Eastern Switzerland']].map(([abbr,name])=>(
             <div key={abbr} className="logo-cell">{abbr}<span className="sub">{name}</span></div>
@@ -1067,29 +1068,29 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
 
       {/* How it works */}
       <div className="how-section">
-        <div className="section-eyebrow">How it works</div>
-        <div className="section-title">One platform.<br/>Three journeys.</div>
+        <div className="section-eyebrow">Cách thức hoạt động</div>
+        <div className="section-title">Một nền tảng.<br/>Ba hành trình.</div>
         <div className="how-grid">
           <div className="how-step">
-            <div className="step-num"><div className="n">1</div> Institutions</div>
+            <div className="step-num"><div className="n">1</div> Tổ chức</div>
             <div className="step-icon"><Icon n="award" size={24}/></div>
-            <h3>Issue credentials</h3>
-            <p>Create courses and classes, manage students, and issue verifiable digital credentials with one click. Each credential gets a unique ID, QR code, and verification link.</p>
-            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}><Icon n="arrow" size={12}/> Open CMS</button></div>
+            <h3>Cấp phát chứng chỉ</h3>
+            <p>Tạo khóa học và lớp học, quản lý học viên, và cấp phát chứng chỉ số có thể xác minh chỉ với một cú nhấp. Mỗi chứng chỉ có ID duy nhất, mã QR và liên kết xác minh.</p>
+            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}><Icon n="arrow" size={12}/> Mở CMS</button></div>
           </div>
           <div className="how-step">
-            <div className="step-num"><div className="n">2</div> Learners</div>
+            <div className="step-num"><div className="n">2</div> Học viên</div>
             <div className="step-icon"><Icon n="wallet" size={24}/></div>
-            <h3>Store & share</h3>
-            <p>Learners receive credentials in their lifelong digital wallet. Share by link, QR code, Certificate PDF, or add directly to LinkedIn — no account needed to view.</p>
-            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>{setMode('wallet')}}><Icon n="arrow" size={12}/> Open Wallet</button></div>
+            <h3>Lưu trữ & chia sẻ</h3>
+            <p>Học viên nhận chứng chỉ vào ví số suốt đời. Chia sẻ qua liên kết, mã QR, PDF Chứng chỉ, hoặc thêm thẳng vào LinkedIn — không cần tài khoản để xem.</p>
+            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>{setMode('wallet')}}><Icon n="arrow" size={12}/> Mở Ví</button></div>
           </div>
           <div className="how-step">
-            <div className="step-num"><div className="n">3</div> Employers</div>
+            <div className="step-num"><div className="n">3</div> Nhà tuyển dụng</div>
             <div className="step-icon"><Icon n="verify" size={24}/></div>
-            <h3>Verify instantly</h3>
-            <p>Enter a Credential ID or scan a QR code to verify any credential in seconds. See issuer, learner, status, skills, and expiry — no account required.</p>
-            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>setPublicPage('verify')}><Icon n="arrow" size={12}/> Verify Now</button></div>
+            <h3>Xác minh tức thì</h3>
+            <p>Nhập ID chứng chỉ hoặc quét mã QR để xác minh bất kỳ chứng chỉ nào trong vài giây. Xem tổ chức cấp, học viên, trạng thái, kỹ năng và ngày hết hạn — không cần tài khoản.</p>
+            <div style={{marginTop:20}}><button className="btn btn-ghost btn-sm" onClick={()=>setPublicPage('verify')}><Icon n="arrow" size={12}/> Xác minh ngay</button></div>
           </div>
         </div>
       </div>
@@ -1098,12 +1099,12 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
       <div style={{background:'var(--ink)',padding:'80px 48px',color:'var(--paper)'}}>
         <div style={{maxWidth:1280,margin:'0 auto',display:'grid',gridTemplateColumns:'1.2fr auto',gap:48,alignItems:'center'}}>
           <div>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.14em',textTransform:'uppercase',color:'rgba(246,243,236,.45)',marginBottom:16}}>Ready to start?</div>
-            <div style={{fontSize:52,fontWeight:800,letterSpacing:'-0.03em',lineHeight:1.05}}>Issue your first<br/>credential today.</div>
+            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.14em',textTransform:'uppercase',color:'rgba(246,243,236,.45)',marginBottom:16}}>Sẵn sàng bắt đầu?</div>
+            <div style={{fontSize:52,fontWeight:800,letterSpacing:'-0.03em',lineHeight:1.05}}>Cấp phát chứng chỉ<br/>đầu tiên ngay hôm nay.</div>
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:12,alignItems:'flex-end'}}>
-            <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Request Demo <Icon n="arrow" size={14}/></button>
-            <button className="btn" style={{background:'rgba(246,243,236,.08)',color:'var(--paper)',border:'1px solid rgba(246,243,236,.15)'}} onClick={()=>setPublicPage('for-institutions')}>Learn more</button>
+            <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Yêu cầu Demo <Icon n="arrow" size={14}/></button>
+            <button className="btn" style={{background:'rgba(246,243,236,.08)',color:'var(--paper)',border:'1px solid rgba(246,243,236,.15)'}} onClick={()=>setPublicPage('for-institutions')}>Tìm hiểu thêm</button>
           </div>
         </div>
       </div>
@@ -1111,10 +1112,10 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
       {/* Footer */}
       <footer style={{background:'var(--ink-2)',padding:'48px',color:'rgba(246,243,236,.5)',fontSize:13,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
         <BrandLogo size={26} textColor="var(--paper)" textSize={15}/>
-        <div>© 2026 M-CRED. Digital credential infrastructure for Swiss institutions.</div>
+        <div>© 2026 M-CRED. Hạ tầng chứng chỉ số cho các tổ chức Thụy Sĩ.</div>
         <div style={{display:'flex',gap:20}}>
-          <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--paper)'} onMouseLeave={e=>e.target.style.color=''}>Privacy</span>
-          <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--paper)'} onMouseLeave={e=>e.target.style.color=''}>Terms</span>
+          <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--paper)'} onMouseLeave={e=>e.target.style.color=''}>Quyền riêng tư</span>
+          <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--paper)'} onMouseLeave={e=>e.target.style.color=''}>Điều khoản</span>
           <span style={{cursor:'pointer',transition:'color .15s'}} onMouseEnter={e=>e.target.style.color='var(--ember)'} onMouseLeave={e=>e.target.style.color=''}>contact@m-cred.ch</span>
         </div>
       </footer>
@@ -1125,17 +1126,17 @@ function LandingPage({ setMode, setCmsPage, setPublicPage, setWalletPage }) {
 function ForInstitutions({ setMode, setCmsPage }) {
   return (
     <div style={{maxWidth:1280,margin:'0 auto',padding:'80px 48px'}}>
-      <div className="section-eyebrow">For Institutions</div>
-      <h1 style={{fontSize:56,fontWeight:800,letterSpacing:'-0.03em',marginBottom:20,lineHeight:1.05}}>Everything you need to<br/>issue verified credentials.</h1>
-      <p style={{fontSize:18,color:'var(--mute)',maxWidth:600,marginBottom:56,lineHeight:1.6}}>M-CRED gives your institution a complete credential lifecycle platform — from course creation to verification tracking.</p>
+      <div className="section-eyebrow">Dành cho Tổ chức</div>
+      <h1 style={{fontSize:56,fontWeight:800,letterSpacing:'-0.03em',marginBottom:20,lineHeight:1.05}}>Tất cả những gì bạn cần để<br/>cấp phát chứng chỉ đã xác minh.</h1>
+      <p style={{fontSize:18,color:'var(--mute)',maxWidth:600,marginBottom:56,lineHeight:1.6}}>M-CRED cung cấp cho tổ chức của bạn một nền tảng quản lý vòng đời chứng chỉ hoàn chỉnh — từ tạo khóa học đến theo dõi xác minh.</p>
       <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20,marginBottom:56}}>
         {[
-          ['Create Courses & Classes','Define learning outcomes, skills, EQF level, ECTS, language, and assessment criteria for every course.','book'],
-          ['Issue in One Click','Complete a 6-step wizard to select students, choose a template, preview, and issue credentials instantly.','award'],
-          ['Manage Credentials','View, copy verification links, download Certificate PDFs, revoke, correct, or reissue from one dashboard.','grid'],
-          ['Custom Branding','Upload your institution logo, configure email templates, and customise credential certificate layouts.','palette'],
-          ['Verification Tracking','See who verified each credential, when, and from where. Full audit trail for compliance.','eye'],
-          ['LinkedIn Integration','Learners can add credentials directly to their LinkedIn profile with one click.','linkedin'],
+          ['Tạo Khóa học & Lớp học','Xác định kết quả học tập, kỹ năng, cấp EQF, ECTS, ngôn ngữ và tiêu chí đánh giá cho từng khóa học.','book'],
+          ['Cấp phát chỉ một cú nhấp','Hoàn thành trình hướng dẫn 6 bước để chọn học viên, chọn mẫu, xem trước và cấp phát chứng chỉ ngay lập tức.','award'],
+          ['Quản lý Chứng chỉ','Xem, sao chép liên kết xác minh, tải PDF Chứng chỉ, thu hồi, chỉnh sửa hoặc tái cấp phát từ một bảng điều khiển.','grid'],
+          ['Thương hiệu tùy chỉnh','Tải lên logo tổ chức, cấu hình mẫu email và tùy chỉnh bố cục chứng chỉ.','palette'],
+          ['Theo dõi Xác minh','Xem ai đã xác minh từng chứng chỉ, khi nào và từ đâu. Nhật ký kiểm toán đầy đủ để tuân thủ.','eye'],
+          ['Tích hợp LinkedIn','Học viên có thể thêm chứng chỉ trực tiếp vào hồ sơ LinkedIn chỉ với một cú nhấp.','linkedin'],
         ].map(([t,d,ic])=>(
           <div key={t} className="panel" style={{padding:24}}>
             <div style={{width:44,height:44,borderRadius:11,background:'var(--ember-soft)',display:'grid',placeItems:'center',color:'var(--ember)',marginBottom:16}}><Icon n={ic} size={20}/></div>
@@ -1144,7 +1145,7 @@ function ForInstitutions({ setMode, setCmsPage }) {
           </div>
         ))}
       </div>
-      <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Open Institution CMS <Icon n="arrow" size={14}/></button>
+      <button className="btn btn-ember btn-lg" onClick={()=>{setMode('cms');setCmsPage('dashboard')}}>Mở CMS Tổ chức <Icon n="arrow" size={14}/></button>
     </div>
   );
 }
@@ -1152,15 +1153,15 @@ function ForInstitutions({ setMode, setCmsPage }) {
 function ForLearners({ setMode, setWalletPage }) {
   return (
     <div style={{maxWidth:1280,margin:'0 auto',padding:'80px 48px'}}>
-      <div className="section-eyebrow">For Learners</div>
-      <h1 style={{fontSize:56,fontWeight:800,letterSpacing:'-0.03em',marginBottom:20,lineHeight:1.05}}>Your credentials.<br/>Yours for life.</h1>
-      <p style={{fontSize:18,color:'var(--mute)',maxWidth:600,marginBottom:56,lineHeight:1.6}}>Receive credentials from trusted institutions, store them in your digital wallet, and share them anywhere — instantly and permanently.</p>
+      <div className="section-eyebrow">Dành cho Học viên</div>
+      <h1 style={{fontSize:56,fontWeight:800,letterSpacing:'-0.03em',marginBottom:20,lineHeight:1.05}}>Chứng chỉ của bạn.<br/>Của bạn suốt đời.</h1>
+      <p style={{fontSize:18,color:'var(--mute)',maxWidth:600,marginBottom:56,lineHeight:1.6}}>Nhận chứng chỉ từ các tổ chức uy tín, lưu trữ trong ví số và chia sẻ bất cứ đâu — tức thì và lâu dài.</p>
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:20,marginBottom:56}}>
         {[
-          ['Lifelong Digital Wallet','All your credentials in one secure place. Access them from any device, anytime.','wallet'],
-          ['Share Everywhere','Share by QR code, public verification link, Certificate PDF, or add to LinkedIn in one tap.','share'],
-          ['Download Certificate PDFs','Get a beautifully formatted Certificate PDF for any credential — great for printed applications.','pdf'],
-          ['Verifiable by Anyone','Employers and institutions can verify your credentials instantly — no account needed.','verify'],
+          ['Ví Số Suốt Đời','Tất cả chứng chỉ của bạn ở một nơi an toàn. Truy cập từ bất kỳ thiết bị nào, bất cứ lúc nào.','wallet'],
+          ['Chia sẻ Khắp Nơi','Chia sẻ bằng mã QR, liên kết xác minh công khai, PDF Chứng chỉ hoặc thêm vào LinkedIn chỉ một chạm.','share'],
+          ['Tải PDF Chứng chỉ','Nhận PDF Chứng chỉ được định dạng đẹp cho bất kỳ chứng chỉ nào — lý tưởng cho hồ sơ in.','pdf'],
+          ['Bất kỳ ai cũng có thể Xác minh','Nhà tuyển dụng và tổ chức có thể xác minh chứng chỉ của bạn ngay lập tức — không cần tài khoản.','verify'],
         ].map(([t,d,ic])=>(
           <div key={t} className="panel" style={{padding:24,display:'flex',gap:16}}>
             <div style={{width:44,height:44,borderRadius:11,background:'var(--sage-soft)',display:'grid',placeItems:'center',color:'var(--sage)',flexShrink:0}}><Icon n={ic} size={20}/></div>
@@ -1171,7 +1172,7 @@ function ForLearners({ setMode, setWalletPage }) {
           </div>
         ))}
       </div>
-      <button className="btn btn-ember btn-lg" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}>Open My Wallet <Icon n="arrow" size={14}/></button>
+      <button className="btn btn-ember btn-lg" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}>Mở Ví của tôi <Icon n="arrow" size={14}/></button>
     </div>
   );
 }
@@ -1186,18 +1187,18 @@ function VerifyPage({ setPublicPage }) {
       <div className="verify-page">
         <div style={{textAlign:'center',marginBottom:40}}>
           <div style={{width:64,height:64,borderRadius:'50%',background:'var(--sage)',display:'grid',placeItems:'center',margin:'0 auto 20px',color:'#fff'}}><Icon n="verify" size={28}/></div>
-          <h1>Verify a Credential</h1>
-          <p>Enter a Credential ID or scan a QR code to verify any M-CRED credential. No account required.</p>
+          <h1>Xác minh Chứng chỉ</h1>
+          <p>Nhập ID Chứng chỉ hoặc quét mã QR để xác minh bất kỳ chứng chỉ M-CRED nào. Không cần tài khoản.</p>
         </div>
         <div className="verify-input-group">
-          <input placeholder="Enter Credential ID (e.g. MCRED-BFH-2026-00482)" value={val} onChange={e=>setVal(e.target.value)} onKeyDown={e=>e.key==='Enter'&&handleVerify()}/>
-          <button className="vbtn" onClick={handleVerify}>Verify</button>
+          <input placeholder="Nhập ID Chứng chỉ (vd: MCRED-BFH-2026-00482)" value={val} onChange={e=>setVal(e.target.value)} onKeyDown={e=>e.key==='Enter'&&handleVerify()}/>
+          <button className="vbtn" onClick={handleVerify}>Xác minh</button>
         </div>
-        <p className="verify-hint">Don't have a Credential ID? <span onClick={()=>{setVal('MCRED-BFH-2026-00482');setTimeout(()=>setPublicPage('verify-result'),300)}}>Use demo credential</span></p>
+        <p className="verify-hint">Chưa có ID Chứng chỉ? <span onClick={()=>{setVal('MCRED-BFH-2026-00482');setTimeout(()=>setPublicPage('verify-result'),300)}}>Dùng chứng chỉ demo</span></p>
         <div style={{marginTop:40,textAlign:'center'}}>
-          <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:16}}>Or scan a QR code</div>
+          <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:16}}>Hoặc quét mã QR</div>
           <div style={{display:'inline-block',padding:16,background:'var(--white)',border:'1px solid var(--line)',borderRadius:16}}><QRCode size={120}/></div>
-          <div style={{fontSize:12,color:'var(--mute)',marginTop:12}}>Point your camera at the QR code from a credential certificate</div>
+          <div style={{fontSize:12,color:'var(--mute)',marginTop:12}}>Hướng camera vào mã QR từ chứng chỉ</div>
         </div>
       </div>
     </div>

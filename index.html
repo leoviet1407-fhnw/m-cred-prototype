@@ -1211,16 +1211,16 @@ function VerificationResult({ setMode, setCmsPage, setWalletPage }) {
     <div style={{background:'var(--paper-2)',minHeight:'calc(100vh - 108px)',padding:'40px 0'}}>
       <div className="vr-page">
         <div className="back-btn" onClick={()=>{}}>
-          <Icon n="back" size={14}/> Back to verification
+          <Icon n="back" size={14}/> Quay lại xác minh
         </div>
         <div className="vr-status-bar valid">
           <div className="vr-status-icon valid"><Icon n="check" size={22}/></div>
           <div>
-            <div className="vr-status-title">Credential Valid</div>
-            <div className="vr-status-sub">This credential is authentic and was issued by a verified institution.</div>
+            <div className="vr-status-title">Chứng chỉ Hợp lệ</div>
+            <div className="vr-status-sub">Chứng chỉ này là xác thực và được cấp bởi một tổ chức đã xác minh.</div>
           </div>
           <div style={{marginLeft:'auto',fontSize:11,color:'var(--sage)',fontWeight:600}}>
-            <div style={{fontSize:10,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:4}}>Verified</div>
+            <div style={{fontSize:10,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:4}}>Đã xác minh</div>
             25 Apr 2026, 11:42
           </div>
         </div>
@@ -1234,37 +1234,37 @@ function VerificationResult({ setMode, setCmsPage, setWalletPage }) {
               </div>
             </div>
             <div className="vr-cred-title">{cred.title}</div>
-            <div style={{fontSize:16,color:'var(--mute)',marginBottom:20}}>Awarded to <strong style={{color:'var(--ink)'}}>{cred.student}</strong></div>
+            <div style={{fontSize:16,color:'var(--mute)',marginBottom:20}}>Trao cho <strong style={{color:'var(--ink)'}}>{cred.student}</strong></div>
             <StatusPill status="Valid"/>
           </div>
           <div className="vr-card-body">
             <div className="vr-grid">
-              <div className="vr-field"><div className="l">Credential ID</div><div className="v mono">{cred.id}</div></div>
-              <div className="vr-field"><div className="l">Issue Date</div><div className="v">{cred.issued}</div></div>
-              <div className="vr-field"><div className="l">Expiry Date</div><div className="v">{cred.expiry}</div></div>
-              <div className="vr-field"><div className="l">EQF Level</div><div className="v">{cred.eqf}</div></div>
-              <div className="vr-field"><div className="l">ECTS Credits</div><div className="v">{cred.ects}</div></div>
-              <div className="vr-field"><div className="l">Issuing Institution</div><div className="v">{cred.institution}</div></div>
+              <div className="vr-field"><div className="l">ID Chứng chỉ</div><div className="v mono">{cred.id}</div></div>
+              <div className="vr-field"><div className="l">Ngày cấp</div><div className="v">{cred.issued}</div></div>
+              <div className="vr-field"><div className="l">Ngày hết hạn</div><div className="v">{cred.expiry}</div></div>
+              <div className="vr-field"><div className="l">Cấp độ EQF</div><div className="v">{cred.eqf}</div></div>
+              <div className="vr-field"><div className="l">Tín chỉ ECTS</div><div className="v">{cred.ects}</div></div>
+              <div className="vr-field"><div className="l">Tổ chức cấp phát</div><div className="v">{cred.institution}</div></div>
             </div>
             <div className="divider"/>
             <div style={{marginBottom:16}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:10}}>Skills & Competencies</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:10}}>Kỹ năng & Năng lực</div>
               <div className="vr-skills">{cred.skills.map(s=><div key={s} className="skill-tag">{s}</div>)}</div>
             </div>
             <div>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:10}}>Learning Outcomes</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:10}}>Kết quả học tập</div>
               <div className="vr-outcomes">{cred.outcomes.map(o=><div key={o} className="vr-outcome">{o}</div>)}</div>
             </div>
           </div>
           <div className="vr-trust">
-            <strong>How to trust this credential:</strong> This credential was issued by Bern University of Applied Sciences through the M-CRED platform. The unique Credential ID <strong>{cred.id}</strong> can be independently verified at any time. The credential status above reflects its current standing.
+            <strong>Cách tin tưởng chứng chỉ này:</strong> Chứng chỉ này được cấp bởi Bern University of Applied Sciences thông qua nền tảng M-CRED. ID Chứng chỉ duy nhất <strong>{cred.id}</strong> có thể được xác minh độc lập bất cứ lúc nào. Trạng thái chứng chỉ ở trên phản ánh tình trạng hiện tại.
           </div>
         </div>
 
         <div style={{display:'flex',gap:12,marginTop:20}}>
-          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Download Certificate PDF</button>
-          <button className="btn btn-ghost btn-sm"><Icon n="copy" size={13}/> Copy Verification Link</button>
-          <button className="btn btn-ember btn-sm" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}><Icon n="wallet" size={13}/> Open in Wallet</button>
+          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Tải PDF Chứng chỉ</button>
+          <button className="btn btn-ghost btn-sm"><Icon n="copy" size={13}/> Sao chép liên kết xác minh</button>
+          <button className="btn btn-ember btn-sm" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}><Icon n="wallet" size={13}/> Mở trong Ví</button>
         </div>
       </div>
     </div>
@@ -1277,10 +1277,10 @@ function VerificationResult({ setMode, setCmsPage, setWalletPage }) {
 function RoleBanner({ role }) {
   const cfg = ROLE_CONFIG[role];
   const desc = {
-    lecturer:'You can view your assigned courses and classes, enter scores, and view credentials issued from your classes.',
-    secretariat:'You can manage courses, classes, students, and issue credentials. You cannot edit institution settings.',
-    admin:'You have full institution management access including user roles, approvals, design, and settings.',
-    developer:'Full platform access including all pages, system logs, integrations, and schema tools.',
+    lecturer:'Bạn có thể xem các khóa học và lớp học được phân công, nhập điểm số và xem chứng chỉ được cấp từ lớp học của mình.',
+    secretariat:'Bạn có thể quản lý khóa học, lớp học, học viên và cấp phát chứng chỉ. Bạn không thể chỉnh sửa cài đặt tổ chức.',
+    admin:'Bạn có toàn quyền quản lý tổ chức bao gồm vai trò người dùng, phê duyệt, thiết kế và cài đặt.',
+    developer:'Toàn quyền truy cập nền tảng bao gồm tất cả trang, nhật ký hệ thống, tích hợp và công cụ schema.',
   };
   return (
     <div className={`role-banner ${role}`}>
@@ -1310,7 +1310,7 @@ function CMSApp({ cmsRole, setCmsRole, cmsPage, setCmsPage, setMode, setPublicPa
   const cfg = ROLE_CONFIG[cmsRole];
   const [selectedLogId, setSelectedLogId] = useState(LOG_ENTRIES[0]?.id);
 
-  const crumbMap = { dashboard:'Dashboard', courses:'Courses', 'my-courses':'My Courses', 'course-proposals':'Course Proposals', 'course-approvals':'Course Approvals', 'course-detail':'Course Detail', 'create-course':'Create Course', classes:'Classes', 'my-classes':'My Classes', 'class-detail':'Class Detail', 'create-class':'Create Class', students:'Students', 'student-detail':'Student Detail', 'issue-credential':'Issue Credential', 'issue-success':'Issue Success', credentials:'All Credentials', 'credential-detail':'Credential Detail', profile:'Institution Profile', design:'Design', layout:'Certificate Layout', settings:'Settings', faq:'FAQ', 'users-roles':'Users & Roles', scores:'Scores / Completion', 'import-students':'Import Students', integrations:'Integrations', 'system-logs':'System Logs', schema:'Schema Import / Export', 'dev-public':'Public Website', 'dev-wallet':'Learner Wallet', log:'Log', 'log-detail':'Log Entry' };
+  const crumbMap = { dashboard:'Bảng điều khiển', courses:'Khóa học', 'my-courses':'Khóa học của tôi', 'course-proposals':'Đề xuất khóa học', 'course-approvals':'Phê duyệt khóa học', 'course-detail':'Chi tiết khóa học', 'create-course':'Tạo khóa học', classes:'Lớp học', 'my-classes':'Lớp học của tôi', 'class-detail':'Chi tiết lớp học', 'create-class':'Tạo lớp học', students:'Học viên', 'student-detail':'Chi tiết học viên', 'issue-credential':'Cấp phát Chứng chỉ', 'issue-success':'Cấp phát thành công', credentials:'Tất cả Chứng chỉ', 'credential-detail':'Chi tiết Chứng chỉ', profile:'Hồ sơ Tổ chức', design:'Thiết kế', layout:'Bố cục Chứng chỉ', settings:'Cài đặt', faq:'FAQ', 'users-roles':'Người dùng & Vai trò', scores:'Điểm số / Hoàn thành', 'import-students':'Nhập Học viên', integrations:'Tích hợp', 'system-logs':'Nhật ký Hệ thống', schema:'Nhập / Xuất Schema', 'dev-public':'Trang công khai', 'dev-wallet':'Ví học viên', log:'Nhật ký', 'log-detail':'Chi tiết Nhật ký' };
 
   function handleNav(id) {
     if (id === 'dev-public') { setMode('public'); setPublicPage('landing'); return; }
@@ -1341,7 +1341,7 @@ function CMSApp({ cmsRole, setCmsRole, cmsPage, setCmsPage, setMode, setPublicPa
         </div>
         <div className="cms-foot">
           <span>BFH · v2.4.1</span>
-          <button style={{color:'rgba(246,243,236,.4)',fontSize:10,letterSpacing:'.1em',textTransform:'uppercase'}} onClick={()=>setMode('public')}>← Public Site</button>
+          <button style={{color:'rgba(246,243,236,.4)',fontSize:10,letterSpacing:'.1em',textTransform:'uppercase'}} onClick={()=>setMode('public')}>← Trang công khai</button>
         </div>
       </div>
 
@@ -1354,18 +1354,18 @@ function CMSApp({ cmsRole, setCmsRole, cmsPage, setCmsPage, setMode, setPublicPa
           <div className="right">
             <div className="cms-search">
               <Icon n="eye" size={14}/>
-              <input placeholder="Search…"/>
+              <input placeholder="Tìm kiếm…"/>
             </div>
             <div className="role-switcher">
               <Icon n="users" size={13}/>
               <select value={cmsRole} onChange={e=>{setCmsRole(e.target.value);setCmsPage('dashboard')}}>
-                <option value="lecturer">Lecturer View</option>
-                <option value="secretariat">Secretariat View</option>
-                <option value="admin">Admin View</option>
-                <option value="developer">Developer View</option>
+                <option value="lecturer">Chế độ Giảng viên</option>
+                <option value="secretariat">Chế độ Ban thư ký</option>
+                <option value="admin">Chế độ Quản trị viên</option>
+                <option value="developer">Chế độ Nhà phát triển</option>
               </select>
             </div>
-            {(cmsRole==='secretariat'||cmsRole==='developer')&&<button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={13}/> Issue Credential</button>}
+            {(cmsRole==='secretariat'||cmsRole==='developer')&&<button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={13}/> Cấp phát Chứng chỉ</button>}
             <div style={{width:36,height:36,borderRadius:'50%',background:`linear-gradient(135deg,${cfg.color},${cfg.color}99)`,display:'grid',placeItems:'center',fontSize:15,fontWeight:600,color:'#fff',cursor:'pointer',flexShrink:0}}>{cfg.initial}</div>
           </div>
         </div>
@@ -1417,14 +1417,14 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
       <div>
         <RoleBanner role={role}/>
         <div className="kpi-row">
-          <div className="kpi"><div className="label">My Courses</div><div className="value">2</div><div className="delta">This semester</div></div>
-          <div className="kpi"><div className="label">My Classes</div><div className="value">3</div><div className="delta">Active</div></div>
-          <div className="kpi"><div className="label">Students</div><div className="value">24</div><div className="delta">Across all classes</div></div>
-          <div className="kpi"><div className="label">Scores Pending</div><div className="value">2</div><div className="delta neg">Need entry</div></div>
+          <div className="kpi"><div className="label">Khóa học của tôi</div><div className="value">2</div><div className="delta">Học kỳ này</div></div>
+          <div className="kpi"><div className="label">Lớp học của tôi</div><div className="value">3</div><div className="delta">Đang hoạt động</div></div>
+          <div className="kpi"><div className="label">Học viên</div><div className="value">24</div><div className="delta">Trên tất cả lớp học</div></div>
+          <div className="kpi"><div className="label">Điểm chờ nhập</div><div className="value">2</div><div className="delta neg">Cần nhập</div></div>
         </div>
         <div className="dash-grid">
           <div className="panel">
-            <div className="panel-head"><h3>Scores to Enter</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('scores')}>Open Scores</button></div>
+            <div className="panel-head"><h3>Điểm cần nhập</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('scores')}>Mở Điểm số</button></div>
             <div className="panel-body">
               {SCORES.filter(s=>!s.readyForCredential).map((s,i)=>(
                 <div key={i} className="activity-row">
@@ -1437,15 +1437,15 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             <div className="panel" style={{padding:20}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Thao tác nhanh</div>
               <div style={{display:'flex',flexDirection:'column',gap:8}}>
-                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('scores')}><Icon n="star" size={14}/> Enter Scores / Completion</button>
-                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Propose New Course</button>
-                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('my-classes')}><Icon n="classes" size={14}/> View My Classes</button>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('scores')}><Icon n="star" size={14}/> Nhập Điểm số / Hoàn thành</button>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Đề xuất Khóa học mới</button>
+                <button className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage('my-classes')}><Icon n="classes" size={14}/> Xem Lớp học của tôi</button>
               </div>
             </div>
-            <DisabledAction icon="award" label="Issue Credential" reason="Only Secretariat and above can issue credentials. Mark students as completed first, then notify the Secretariat."/>
-            <DisabledAction icon="settings" label="Institution Settings" reason="Only Admins can modify institution settings."/>
+            <DisabledAction icon="award" label="Cấp phát Chứng chỉ" reason="Chỉ Ban thư ký trở lên mới có thể cấp phát chứng chỉ. Đánh dấu học viên là đã hoàn thành trước, sau đó thông báo cho Ban thư ký."/>
+            <DisabledAction icon="settings" label="Cài đặt Tổ chức" reason="Chỉ Quản trị viên mới có thể chỉnh sửa cài đặt tổ chức."/>
           </div>
         </div>
       </div>
@@ -1454,14 +1454,14 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
       <div>
         <RoleBanner role={role}/>
         <div className="kpi-row">
-          <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
-          <div className="kpi"><div className="label">Ready to Issue</div><div className="value">{SCORES.filter(s=>s.readyForCredential&&!CREDENTIALS.find(c=>c.studentId===s.studentId)).length}</div><div className="delta">Awaiting issuance</div></div>
-          <div className="kpi"><div className="label">All Students</div><div className="value">{STUDENTS.length}</div><div className="delta">Across institution</div></div>
-          <div className="kpi"><div className="label">Verifications (30d)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
+          <div className="kpi"><div className="label">Chứng chỉ đã cấp</div><div className="value">482</div><div className="delta">↑ +24 tháng này</div></div>
+          <div className="kpi"><div className="label">Sẵn sàng cấp phát</div><div className="value">{SCORES.filter(s=>s.readyForCredential&&!CREDENTIALS.find(c=>c.studentId===s.studentId)).length}</div><div className="delta">Chờ cấp phát</div></div>
+          <div className="kpi"><div className="label">Tất cả Học viên</div><div className="value">{STUDENTS.length}</div><div className="delta">Toàn tổ chức</div></div>
+          <div className="kpi"><div className="label">Xác minh (30 ngày)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
         </div>
         <div className="dash-grid">
           <div className="panel">
-            <div className="panel-head"><h3>Ready to Issue</h3><button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}>Issue Credential</button></div>
+            <div className="panel-head"><h3>Sẵn sàng cấp phát</h3><button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}>Cấp phát Chứng chỉ</button></div>
             <div className="panel-body">
               {SCORES.filter(s=>s.readyForCredential).map((s,i)=>(
                 <div key={i} className="activity-row">
@@ -1476,13 +1476,13 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
             <div className="panel" style={{padding:20}}>
               <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
               <div style={{display:'flex',flexDirection:'column',gap:8}}>
-                {[['Issue Credential','award','issue-credential'],['Add Students','users','students'],['Import CSV','import','import-students'],['All Credentials','shield','credentials']].map(([t,ic,pg])=>(
+                {[['Cấp phát Chứng chỉ','award','issue-credential'],['Thêm Học viên','users','students'],['Nhập CSV','import','import-students'],['Tất cả Chứng chỉ','shield','credentials']].map(([t,ic,pg])=>(
                   <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
                 ))}
               </div>
             </div>
-            <DisabledAction icon="settings" label="Institution Settings" reason="Only Admins can modify institution settings, branding, and credential rules."/>
-            <DisabledAction icon="users" label="Manage Users & Roles" reason="Only Admins can invite users, assign roles, or deactivate accounts."/>
+            <DisabledAction icon="settings" label="Cài đặt Tổ chức" reason="Chỉ Quản trị viên mới có thể chỉnh sửa cài đặt tổ chức, thương hiệu và quy tắc chứng chỉ."/>
+            <DisabledAction icon="users" label="Quản lý Người dùng & Vai trò" reason="Chỉ Quản trị viên mới có thể mời người dùng, gán vai trò hoặc vô hiệu hóa tài khoản."/>
           </div>
         </div>
       </div>
@@ -1491,23 +1491,23 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
       <div>
         <RoleBanner role={role}/>
         <div className="kpi-row">
-          <div className="kpi"><div className="label">Credentials Issued</div><div className="value">482</div><div className="delta">↑ +24 this month</div></div>
-          <div className="kpi"><div className="label">Active Users</div><div className="value">{CMS_USERS.filter(u=>u.status==='Active').length}</div><div className="delta">Across all roles</div></div>
-          <div className="kpi"><div className="label">Pending Approvals</div><div className="value">2</div><div className="delta neg">Courses awaiting review</div></div>
-          <div className="kpi"><div className="label">Verifications (30d)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
+          <div className="kpi"><div className="label">Chứng chỉ đã cấp</div><div className="value">482</div><div className="delta">↑ +24 tháng này</div></div>
+          <div className="kpi"><div className="label">Người dùng hoạt động</div><div className="value">{CMS_USERS.filter(u=>u.status==='Active').length}</div><div className="delta">Trên tất cả vai trò</div></div>
+          <div className="kpi"><div className="label">Phê duyệt chờ xử lý</div><div className="value">2</div><div className="delta neg">Khóa học chờ xem xét</div></div>
+          <div className="kpi"><div className="label">Xác minh (30 ngày)</div><div className="value">37</div><div className="delta">↑ +12</div></div>
         </div>
         <div className="dash-grid">
           <div className="panel">
-            <div className="panel-head"><h3>Pending Course Approvals</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('course-approvals')}>View all</button></div>
+            <div className="panel-head"><h3>Phê duyệt Khóa học chờ xử lý</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('course-approvals')}>Xem tất cả</button></div>
             <div className="panel-body">
               {[{name:'AI in Healthcare Management',lecturer:'Dr. Priya Sharma',dept:'ICT',date:'Today'},
                 {name:'Circular Economy Fundamentals',lecturer:'Dr. Klaus Brönnimann',dept:'Business',date:'Yesterday'}].map((c,i)=>(
                 <div key={i} className="activity-row">
                   <div className="ava">{c.lecturer[0]}</div>
-                  <div className="msg">{c.name}<div className="sub">{c.dept} · Proposed by {c.lecturer}</div></div>
+                  <div className="msg">{c.name}<div className="sub">{c.dept} · Đề xuất bởi {c.lecturer}</div></div>
                   <div style={{display:'flex',gap:6,flexShrink:0}}>
-                    <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff',padding:'5px 12px'}}>Approve</button>
-                    <button className="btn btn-ghost btn-sm">Reject</button>
+                    <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff',padding:'5px 12px'}}>Phê duyệt</button>
+                    <button className="btn btn-ghost btn-sm">Từ chối</button>
                   </div>
                 </div>
               ))}
@@ -1515,15 +1515,15 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             <div className="panel" style={{padding:20}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Admin Actions</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Thao tác Quản trị</div>
               <div style={{display:'flex',flexDirection:'column',gap:8}}>
-                {[['Manage Users & Roles','users','users-roles'],['Course Approvals','verify','course-approvals'],['Institution Profile','user','profile'],['Settings','settings','settings']].map(([t,ic,pg])=>(
+                {[['Quản lý Người dùng & Vai trò','users','users-roles'],['Phê duyệt Khóa học','verify','course-approvals'],['Hồ sơ Tổ chức','user','profile'],['Cài đặt','settings','settings']].map(([t,ic,pg])=>(
                   <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
                 ))}
               </div>
             </div>
             <div className="panel" style={{padding:20}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Users by Role</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Người dùng theo Vai trò</div>
               {Object.entries({Lecturer:4,Secretariat:1,Admin:1,Developer:1}).map(([role,count])=>(
                 <div key={role} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'7px 0',borderBottom:'1px solid var(--line-2)',fontSize:13}}>
                   <span className={`role-badge ${role.toLowerCase()}`}>{role}</span>
@@ -1539,14 +1539,14 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
       <div>
         <RoleBanner role={role}/>
         <div className="kpi-row">
-          <div className="kpi"><div className="label">Credentials</div><div className="value">482</div><div className="delta">Total issued</div></div>
-          <div className="kpi"><div className="label">Users</div><div className="value">{CMS_USERS.length}</div><div className="delta">Across all roles</div></div>
-          <div className="kpi"><div className="label">API Calls (24h)</div><div className="value">1,204</div><div className="delta">↑ +18%</div></div>
-          <div className="kpi"><div className="label">Uptime</div><div className="value">99.8%</div><div className="delta">Last 30 days</div></div>
+          <div className="kpi"><div className="label">Chứng chỉ</div><div className="value">482</div><div className="delta">Tổng đã cấp</div></div>
+          <div className="kpi"><div className="label">Người dùng</div><div className="value">{CMS_USERS.length}</div><div className="delta">Trên tất cả vai trò</div></div>
+          <div className="kpi"><div className="label">Lượt gọi API (24h)</div><div className="value">1.204</div><div className="delta">↑ +18%</div></div>
+          <div className="kpi"><div className="label">Thời gian hoạt động</div><div className="value">99,8%</div><div className="delta">30 ngày qua</div></div>
         </div>
         <div className="dash-grid">
           <div className="panel">
-            <div className="panel-head"><h3>System Log (Recent)</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('system-logs')}>View logs</button></div>
+            <div className="panel-head"><h3>Nhật ký Hệ thống (Gần đây)</h3><button className="btn btn-ghost btn-sm view-all" onClick={()=>setCmsPage('system-logs')}>Xem nhật ký</button></div>
             <div className="panel-body">
               {[
                 {type:'INFO',msg:'Credential MCRED-BFH-2026-00482 issued',time:'09:14:22'},
@@ -1564,9 +1564,9 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             <div className="panel" style={{padding:20}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Developer Tools</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Công cụ Nhà phát triển</div>
               <div style={{display:'flex',flexDirection:'column',gap:8}}>
-                {[['System Logs','eye','system-logs'],['Integrations','link','integrations'],['Schema Import / Export','import','schema'],['Users & Roles','users','users-roles']].map(([t,ic,pg])=>(
+                {[['Nhật ký Hệ thống','eye','system-logs'],['Tích hợp','link','integrations'],['Nhập / Xuất Schema','import','schema'],['Người dùng & Vai trò','users','users-roles']].map(([t,ic,pg])=>(
                   <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
                 ))}
               </div>
@@ -1581,10 +1581,10 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
     <div>
       <div className="page-head">
         <div className="left">
-          <h1>Dashboard</h1>
-          <p>Welcome back, {cfg.name}.</p>
+          <h1>Bảng điều khiển</h1>
+          <p>Chào mừng trở lại, {cfg.name}.</p>
         </div>
-        {(role==='secretariat'||role==='developer')&&<div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Issue Credential</button></div>}
+        {(role==='secretariat'||role==='developer')&&<div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Cấp phát Chứng chỉ</button></div>}
       </div>
       {dashContent[role]}
     </div>

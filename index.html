@@ -755,89 +755,89 @@ const ROLE_CONFIG = {
   lecturer: {
     label:'Lecturer', name:'Prof. Dr. Anna Steiner', initial:'A', color:'#3C6E47', dept:'Business · Digital Marketing',
     nav:[
-      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
-      { label:'Teaching', items:[
-        { id:'my-courses', label:'My Courses', icon:'book' },
-        { id:'course-proposals', label:'Course Proposals', icon:'edit' },
-        { id:'my-classes', label:'My Classes', icon:'classes' },
-        { id:'students', label:'Students', icon:'users' },
-        { id:'scores', label:'Scores / Completion', icon:'star' },
+      { label:'Tổng quan', items:[{ id:'dashboard', label:'Bảng điều khiển', icon:'grid' }]},
+      { label:'Giảng dạy', items:[
+        { id:'my-courses', label:'Khóa học của tôi', icon:'book' },
+        { id:'course-proposals', label:'Đề xuất Khóa học', icon:'edit' },
+        { id:'my-classes', label:'Lớp học của tôi', icon:'classes' },
+        { id:'students', label:'Học viên', icon:'users' },
+        { id:'scores', label:'Điểm số / Hoàn thành', icon:'star' },
       ]},
-      { label:'Credentials', items:[{ id:'credentials', label:'Issued Credentials', icon:'shield' }]},
-      { label:'Account', items:[{ id:'profile', label:'Profile', icon:'user' },{ id:'log', label:'Log', icon:'eye' }]},
+      { label:'Chứng chỉ', items:[{ id:'credentials', label:'Chứng chỉ đã Cấp', icon:'shield' }]},
+      { label:'Tài khoản', items:[{ id:'profile', label:'Hồ sơ', icon:'user' },{ id:'log', label:'Nhật ký', icon:'eye' }]},
     ],
   },
   secretariat: {
     label:'Secretariat', name:'Marie Brunner', initial:'M', color:'#B88A2B', dept:'Academic Administration',
     nav:[
-      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
-      { label:'Academic', items:[
-        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
-        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
-        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
-        { id:'import-students', label:'Import Students', icon:'import' },
+      { label:'Tổng quan', items:[{ id:'dashboard', label:'Bảng điều khiển', icon:'grid' }]},
+      { label:'Học thuật', items:[
+        { id:'courses', label:'Khóa học', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Lớp học', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Học viên', icon:'users', count:STUDENTS.length },
+        { id:'import-students', label:'Nhập Học viên', icon:'import' },
       ]},
-      { label:'Credentials', items:[
-        { id:'issue-credential', label:'Issue Credential', icon:'award' },
-        { id:'credentials', label:'All Credentials', icon:'shield', count:CREDENTIALS.length },
+      { label:'Chứng chỉ', items:[
+        { id:'issue-credential', label:'Cấp Chứng chỉ', icon:'award' },
+        { id:'credentials', label:'Tất cả Chứng chỉ', icon:'shield', count:CREDENTIALS.length },
       ]},
-      { label:'Help', items:[
+      { label:'Trợ giúp', items:[
         { id:'faq', label:'FAQ', icon:'help' },
-        { id:'profile', label:'Profile', icon:'user' },
-        { id:'log', label:'Log', icon:'eye' },
+        { id:'profile', label:'Hồ sơ', icon:'user' },
+        { id:'log', label:'Nhật ký', icon:'eye' },
       ]},
     ],
   },
   admin: {
     label:'Admin', name:'Dr. Hans Zimmermann', initial:'H', color:'#C8421E', dept:'Institution Administration',
     nav:[
-      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
-      { label:'Management', items:[
-        { id:'users-roles', label:'Users & Roles', icon:'users' },
-        { id:'course-approvals', label:'Course Approvals', icon:'verify' },
+      { label:'Tổng quan', items:[{ id:'dashboard', label:'Bảng điều khiển', icon:'grid' }]},
+      { label:'Quản lý', items:[
+        { id:'users-roles', label:'Người dùng & Vai trò', icon:'users' },
+        { id:'course-approvals', label:'Phê duyệt Khóa học', icon:'verify' },
       ]},
-      { label:'Academic', items:[
-        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
-        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
-        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
-        { id:'credentials', label:'Credentials', icon:'shield', count:CREDENTIALS.length },
+      { label:'Học thuật', items:[
+        { id:'courses', label:'Khóa học', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Lớp học', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Học viên', icon:'users', count:STUDENTS.length },
+        { id:'credentials', label:'Chứng chỉ', icon:'shield', count:CREDENTIALS.length },
       ]},
-      { label:'Institution', items:[
-        { id:'profile', label:'Institution Profile', icon:'user' },
-        { id:'design', label:'Design', icon:'palette' },
-        { id:'layout', label:'Certificate Layout', icon:'layout' },
-        { id:'settings', label:'Settings', icon:'settings' },
-        { id:'log', label:'Log', icon:'eye' },
+      { label:'Tổ chức', items:[
+        { id:'profile', label:'Hồ sơ Tổ chức', icon:'user' },
+        { id:'design', label:'Thiết kế', icon:'palette' },
+        { id:'layout', label:'Bố cục Chứng chỉ', icon:'layout' },
+        { id:'settings', label:'Cài đặt', icon:'settings' },
+        { id:'log', label:'Nhật ký', icon:'eye' },
       ]},
     ],
   },
   developer: {
     label:'Developer', name:'Dev Account', initial:'D', color:'#2563EB', dept:'System · Full Access',
     nav:[
-      { label:'Overview', items:[{ id:'dashboard', label:'Dashboard', icon:'grid' }]},
-      { label:'Platform Views', items:[
-        { id:'dev-public', label:'Public Website', icon:'eye' },
-        { id:'dev-wallet', label:'Learner Wallet', icon:'wallet' },
+      { label:'Tổng quan', items:[{ id:'dashboard', label:'Bảng điều khiển', icon:'grid' }]},
+      { label:'Xem nền tảng', items:[
+        { id:'dev-public', label:'Trang Web Công khai', icon:'eye' },
+        { id:'dev-wallet', label:'Ví Học viên', icon:'wallet' },
       ]},
-      { label:'Academic', items:[
-        { id:'courses', label:'Courses', icon:'book', count:COURSES.length },
-        { id:'classes', label:'Classes', icon:'classes', count:CLASSES.length },
-        { id:'students', label:'Students', icon:'users', count:STUDENTS.length },
-        { id:'issue-credential', label:'Issue Credential', icon:'award' },
-        { id:'credentials', label:'Credentials', icon:'shield', count:CREDENTIALS.length },
+      { label:'Học thuật', items:[
+        { id:'courses', label:'Khóa học', icon:'book', count:COURSES.length },
+        { id:'classes', label:'Lớp học', icon:'classes', count:CLASSES.length },
+        { id:'students', label:'Học viên', icon:'users', count:STUDENTS.length },
+        { id:'issue-credential', label:'Cấp Chứng chỉ', icon:'award' },
+        { id:'credentials', label:'Chứng chỉ', icon:'shield', count:CREDENTIALS.length },
       ]},
-      { label:'Institution', items:[
-        { id:'users-roles', label:'Users & Roles', icon:'users' },
-        { id:'profile', label:'Institution Profile', icon:'user' },
-        { id:'design', label:'Design', icon:'palette' },
-        { id:'layout', label:'Certificate Layout', icon:'layout' },
-        { id:'settings', label:'Settings', icon:'settings' },
+      { label:'Tổ chức', items:[
+        { id:'users-roles', label:'Người dùng & Vai trò', icon:'users' },
+        { id:'profile', label:'Hồ sơ Tổ chức', icon:'user' },
+        { id:'design', label:'Thiết kế', icon:'palette' },
+        { id:'layout', label:'Bố cục Chứng chỉ', icon:'layout' },
+        { id:'settings', label:'Cài đặt', icon:'settings' },
       ]},
-      { label:'Developer', items:[
-        { id:'integrations', label:'Integrations', icon:'link' },
-        { id:'system-logs', label:'System Logs', icon:'eye' },
-        { id:'schema', label:'Schema Import / Export', icon:'import' },
-        { id:'log', label:'Log', icon:'eye' },
+      { label:'Nhà phát triển', items:[
+        { id:'integrations', label:'Tích hợp', icon:'link' },
+        { id:'system-logs', label:'Nhật ký Hệ thống', icon:'eye' },
+        { id:'schema', label:'Nhập / Xuất Schema', icon:'import' },
+        { id:'log', label:'Nhật ký', icon:'eye' },
       ]},
     ],
   },
@@ -1286,7 +1286,7 @@ function RoleBanner({ role }) {
     <div className={`role-banner ${role}`}>
       <div className="rb-icon">{cfg.initial}</div>
       <div>
-        <div className="rb-title">{cfg.label} View — {cfg.name}</div>
+        <div className="rb-title">Chế độ xem {cfg.label} — {cfg.name}</div>
         <div className="rb-desc">{desc[role]}</div>
       </div>
       <span className={`role-badge ${role}`} style={{marginLeft:'auto',flexShrink:0}}>{cfg.label}</span>
@@ -1467,14 +1467,14 @@ function CMSDashboard({ role, setCmsPage, setSelectedCredId }) {
                 <div key={i} className="activity-row">
                   <div className="ava">{s.studentName[0]}</div>
                   <div className="msg">{s.studentName}<div className="sub">{s.courseTitle} · {s.grade}</div></div>
-                  <span className="completion-badge completed">Ready</span>
+                  <span className="completion-badge completed">Sẵn sàng</span>
                 </div>
               ))}
             </div>
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             <div className="panel" style={{padding:20}}>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Quick Actions</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Thao tác nhanh</div>
               <div style={{display:'flex',flexDirection:'column',gap:8}}>
                 {[['Cấp phát Chứng chỉ','award','issue-credential'],['Thêm Học viên','users','students'],['Nhập CSV','import','import-students'],['Tất cả Chứng chỉ','shield','credentials']].map(([t,ic,pg])=>(
                   <button key={t} className="btn btn-ghost btn-sm" style={{justifyContent:'flex-start',gap:10}} onClick={()=>setCmsPage(pg)}><Icon n={ic} size={14}/> {t}</button>
@@ -1597,10 +1597,10 @@ function CMSCourses({ role, setCmsPage, setSelectedCourseId, myOnly }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'My Courses':'Courses'}</h1><p>{myOnly?'Courses you are assigned to teach.':'Official courses used as the basis for classes and credentials.'}</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'Khóa học của tôi':'Khóa học'}</h1><p>{myOnly?'Các khóa học bạn được phân công giảng dạy.':'Các khóa học chính thức dùng làm cơ sở cho các lớp học và chứng chỉ.'}</p></div>
         <div className="right">
-          {canCreate ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-course')}><Icon n="plus" size={14}/> Add Course</button>
-          : <button className="btn btn-ghost" onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Propose Course</button>}
+          {canCreate ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-course')}><Icon n="plus" size={14}/> Thêm Khóa học</button>
+          : <button className="btn btn-ghost" onClick={()=>setCmsPage('course-proposals')}><Icon n="edit" size={14}/> Đề xuất Khóa học</button>}
         </div>
       </div>
       {myOnly&&<RoleBanner role={role}/>}
@@ -1615,15 +1615,15 @@ function CMSCourses({ role, setCmsPage, setSelectedCourseId, myOnly }) {
               <p>{c.desc.slice(0,80)}…</p>
               <div className="course-meta">
                 <span>{c.dept} · EQF {c.eqf} · {c.ects} ECTS</span>
-                <span className="enrolled">{c.students} students</span>
+                <span className="enrolled">{c.students} học viên</span>
               </div>
             </div>
           </div>
         ))}
         {canCreate && <div className="add-card" onClick={()=>setCmsPage('create-course')}>
           <div className="plus">+</div>
-          <h4>Add Course</h4>
-          <p>Create a new official course</p>
+          <h4>Thêm Khóa học</h4>
+          <p>Tạo một khóa học chính thức mới</p>
         </div>}
       </div>
     </div>
@@ -1635,7 +1635,7 @@ function CMSCourseDetail({ courseId, setCmsPage }) {
   const cls = CLASSES.filter(x=>x.course===c.id);
   return (
     <div>
-      <div className="back-btn" onClick={()=>setCmsPage('courses')}><Icon n="back" size={14}/> Back to Courses</div>
+      <div className="back-btn" onClick={()=>setCmsPage('courses')}><Icon n="back" size={14}/> Quay lại Khóa học</div>
       <div className="detail-hero">
         <div className="dh-top">
           <div>
@@ -1644,12 +1644,12 @@ function CMSCourseDetail({ courseId, setCmsPage }) {
             <p style={{fontSize:14,color:'var(--mute)',marginTop:8,maxWidth:560,lineHeight:1.6}}>{c.desc}</p>
           </div>
           <div style={{display:'flex',gap:8,flexShrink:0}}>
-            <button className="btn btn-ghost btn-sm"><Icon n="edit" size={13}/> Edit</button>
-            <button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={13}/> Issue Credential</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="edit" size={13}/> Chỉnh sửa</button>
+            <button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={13}/> Cấp Chứng chỉ</button>
           </div>
         </div>
         <div className="dh-meta">
-          {[['EQF Level',c.eqf],['ECTS Credits',c.ects],['Workload',`${c.workload}h`],['Language',c.language],['Mode',c.mode],['Evaluation',c.evaluation]].map(([l,v])=>(
+          {[['Cấp độ EQF',c.eqf],['Tín chỉ ECTS',c.ects],['Khối lượng học tập',`${c.workload}h`],['Ngôn ngữ',c.language],['Hình thức',c.mode],['Đánh giá',c.evaluation]].map(([l,v])=>(
             <div key={l} className="dh-meta-item"><div className="l">{l}</div><div className="v">{v}</div></div>
           ))}
         </div>
@@ -1657,15 +1657,15 @@ function CMSCourseDetail({ courseId, setCmsPage }) {
 
       <div style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:20}}>
         <div>
-          <div className="sec-label">Learning Outcomes</div>
+          <div className="sec-label">Kết quả học tập</div>
           <div className="panel"><div style={{padding:'16px 20px',display:'flex',flexDirection:'column',gap:10}}>
             {c.outcomes.map(o=><div key={o} className="vr-outcome">{o}</div>)}
           </div></div>
 
-          <div className="sec-label">Classes</div>
+          <div className="sec-label">Lớp học</div>
           <div className="panel">
             <table className="data-table">
-              <thead><tr><th>Class Name</th><th>Lecturer</th><th>Students</th><th>Status</th></tr></thead>
+              <thead><tr><th>Tên Lớp học</th><th>Giảng viên</th><th>Học viên</th><th>Trạng thái</th></tr></thead>
               <tbody>{cls.map(cl=>(
                 <tr key={cl.id}><td className="fw">{cl.name}</td><td>{cl.lecturer}</td><td>{cl.students}</td><td><StatusPill status={cl.status}/></td></tr>
               ))}</tbody>
@@ -1673,14 +1673,14 @@ function CMSCourseDetail({ courseId, setCmsPage }) {
           </div>
         </div>
         <div>
-          <div className="sec-label">Skills & Competencies</div>
+          <div className="sec-label">Kỹ năng & Năng lực</div>
           <div className="panel" style={{padding:20}}>
             <div className="tag-list">{c.skills.map(s=><div key={s} className="tag">{s}</div>)}</div>
           </div>
-          <div className="sec-label">Grading & Evaluation</div>
+          <div className="sec-label">Đánh giá & Cho điểm</div>
           <div className="panel" style={{padding:20}}>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
-              {[['Grading System',c.grading],['Evaluation',c.evaluation],['Learning Mode',c.mode],['Department',c.dept]].map(([l,v])=>(
+              {[['Hệ thống Điểm',c.grading],['Đánh giá',c.evaluation],['Hình thức Học',c.mode],['Khoa/Bộ phận',c.dept]].map(([l,v])=>(
                 <div key={l}><div style={{fontSize:10,fontWeight:600,letterSpacing:'.12em',textTransform:'uppercase',color:'var(--mute)',marginBottom:4}}>{l}</div><div style={{fontSize:14,fontWeight:500}}>{v}</div></div>
               ))}
             </div>
@@ -1694,40 +1694,40 @@ function CMSCourseDetail({ courseId, setCmsPage }) {
 function CMSCreateCourse({ setCmsPage }) {
   return (
     <div style={{maxWidth:760}}>
-      <div className="back-btn" onClick={()=>setCmsPage('courses')}><Icon n="back" size={14}/> Back to Courses</div>
+      <div className="back-btn" onClick={()=>setCmsPage('courses')}><Icon n="back" size={14}/> Quay lại Khóa học</div>
       <div className="page-head" style={{marginBottom:24}}>
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Create Course</h1><p>Define the official course used for credential issuance.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Tạo Khóa học</h1><p>Xác định khóa học chính thức dùng để cấp phát chứng chỉ.</p></div>
       </div>
       <div className="panel">
         <div style={{padding:'24px 28px',borderBottom:'1px solid var(--line)'}}>
-          <div style={{fontSize:14,fontWeight:700,marginBottom:2}}>General Information</div>
-          <div style={{fontSize:12,color:'var(--mute)'}}>Basic course details and classification</div>
+          <div style={{fontSize:14,fontWeight:700,marginBottom:2}}>Thông tin chung</div>
+          <div style={{fontSize:12,color:'var(--mute)'}}>Thông tin cơ bản và phân loại khóa học</div>
         </div>
         <div style={{padding:'24px 28px'}}>
-          <div className="field"><label>Course Name *</label><input placeholder="e.g. Digital Marketing Fundamentals"/></div>
-          <div className="field"><label>Description *</label><textarea placeholder="Describe what learners will achieve in this course…" style={{minHeight:80}}/></div>
+          <div className="field"><label>Tên Khóa học *</label><input placeholder="vd. Digital Marketing Fundamentals"/></div>
+          <div className="field"><label>Mô tả *</label><textarea placeholder="Mô tả những gì học viên sẽ đạt được trong khóa học này…" style={{minHeight:80}}/></div>
           <div className="field-row">
-            <div className="field"><label>Department *</label><select><option>Business</option><option>ICT</option><option>Engineering</option><option>Health</option></select></div>
-            <div className="field"><label>Language *</label><select><option>English</option><option>German</option><option>French</option><option>Italian</option></select></div>
+            <div className="field"><label>Khoa/Bộ phận *</label><select><option>Business</option><option>ICT</option><option>Engineering</option><option>Health</option></select></div>
+            <div className="field"><label>Ngôn ngữ *</label><select><option>English</option><option>German</option><option>French</option><option>Italian</option></select></div>
           </div>
           <div className="field-row">
-            <div className="field"><label>EQF Level *</label><select><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
-            <div className="field"><label>ECTS Credits</label><input type="number" placeholder="e.g. 3"/></div>
+            <div className="field"><label>Cấp độ EQF *</label><select><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+            <div className="field"><label>Tín chỉ ECTS</label><input type="number" placeholder="vd. 3"/></div>
           </div>
           <div className="field-row">
-            <div className="field"><label>Workload Hours</label><input type="number" placeholder="e.g. 75"/></div>
-            <div className="field"><label>Learning Mode *</label><select><option>Online</option><option>Blended</option><option>On-campus</option></select></div>
+            <div className="field"><label>Số giờ học</label><input type="number" placeholder="vd. 75"/></div>
+            <div className="field"><label>Hình thức Học *</label><select><option>Online</option><option>Blended</option><option>On-campus</option></select></div>
           </div>
           <div className="field-row">
-            <div className="field"><label>Evaluation Type</label><select><option>Portfolio + Quiz</option><option>Case Study</option><option>Project</option><option>Exam</option></select></div>
-            <div className="field"><label>Grading System</label><select><option>Pass/Fail</option><option>Grade (1–6)</option><option>Distinction/Merit/Pass</option></select></div>
+            <div className="field"><label>Loại Đánh giá</label><select><option>Portfolio + Quiz</option><option>Case Study</option><option>Project</option><option>Exam</option></select></div>
+            <div className="field"><label>Hệ thống Điểm</label><select><option>Pass/Fail</option><option>Grade (1–6)</option><option>Distinction/Merit/Pass</option></select></div>
           </div>
-          <div className="field"><label>Learning Outcomes</label><textarea placeholder="List the learning outcomes, one per line…" style={{minHeight:100}}/></div>
-          <div className="field"><label>Skills & Competencies</label><input placeholder="e.g. SEO Basics, Campaign Analytics, Content Strategy (comma separated)"/></div>
+          <div className="field"><label>Kết quả học tập</label><textarea placeholder="Liệt kê các kết quả học tập, mỗi dòng một kết quả…" style={{minHeight:100}}/></div>
+          <div className="field"><label>Kỹ năng & Năng lực</label><input placeholder="vd. SEO Basics, Campaign Analytics, Content Strategy (phân cách bằng dấu phẩy)"/></div>
         </div>
         <div style={{padding:'16px 28px',borderTop:'1px solid var(--line)',display:'flex',justifyContent:'space-between',background:'var(--paper-2)'}}>
-          <button className="btn btn-ghost" onClick={()=>setCmsPage('courses')}>Cancel</button>
-          <button className="btn btn-ember" onClick={()=>setCmsPage('courses')}>Create Course</button>
+          <button className="btn btn-ghost" onClick={()=>setCmsPage('courses')}>Hủy</button>
+          <button className="btn btn-ember" onClick={()=>setCmsPage('courses')}>Tạo Khóa học</button>
         </div>
       </div>
     </div>
@@ -1742,16 +1742,16 @@ function CMSClasses({ role, setCmsPage, setSelectedClassId, myOnly }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'My Classes':'Classes'}</h1><p>{role==='lecturer'?'Classes you are assigned to teach.':'Manage class cohorts linked to official courses.'}</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{myOnly?'Lớp học của tôi':'Lớp học'}</h1><p>{role==='lecturer'?'Các lớp học bạn được phân công giảng dạy.':'Quản lý các lớp học liên kết với khóa học chính thức.'}</p></div>
         <div className="right">
           {canCreate
-            ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-class')}><Icon n="plus" size={14}/> Add Class</button>
-            : <DisabledAction icon="plus" label="Add Class" reason="Only Secretariat and above can create classes."/>}
+            ? <button className="btn btn-ember" onClick={()=>setCmsPage('create-class')}><Icon n="plus" size={14}/> Thêm Lớp học</button>
+            : <DisabledAction icon="plus" label="Thêm Lớp học" reason="Chỉ Ban thư ký trở lên mới có thể tạo lớp học."/>}
         </div>
       </div>
       <div className="panel">
         <table className="data-table">
-          <thead><tr><th>Class Name</th><th>Course</th><th>Lecturer</th><th>Period</th><th>Students</th><th>Mode</th><th>Status</th><th></th></tr></thead>
+          <thead><tr><th>Tên Lớp học</th><th>Khóa học</th><th>Giảng viên</th><th>Thời gian</th><th>Học viên</th><th>Hình thức</th><th>Trạng thái</th><th></th></tr></thead>
           <tbody>
             {classes.map(cl=>(
               <tr key={cl.id} style={{cursor:'pointer'}} onClick={()=>{setSelectedClassId(cl.id);setCmsPage('class-detail')}}>
@@ -1762,7 +1762,7 @@ function CMSClasses({ role, setCmsPage, setSelectedClassId, myOnly }) {
                 <td>{cl.students}</td>
                 <td>{cl.mode}</td>
                 <td><StatusPill status={cl.status}/></td>
-                <td><button className="btn btn-ghost btn-sm" onClick={e=>{e.stopPropagation();setSelectedClassId(cl.id);setCmsPage('class-detail')}}>View</button></td>
+                <td><button className="btn btn-ghost btn-sm" onClick={e=>{e.stopPropagation();setSelectedClassId(cl.id);setCmsPage('class-detail')}}>Xem</button></td>
               </tr>
             ))}
           </tbody>
@@ -1777,30 +1777,30 @@ function CMSClassDetail({ classId, setCmsPage }) {
   const sts = STUDENTS.filter(s=>s.classes.includes(cl.id));
   return (
     <div>
-      <div className="back-btn" onClick={()=>setCmsPage('classes')}><Icon n="back" size={14}/> Back to Classes</div>
+      <div className="back-btn" onClick={()=>setCmsPage('classes')}><Icon n="back" size={14}/> Quay lại Lớp học</div>
       <div className="detail-hero">
         <div className="dh-top">
           <div>
             <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}><StatusPill status={cl.status}/></div>
             <h2>{cl.name}</h2>
-            <div style={{fontSize:14,color:'var(--mute)',marginTop:4}}>Linked to: <strong style={{color:'var(--ink)'}}>{cl.courseTitle}</strong></div>
+            <div style={{fontSize:14,color:'var(--mute)',marginTop:4}}>Liên kết với: <strong style={{color:'var(--ink)'}}>{cl.courseTitle}</strong></div>
           </div>
-          <button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={13}/> Issue Credential</button>
+          <button className="btn btn-ember btn-sm" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={13}/> Cấp Chứng chỉ</button>
         </div>
         <div className="dh-meta">
-          {[['Lecturer',cl.lecturer],['Start Date',cl.start],['End Date',cl.end],['Mode',cl.mode],['Students',cl.students],['Template',cl.template]].map(([l,v])=>(
+          {[['Giảng viên',cl.lecturer],['Ngày bắt đầu',cl.start],['Ngày kết thúc',cl.end],['Hình thức',cl.mode],['Học viên',cl.students],['Mẫu',cl.template]].map(([l,v])=>(
             <div key={l} className="dh-meta-item"><div className="l">{l}</div><div className="v">{v}</div></div>
           ))}
         </div>
       </div>
-      <div className="sec-label">Students in this class</div>
+      <div className="sec-label">Học viên trong lớp này</div>
       <div className="panel">
         <table className="data-table">
-          <thead><tr><th>Student ID</th><th>Name</th><th>Email</th><th>Credentials</th><th>Wallet</th></tr></thead>
+          <thead><tr><th>Mã Học viên</th><th>Tên</th><th>Email</th><th>Chứng chỉ</th><th>Ví</th></tr></thead>
           <tbody>
             {sts.length>0?sts.map(s=>(
               <tr key={s.id}><td className="mono">{s.id}</td><td className="fw">{s.first} {s.last}</td><td className="mono" style={{fontSize:12}}>{s.email}</td><td>{s.credentials}</td><td><StatusPill status={s.walletStatus}/></td></tr>
-            )):<tr><td colSpan={5} style={{textAlign:'center',padding:'32px',color:'var(--mute)'}}>No students assigned to this class yet.</td></tr>}
+            )):<tr><td colSpan={5} style={{textAlign:'center',padding:'32px',color:'var(--mute)'}}>Chưa có học viên nào được phân công vào lớp này.</td></tr>}
           </tbody>
         </table>
       </div>
@@ -1811,27 +1811,27 @@ function CMSClassDetail({ classId, setCmsPage }) {
 function CMSCreateClass({ setCmsPage }) {
   return (
     <div style={{maxWidth:680}}>
-      <div className="back-btn" onClick={()=>setCmsPage('classes')}><Icon n="back" size={14}/> Back to Classes</div>
+      <div className="back-btn" onClick={()=>setCmsPage('classes')}><Icon n="back" size={14}/> Quay lại Lớp học</div>
       <div className="page-head" style={{marginBottom:24}}>
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Create Class</h1><p>Set up a new cohort linked to an official course.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Tạo Lớp học</h1><p>Thiết lập một nhóm học mới liên kết với khóa học chính thức.</p></div>
       </div>
       <div className="panel">
         <div style={{padding:'24px 28px'}}>
-          <div className="field"><label>Class Name *</label><input placeholder="e.g. Digital Marketing — Spring 2026"/></div>
+          <div className="field"><label>Tên Lớp học *</label><input placeholder="vd. Digital Marketing — Spring 2026"/></div>
           <div className="field-row">
-            <div className="field"><label>Linked Course *</label><select><option>Digital Marketing Fundamentals</option><option>Sustainable Business Management</option><option>Data Analytics for Business</option><option>AI Literacy for Professionals</option></select></div>
-            <div className="field"><label>Learning Mode</label><select><option>Online</option><option>Blended</option><option>On-campus</option></select></div>
+            <div className="field"><label>Khóa học liên kết *</label><select><option>Digital Marketing Fundamentals</option><option>Sustainable Business Management</option><option>Data Analytics for Business</option><option>AI Literacy for Professionals</option></select></div>
+            <div className="field"><label>Hình thức Học</label><select><option>Online</option><option>Blended</option><option>On-campus</option></select></div>
           </div>
-          <div className="field"><label>Lecturer *</label><input placeholder="e.g. Prof. Dr. Anna Steiner"/></div>
+          <div className="field"><label>Giảng viên *</label><input placeholder="vd. Prof. Dr. Anna Steiner"/></div>
           <div className="field-row">
-            <div className="field"><label>Start Date</label><input type="date"/></div>
-            <div className="field"><label>End Date</label><input type="date"/></div>
+            <div className="field"><label>Ngày bắt đầu</label><input type="date"/></div>
+            <div className="field"><label>Ngày kết thúc</label><input type="date"/></div>
           </div>
-          <div className="field"><label>Credential Template</label><select><option>Clean White</option><option>Bold Dark</option><option>Warm Ember</option></select></div>
+          <div className="field"><label>Mẫu Chứng chỉ</label><select><option>Clean White</option><option>Bold Dark</option><option>Warm Ember</option></select></div>
         </div>
         <div style={{padding:'16px 28px',borderTop:'1px solid var(--line)',display:'flex',justifyContent:'space-between',background:'var(--paper-2)'}}>
-          <button className="btn btn-ghost" onClick={()=>setCmsPage('classes')}>Cancel</button>
-          <button className="btn btn-ember" onClick={()=>setCmsPage('classes')}>Create Class</button>
+          <button className="btn btn-ghost" onClick={()=>setCmsPage('classes')}>Hủy</button>
+          <button className="btn btn-ember" onClick={()=>setCmsPage('classes')}>Tạo Lớp học</button>
         </div>
       </div>
     </div>
@@ -1845,28 +1845,28 @@ function CMSStudents({ role, setCmsPage, setSelectedStudentId }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Students</h1><p>{role==='lecturer'?'Students enrolled in your assigned classes.':'All enrolled students across your institution.'}</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Học viên</h1><p>{role==='lecturer'?'Học viên đã đăng ký trong các lớp học của bạn.':'Tất cả học viên đã đăng ký trong tổ chức của bạn.'}</p></div>
         <div className="right">
           {canAdd ? <>
-            <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('import-students')}><Icon n="import" size={13}/> Import CSV</button>
-            <button className="btn btn-ember"><Icon n="plus" size={14}/> Add Student</button>
-          </> : <span style={{fontSize:12,color:'var(--mute)',display:'flex',alignItems:'center',gap:6}}><Icon n="eye" size={13}/> Read-only — your assigned students</span>}
+            <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('import-students')}><Icon n="import" size={13}/> Nhập CSV</button>
+            <button className="btn btn-ember"><Icon n="plus" size={14}/> Thêm Học viên</button>
+          </> : <span style={{fontSize:12,color:'var(--mute)',display:'flex',alignItems:'center',gap:6}}><Icon n="eye" size={13}/> Chỉ đọc — học viên được phân công của bạn</span>}
         </div>
       </div>
       <div className="toolbar">
         <div className="left">
-          {['All','Active','Pending','Not registered'].map(f=>(
-            <div key={f} className={`filter-chip${f==='All'?' active':''}`}>{f}</div>
+          {['Tất cả','Đang hoạt động','Chờ duyệt','Chưa đăng ký'].map(f=>(
+            <div key={f} className={`filter-chip${f==='Tất cả'?' active':''}`}>{f}</div>
           ))}
         </div>
         <div className="cms-search" style={{width:220}}>
           <Icon n="eye" size={14}/>
-          <input placeholder="Search students…"/>
+          <input placeholder="Tìm kiếm học viên…"/>
         </div>
       </div>
       <div className="panel">
         <table className="data-table">
-          <thead><tr><th>Student ID</th><th>Name</th><th>Email</th><th>Classes</th><th>Credentials</th><th>Wallet</th><th></th></tr></thead>
+          <thead><tr><th>Mã Học viên</th><th>Tên</th><th>Email</th><th>Lớp học</th><th>Chứng chỉ</th><th>Ví</th><th></th></tr></thead>
           <tbody>
             {students.map((s,i)=>(
               <tr key={s.id} style={{cursor:'pointer'}} onClick={()=>{setSelectedStudentId(s.id);setCmsPage('student-detail')}}>
@@ -1876,7 +1876,7 @@ function CMSStudents({ role, setCmsPage, setSelectedStudentId }) {
                 <td>{s.classes.length}</td>
                 <td>{s.credentials}</td>
                 <td><StatusPill status={s.walletStatus}/></td>
-                <td><button className="btn btn-ghost btn-sm" onClick={e=>{e.stopPropagation();setSelectedStudentId(s.id);setCmsPage('student-detail')}}>View</button></td>
+                <td><button className="btn btn-ghost btn-sm" onClick={e=>{e.stopPropagation();setSelectedStudentId(s.id);setCmsPage('student-detail')}}>Xem</button></td>
               </tr>
             ))}
           </tbody>
@@ -1891,7 +1891,7 @@ function CMSStudentDetail({ studentId, setCmsPage, setSelectedCredId }) {
   const creds = CREDENTIALS.filter(c=>c.studentId===s.id);
   return (
     <div className="student-detail">
-      <div className="back-btn" onClick={()=>setCmsPage('students')}><Icon n="back" size={14}/> Back to Students</div>
+      <div className="back-btn" onClick={()=>setCmsPage('students')}><Icon n="back" size={14}/> Quay lại Học viên</div>
       <div className="sd-header">
         <div className="sd-avatar" style={{background:`linear-gradient(135deg, ${s.color}, ${s.color}aa)`}}>{s.first[0]}</div>
         <div>
@@ -1901,31 +1901,31 @@ function CMSStudentDetail({ studentId, setCmsPage, setSelectedCredId }) {
         </div>
       </div>
       <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:0,border:'1px solid var(--line)',borderRadius:12,overflow:'hidden',background:'var(--white)',marginBottom:20}}>
-        {[['Student ID',s.id,'mono'],['Classes Attended',s.classes.length,''],['Credentials Issued',s.credentials,'']].map(([l,v,cls])=>(
+        {[['Mã Học viên',s.id,'mono'],['Lớp học đã tham gia',s.classes.length,''],['Chứng chỉ đã cấp',s.credentials,'']].map(([l,v,cls])=>(
           <div key={l} style={{padding:'18px 20px',borderRight:'1px solid var(--line)'}}>
             <div style={{fontSize:10,fontWeight:600,letterSpacing:'.12em',textTransform:'uppercase',color:'var(--mute)',marginBottom:6}}>{l}</div>
             <div style={{fontSize:24,fontWeight:800,letterSpacing:'-0.02em',fontFamily:cls==='mono'?'monospace':'inherit',fontSize:cls==='mono'?14:24}}>{v}</div>
           </div>
         ))}
       </div>
-      <div className="sec-label">Issued Credentials</div>
+      <div className="sec-label">Chứng chỉ đã cấp</div>
       {creds.length>0?(
         <div className="panel">
           <table className="data-table">
-            <thead><tr><th>Credential ID</th><th>Title</th><th>Issued</th><th>Status</th><th></th></tr></thead>
+            <thead><tr><th>Mã Chứng chỉ</th><th>Tiêu đề</th><th>Đã cấp</th><th>Trạng thái</th><th></th></tr></thead>
             <tbody>{creds.map(c=>(
               <tr key={c.id}>
                 <td className="mono" style={{fontSize:11}}>{c.id}</td>
                 <td className="fw">{c.title}</td>
                 <td>{c.issued}</td>
                 <td><StatusPill status={c.status}/></td>
-                <td><button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('credential-detail')}>View</button></td>
+                <td><button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('credential-detail')}>Xem</button></td>
               </tr>
             ))}</tbody>
           </table>
         </div>
       ):(
-        <div className="panel" style={{padding:'32px',textAlign:'center',color:'var(--mute)'}}>No credentials issued yet. <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')} style={{marginLeft:8}}>Issue Credential</button></div>
+        <div className="panel" style={{padding:'32px',textAlign:'center',color:'var(--mute)'}}>Chưa có chứng chỉ nào được cấp. <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('issue-credential')} style={{marginLeft:8}}>Cấp Chứng chỉ</button></div>
       )}
     </div>
   );
@@ -1940,7 +1940,7 @@ function CMSIssueCredential({ role, setCmsPage }) {
   const [selTemplate, setSelTemplate] = useState('clean');
 
   const totalSteps = 6;
-  const stepLabels = ['Select Course','Select Class','Select Students','Choose Template','Preview','Confirm & Issue'];
+  const stepLabels = ['Chọn Khóa học','Chọn Lớp học','Chọn Học viên','Chọn Mẫu','Xem trước','Xác nhận & Cấp phát'];
 
   const filteredClasses = CLASSES.filter(c=>c.course===selCourse);
   // Only show students who are marked as ready for credential issuance
@@ -1957,16 +1957,16 @@ function CMSIssueCredential({ role, setCmsPage }) {
   const cls = CLASSES.find(c=>c.id===selClass);
 
   const templates = [
-    { id:'clean', name:'Clean White', desc:'Minimal, professional layout', preview:'clean' },
-    { id:'bold', name:'Bold Dark', desc:'High-contrast dark background', preview:'bold' },
-    { id:'warm', name:'Warm Ember', desc:'Warm, branded with institution accent', preview:'warm' },
+    { id:'clean', name:'Clean White', desc:'Bố cục tối giản, chuyên nghiệp', preview:'clean' },
+    { id:'bold', name:'Bold Dark', desc:'Nền tối tương phản cao', preview:'bold' },
+    { id:'warm', name:'Warm Ember', desc:'Ấm áp, mang thương hiệu tổ chức', preview:'warm' },
   ];
 
   return (
     <div className="wizard-wrap">
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Issue Credential</h1><p>Follow the steps to issue verifiable credentials to your students.</p></div>
-        <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('credentials')}>Cancel</button>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Cấp Chứng chỉ</h1><p>Làm theo các bước để cấp phát chứng chỉ có thể xác minh cho học viên của bạn.</p></div>
+        <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('credentials')}>Hủy</button>
       </div>
 
       {/* Steps indicator */}
@@ -1993,7 +1993,7 @@ function CMSIssueCredential({ role, setCmsPage }) {
         {/* Step 1: Select Course */}
         {step===1&&(
           <>
-            <div className="wizard-card-head"><h2>Select Course</h2><p>Choose the course for which you are issuing credentials.</p></div>
+            <div className="wizard-card-head"><h2>Chọn Khóa học</h2><p>Chọn khóa học mà bạn đang cấp phát chứng chỉ.</p></div>
             <div className="wizard-card-body">
               <div className="sel-grid">
                 {COURSES.map(c=>(
@@ -2013,8 +2013,8 @@ function CMSIssueCredential({ role, setCmsPage }) {
               </div>
             </div>
             <div className="wizard-card-foot">
-              <span style={{fontSize:12,color:'var(--mute)'}}>Step 1 of 6</span>
-              <button className={`btn btn-ember`} disabled={!selCourse} onClick={()=>setStep(2)} style={{opacity:selCourse?1:.45}}>Next: Select Class <Icon n="arrow" size={13}/></button>
+              <span style={{fontSize:12,color:'var(--mute)'}}>Bước 1 / 6</span>
+              <button className={`btn btn-ember`} disabled={!selCourse} onClick={()=>setStep(2)} style={{opacity:selCourse?1:.45}}>Tiếp theo: Chọn Lớp học <Icon n="arrow" size={13}/></button>
             </div>
           </>
         )}
@@ -2022,7 +2022,7 @@ function CMSIssueCredential({ role, setCmsPage }) {
         {/* Step 2: Select Class */}
         {step===2&&(
           <>
-            <div className="wizard-card-head"><h2>Select Class</h2><p>Choose the class cohort from {course?.title}.</p></div>
+            <div className="wizard-card-head"><h2>Chọn Lớp học</h2><p>Chọn nhóm lớp học từ {course?.title}.</p></div>
             <div className="wizard-card-body">
               {filteredClasses.length>0?(
                 <div style={{display:'flex',flexDirection:'column',gap:10}}>
@@ -2030,20 +2030,20 @@ function CMSIssueCredential({ role, setCmsPage }) {
                     <div key={cl.id} className={`sel-card${selClass===cl.id?' selected':''}`} onClick={()=>setSelClass(cl.id)} style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
                       <div>
                         <div style={{fontSize:15,fontWeight:700,marginBottom:4}}>{cl.name}</div>
-                        <div style={{fontSize:12,color:'var(--mute)'}}>Lecturer: {cl.lecturer} · {cl.start} – {cl.end}</div>
-                        <div style={{fontSize:12,color:'var(--mute)',marginTop:2}}>{cl.students} students · {cl.mode}</div>
+                        <div style={{fontSize:12,color:'var(--mute)'}}>Giảng viên: {cl.lecturer} · {cl.start} – {cl.end}</div>
+                        <div style={{fontSize:12,color:'var(--mute)',marginTop:2}}>{cl.students} học viên · {cl.mode}</div>
                       </div>
                       <StatusPill status={cl.status}/>
                     </div>
                   ))}
                 </div>
               ):(
-                <div className="empty-state"><h3>No classes for this course</h3><p>Create a class first to assign students.</p></div>
+                <div className="empty-state"><h3>Không có lớp học nào cho khóa học này</h3><p>Hãy tạo một lớp học trước để phân công học viên.</p></div>
               )}
             </div>
             <div className="wizard-card-foot">
-              <button className="btn btn-ghost" onClick={()=>setStep(1)}><Icon n="back" size={13}/> Back</button>
-              <button className="btn btn-ember" disabled={!selClass} onClick={()=>setStep(3)} style={{opacity:selClass?1:.45}}>Next: Select Students <Icon n="arrow" size={13}/></button>
+              <button className="btn btn-ghost" onClick={()=>setStep(1)}><Icon n="back" size={13}/> Quay lại</button>
+              <button className="btn btn-ember" disabled={!selClass} onClick={()=>setStep(3)} style={{opacity:selClass?1:.45}}>Tiếp theo: Chọn Học viên <Icon n="arrow" size={13}/></button>
             </div>
           </>
         )}
@@ -2053,13 +2053,13 @@ function CMSIssueCredential({ role, setCmsPage }) {
           <>
             <div className="wizard-card-head">
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
-                <div><h2>Select Students</h2><p>Only students marked as <strong>Ready for Credential</strong> by their lecturer are shown.</p></div>
-                <button className="btn btn-ghost btn-sm" onClick={()=>setSelStudents(filteredStudents.map(s=>s.id))}>Select All</button>
+                <div><h2>Chọn Học viên</h2><p>Chỉ những học viên được giảng viên đánh dấu là <strong>Sẵn sàng nhận Chứng chỉ</strong> mới được hiển thị.</p></div>
+                <button className="btn btn-ghost btn-sm" onClick={()=>setSelStudents(filteredStudents.map(s=>s.id))}>Chọn tất cả</button>
               </div>
             </div>
             <div className="wizard-card-body">
-              {pendingCount>0&&<div style={{padding:'10px 14px',background:'var(--amber-soft)',border:'1px solid rgba(184,138,43,.25)',borderRadius:8,fontSize:12,color:'var(--amber)',marginBottom:16}}><Icon n="star" size={13}/> <strong>{pendingCount} student{pendingCount>1?'s':''}</strong> in this class {pendingCount>1?'are':'is'} not yet marked as completed by the lecturer and cannot receive a credential.</div>}
-              {filteredStudents.length===0&&<div className="empty-state"><h3>No students ready</h3><p>The lecturer must mark students as completed in Scores / Completion first.</p></div>}
+              {pendingCount>0&&<div style={{padding:'10px 14px',background:'var(--amber-soft)',border:'1px solid rgba(184,138,43,.25)',borderRadius:8,fontSize:12,color:'var(--amber)',marginBottom:16}}><Icon n="star" size={13}/> <strong>{pendingCount} học viên</strong> trong lớp này chưa được giảng viên đánh dấu là hoàn thành và không thể nhận chứng chỉ.</div>}
+              {filteredStudents.length===0&&<div className="empty-state"><h3>Không có học viên nào sẵn sàng</h3><p>Giảng viên phải đánh dấu học viên là hoàn thành trong mục Điểm số / Hoàn thành trước.</p></div>}
               <div className="student-list-sel">
                 {filteredStudents.length>0?filteredStudents.map((s,i)=>(
                   <div key={s.id} className={`student-sel-item${selStudents.includes(s.id)?' selected':''}`} onClick={()=>toggleStudent(s.id)}>
@@ -2072,14 +2072,14 @@ function CMSIssueCredential({ role, setCmsPage }) {
                     <div style={{marginLeft:'auto'}}><StatusPill status={s.walletStatus}/></div>
                   </div>
                 )):(
-                  <div className="empty-state"><h3>No students in this class</h3><p>Import students to get started.</p></div>
+                  <div className="empty-state"><h3>Không có học viên nào trong lớp này</h3><p>Nhập học viên để bắt đầu.</p></div>
                 )}
               </div>
-              {selStudents.length>0&&<div style={{marginTop:16,padding:'12px 16px',background:'var(--sage-soft)',borderRadius:8,fontSize:13,color:'var(--sage)',fontWeight:500}}>{selStudents.length} student{selStudents.length!==1?'s':''} selected</div>}
+              {selStudents.length>0&&<div style={{marginTop:16,padding:'12px 16px',background:'var(--sage-soft)',borderRadius:8,fontSize:13,color:'var(--sage)',fontWeight:500}}>Đã chọn {selStudents.length} học viên</div>}
             </div>
             <div className="wizard-card-foot">
-              <button className="btn btn-ghost" onClick={()=>setStep(2)}><Icon n="back" size={13}/> Back</button>
-              <button className="btn btn-ember" disabled={!selStudents.length} onClick={()=>setStep(4)} style={{opacity:selStudents.length?1:.45}}>Next: Choose Template <Icon n="arrow" size={13}/></button>
+              <button className="btn btn-ghost" onClick={()=>setStep(2)}><Icon n="back" size={13}/> Quay lại</button>
+              <button className="btn btn-ember" disabled={!selStudents.length} onClick={()=>setStep(4)} style={{opacity:selStudents.length?1:.45}}>Tiếp theo: Chọn Mẫu <Icon n="arrow" size={13}/></button>
             </div>
           </>
         )}
@@ -2087,7 +2087,7 @@ function CMSIssueCredential({ role, setCmsPage }) {
         {/* Step 4: Select Template */}
         {step===4&&(
           <>
-            <div className="wizard-card-head"><h2>Choose Credential Template</h2><p>Select the certificate design for this batch of credentials.</p></div>
+            <div className="wizard-card-head"><h2>Chọn Mẫu Chứng chỉ</h2><p>Chọn thiết kế chứng chỉ cho đợt cấp phát này.</p></div>
             <div className="wizard-card-body">
               <div className="template-grid">
                 {templates.map(t=>(
@@ -2106,8 +2106,8 @@ function CMSIssueCredential({ role, setCmsPage }) {
               </div>
             </div>
             <div className="wizard-card-foot">
-              <button className="btn btn-ghost" onClick={()=>setStep(3)}><Icon n="back" size={13}/> Back</button>
-              <button className="btn btn-ember" onClick={()=>setStep(5)}>Next: Preview <Icon n="arrow" size={13}/></button>
+              <button className="btn btn-ghost" onClick={()=>setStep(3)}><Icon n="back" size={13}/> Quay lại</button>
+              <button className="btn btn-ember" onClick={()=>setStep(5)}>Tiếp theo: Xem trước <Icon n="arrow" size={13}/></button>
             </div>
           </>
         )}
@@ -2115,33 +2115,33 @@ function CMSIssueCredential({ role, setCmsPage }) {
         {/* Step 5: Preview */}
         {step===5&&(
           <>
-            <div className="wizard-card-head"><h2>Preview Credential</h2><p>This is how the credential will look for each selected student.</p></div>
+            <div className="wizard-card-head"><h2>Xem trước Chứng chỉ</h2><p>Đây là giao diện chứng chỉ sẽ hiển thị cho từng học viên được chọn.</p></div>
             <div className="wizard-card-body">
               <div className="cred-preview-full">
                 <div className="cpf-header">
                   <div className="seal">B</div>
                   <div>
                     <div className="issuer-name">Bern University of Applied Sciences</div>
-                    <div className="cred-type">Official Microcredential</div>
+                    <div className="cred-type">Chứng chỉ Vi mô Chính thức</div>
                   </div>
                 </div>
                 <div className="cpf-body">
                   <div className="cred-title">{course?.title||'Digital Marketing Fundamentals'}</div>
-                  <div className="awarded-to">Awarded to</div>
+                  <div className="awarded-to">Cấp cho</div>
                   <div className="student-big">{selStudents.length>0 ? (STUDENTS.find(s=>s.id===selStudents[0])?.first+' '+STUDENTS.find(s=>s.id===selStudents[0])?.last) : 'Sarah Keller'}</div>
                   <div className="cpf-skills">{(course?.skills||['SEO Basics','Campaign Analytics','Content Strategy','Paid Media Fundamentals']).map(sk=><div key={sk} className="cpf-skill">{sk}</div>)}</div>
-                  <div style={{fontSize:13,color:'var(--mute)',lineHeight:1.6}}>Issued by Bern University of Applied Sciences in partnership with the M-CRED credential infrastructure.</div>
+                  <div style={{fontSize:13,color:'var(--mute)',lineHeight:1.6}}>Được cấp bởi Bern University of Applied Sciences hợp tác với hạ tầng chứng chỉ M-CRED.</div>
                 </div>
                 <div className="cpf-footer">
                   <span className="cred-id">MCRED-BFH-2026-00487</span>
-                  <span className="valid-badge"><Icon n="verify" size={13}/> Verifiable Credential</span>
+                  <span className="valid-badge"><Icon n="verify" size={13}/> Chứng chỉ Có thể Xác minh</span>
                 </div>
               </div>
-              {selStudents.length>1&&<div style={{textAlign:'center',marginTop:12,fontSize:13,color:'var(--mute)'}}>+ {selStudents.length-1} more student{selStudents.length-1!==1?'s':''} will receive the same credential with their name.</div>}
+              {selStudents.length>1&&<div style={{textAlign:'center',marginTop:12,fontSize:13,color:'var(--mute)'}}>+ {selStudents.length-1} học viên khác sẽ nhận được chứng chỉ tương tự với tên của họ.</div>}
             </div>
             <div className="wizard-card-foot">
-              <button className="btn btn-ghost" onClick={()=>setStep(4)}><Icon n="back" size={13}/> Back</button>
-              <button className="btn btn-ember" onClick={()=>setStep(6)}>Confirm & Issue <Icon n="arrow" size={13}/></button>
+              <button className="btn btn-ghost" onClick={()=>setStep(4)}><Icon n="back" size={13}/> Quay lại</button>
+              <button className="btn btn-ember" onClick={()=>setStep(6)}>Xác nhận & Cấp phát <Icon n="arrow" size={13}/></button>
             </div>
           </>
         )}
@@ -2149,10 +2149,10 @@ function CMSIssueCredential({ role, setCmsPage }) {
         {/* Step 6: Confirm & Issue */}
         {step===6&&(
           <>
-            <div className="wizard-card-head"><h2>Confirm & Issue</h2><p>Review your selection before issuing. This action will notify learners by email.</p></div>
+            <div className="wizard-card-head"><h2>Xác nhận & Cấp phát</h2><p>Xem lại lựa chọn của bạn trước khi cấp phát. Thao tác này sẽ thông báo cho học viên qua email.</p></div>
             <div className="wizard-card-body">
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:24}}>
-                {[['Course',course?.title||'Digital Marketing Fundamentals'],['Class',cls?.name||'Digital Marketing — Spring 2026'],['Students Selected',selStudents.length||3],['Template',templates.find(t=>t.id===selTemplate)?.name||'Clean White'],['Institution','Bern University of Applied Sciences'],['Issue Date','14 May 2026']].map(([l,v])=>(
+                {[['Khóa học',course?.title||'Digital Marketing Fundamentals'],['Lớp học',cls?.name||'Digital Marketing — Spring 2026'],['Học viên đã chọn',selStudents.length||3],['Mẫu',templates.find(t=>t.id===selTemplate)?.name||'Clean White'],['Tổ chức','Bern University of Applied Sciences'],['Ngày cấp phát','14 May 2026']].map(([l,v])=>(
                   <div key={l} style={{padding:'16px 18px',background:'var(--paper)',border:'1px solid var(--line)',borderRadius:10}}>
                     <div style={{fontSize:10,fontWeight:600,letterSpacing:'.12em',textTransform:'uppercase',color:'var(--mute)',marginBottom:6}}>{l}</div>
                     <div style={{fontSize:14,fontWeight:600,color:'var(--ink)'}}>{v}</div>
@@ -2160,12 +2160,12 @@ function CMSIssueCredential({ role, setCmsPage }) {
                 ))}
               </div>
               <div style={{padding:'16px 18px',background:'var(--sage-soft)',border:'1px solid rgba(60,110,71,.2)',borderRadius:10,fontSize:13,color:'var(--sage)',lineHeight:1.6}}>
-                <strong>Ready to issue:</strong> {selStudents.length||3} credential{(selStudents.length||3)!==1?'s':''} will be issued to {selStudents.length||3} student{(selStudents.length||3)!==1?'s':''}. Each credential will receive a unique Credential ID, QR code, and public verification link. Students will be notified by email.
+                <strong>Sẵn sàng cấp phát:</strong> {selStudents.length||3} chứng chỉ sẽ được cấp cho {selStudents.length||3} học viên. Mỗi chứng chỉ sẽ nhận được Mã Chứng chỉ duy nhất, mã QR và liên kết xác minh công khai. Học viên sẽ được thông báo qua email.
               </div>
             </div>
             <div className="wizard-card-foot">
-              <button className="btn btn-ghost" onClick={()=>setStep(5)}><Icon n="back" size={13}/> Back</button>
-              <button className="btn btn-ember btn-lg" onClick={()=>setCmsPage('issue-success')}><Icon n="award" size={15}/> Issue {selStudents.length||3} Credential{(selStudents.length||3)!==1?'s':''}</button>
+              <button className="btn btn-ghost" onClick={()=>setStep(5)}><Icon n="back" size={13}/> Quay lại</button>
+              <button className="btn btn-ember btn-lg" onClick={()=>setCmsPage('issue-success')}><Icon n="award" size={15}/> Cấp phát {selStudents.length||3} Chứng chỉ</button>
             </div>
           </>
         )}
@@ -2181,23 +2181,23 @@ function CMSIssueSuccess({ setCmsPage, setMode, setWalletPage, setPublicPage }) 
       <div className="panel success-page">
         <div className="success-hero">
           <div className="success-check">✓</div>
-          <h1>Credentials Issued!</h1>
-          <p>3 credentials were successfully issued and sent to learners' wallets. Each credential is now publicly verifiable.</p>
+          <h1>Chứng chỉ đã được Cấp phát!</h1>
+          <p>3 chứng chỉ đã được cấp phát thành công và gửi đến ví của học viên. Mỗi chứng chỉ hiện có thể được xác minh công khai.</p>
         </div>
         <div className="success-details">
           <div className="success-id-box">
             <div>
-              <div className="label">Credential ID (Sample)</div>
+              <div className="label">Mã Chứng chỉ (Mẫu)</div>
               <div className="id-val">MCRED-BFH-2026-00482</div>
             </div>
-            <button className="btn btn-ghost btn-sm"><Icon n="copy" size={13}/> Copy</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="copy" size={13}/> Sao chép</button>
           </div>
 
           <div className="success-links">
             <div className="success-link-item">
               <div className="sli-ic"><Icon n="link" size={16}/></div>
               <div>
-                <div className="sli-label">Verification Link</div>
+                <div className="sli-label">Liên kết Xác minh</div>
                 <div className="sli-val">m-cred.ch/verify/MCRED-BFH-2026-00482</div>
               </div>
               <button className="btn-icon btn-sm"><Icon n="copy" size={13}/></button>
@@ -2205,33 +2205,33 @@ function CMSIssueSuccess({ setCmsPage, setMode, setWalletPage, setPublicPage }) 
             <div className="success-link-item" onClick={()=>setPublicPage('verify-result')}>
               <div className="sli-ic"><Icon n="qr" size={16}/></div>
               <div>
-                <div className="sli-label">QR Code</div>
-                <div className="sli-val">Scan to verify</div>
+                <div className="sli-label">Mã QR</div>
+                <div className="sli-val">Quét để xác minh</div>
               </div>
               <div className="qr-block" style={{width:48,height:48,padding:4}}><QRCode size={40}/></div>
             </div>
             <div className="success-link-item">
               <div className="sli-ic"><Icon n="pdf" size={16}/></div>
               <div>
-                <div className="sli-label">Certificate PDF</div>
-                <div className="sli-val">Download all certificates</div>
+                <div className="sli-label">PDF Chứng chỉ</div>
+                <div className="sli-val">Tải xuống tất cả chứng chỉ</div>
               </div>
               <button className="btn-icon btn-sm"><Icon n="download" size={13}/></button>
             </div>
             <div className="success-link-item">
               <div className="sli-ic"><Icon n="mail" size={16}/></div>
               <div>
-                <div className="sli-label">Email Notifications</div>
-                <div className="sli-val">Sent to 3 learners</div>
+                <div className="sli-label">Thông báo qua Email</div>
+                <div className="sli-val">Đã gửi đến 3 học viên</div>
               </div>
-              <span className="pill pill-issued" style={{flexShrink:0}}><span className="pill-dot" style={{background:'#3C6E47'}}></span>Sent</span>
+              <span className="pill pill-issued" style={{flexShrink:0}}><span className="pill-dot" style={{background:'#3C6E47'}}></span>Đã gửi</span>
             </div>
           </div>
 
           <div style={{display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap',paddingTop:8,borderTop:'1px solid var(--line)'}}>
-            <button className="btn btn-ghost" onClick={()=>setCmsPage('credentials')}><Icon n="shield" size={13}/> View All Credentials</button>
-            <button className="btn btn-ghost" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}><Icon n="wallet" size={13}/> Open Learner Wallet</button>
-            <button className="btn btn-ember" onClick={()=>{setMode('public');setPublicPage('verify-result')}}><Icon n="verify" size={13}/> See Verification Result</button>
+            <button className="btn btn-ghost" onClick={()=>setCmsPage('credentials')}><Icon n="shield" size={13}/> Xem Tất cả Chứng chỉ</button>
+            <button className="btn btn-ghost" onClick={()=>{setMode('wallet');setWalletPage('dashboard')}}><Icon n="wallet" size={13}/> Mở Ví Học viên</button>
+            <button className="btn btn-ember" onClick={()=>{setMode('public');setPublicPage('verify-result')}}><Icon n="verify" size={13}/> Xem Kết quả Xác minh</button>
           </div>
         </div>
       </div>
@@ -2248,27 +2248,27 @@ function CMSCredentials({ role, setCmsPage, setSelectedCredId }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{role==='lecturer'?'Issued Credentials':'All Credentials'}</h1><p>{role==='lecturer'?'Credentials issued to students in your classes.':'View and manage all credentials issued by your institution.'}</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{role==='lecturer'?'Chứng chỉ đã Cấp':'Tất cả Chứng chỉ'}</h1><p>{role==='lecturer'?'Chứng chỉ đã cấp cho học viên trong các lớp học của bạn.':'Xem và quản lý tất cả chứng chỉ do tổ chức của bạn cấp phát.'}</p></div>
         <div className="right">
-          {canIssue && <><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export</button><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={14}/> Issue Credential</button></>}
+          {canIssue && <><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Xuất</button><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="plus" size={14}/> Cấp Chứng chỉ</button></>}
         </div>
       </div>
 
       <div className="creds-stats">
-        {[['Total',creds.length],['Valid',creds.filter(c=>c.status==='Issued').length],['Revoked',creds.filter(c=>c.status==='Revoked').length],['Verifications',creds.reduce((a,c)=>a+c.verifications,0)],['Learners',creds.filter(c=>c.status==='Issued').length]].map(([l,v])=>(
+        {[['Tổng cộng',creds.length],['Hợp lệ',creds.filter(c=>c.status==='Issued').length],['Đã thu hồi',creds.filter(c=>c.status==='Revoked').length],['Lượt xác minh',creds.reduce((a,c)=>a+c.verifications,0)],['Học viên',creds.filter(c=>c.status==='Issued').length]].map(([l,v])=>(
           <div key={l} className="creds-stat"><div className="sv">{v}</div><div className="sl">{l}</div></div>
         ))}
       </div>
 
       <div className="toolbar">
         <div className="left">
-          {['All','Issued','Revoked','Expired'].map(f=>(
-            <div key={f} className={`filter-chip${f==='All'?' active':''}`}>{f}</div>
+          {['Tất cả','Đã cấp','Đã thu hồi','Hết hạn'].map(f=>(
+            <div key={f} className={`filter-chip${f==='Tất cả'?' active':''}`}>{f}</div>
           ))}
         </div>
         <div className="cms-search" style={{width:240}}>
           <Icon n="eye" size={14}/>
-          <input placeholder="Search by student or credential ID…"/>
+          <input placeholder="Tìm kiếm theo học viên hoặc mã chứng chỉ…"/>
         </div>
       </div>
 
@@ -2276,8 +2276,8 @@ function CMSCredentials({ role, setCmsPage, setSelectedCredId }) {
         <table className="data-table">
           <thead>
             <tr>
-              <th>Credential ID</th><th>Student Name</th><th>Credential Title</th>
-              <th>Issue Date</th><th>Expiry Date</th><th>Status</th><th>Verifications</th><th>Actions</th>
+              <th>Mã Chứng chỉ</th><th>Tên Học viên</th><th>Tiêu đề Chứng chỉ</th>
+              <th>Ngày cấp</th><th>Ngày hết hạn</th><th>Trạng thái</th><th>Lượt xác minh</th><th>Thao tác</th>
             </tr>
           </thead>
           <tbody>
@@ -2311,9 +2311,9 @@ function CMSCredentialDetail({ credId, setCmsPage }) {
   const c = CREDENTIALS.find(x=>x.id===credId)||CREDENTIALS[0];
   return (
     <div>
-      <div className="back-btn" onClick={()=>setCmsPage('credentials')}><Icon n="back" size={14}/> Back to Credentials</div>
+      <div className="back-btn" onClick={()=>setCmsPage('credentials')}><Icon n="back" size={14}/> Quay lại Chứng chỉ</div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Credential Detail</h1></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Chi tiết Chứng chỉ</h1></div>
         <StatusPill status={c.status}/>
       </div>
       <div className="cred-detail-grid">
@@ -2322,27 +2322,27 @@ function CMSCredentialDetail({ credId, setCmsPage }) {
             <div className="cdc-header">
               <div className="issuer"><div style={{width:20,height:20,borderRadius:'50%',background:'var(--ember)',display:'grid',placeItems:'center',flexShrink:0}}><Icon n="verify" size={10}/></div>{c.institution}</div>
               <div className="title">{c.title}</div>
-              <div className="student">Awarded to {c.student}</div>
+              <div className="student">Cấp cho {c.student}</div>
             </div>
             <div className="cdc-body">
               <div className="cdc-field-grid">
-                {[['Credential ID',c.id,'mono'],['Issue Date',c.issued,''],['Expiry Date',c.expiry,''],['EQF Level',c.eqf,''],['ECTS Credits',c.ects,''],['Verifications',c.verifications,'']].map(([l,v,cls])=>(
+                {[['Mã Chứng chỉ',c.id,'mono'],['Ngày cấp',c.issued,''],['Ngày hết hạn',c.expiry,''],['Cấp độ EQF',c.eqf,''],['Tín chỉ ECTS',c.ects,''],['Lượt xác minh',c.verifications,'']].map(([l,v,cls])=>(
                   <div key={l} className="cdc-field"><div className="l">{l}</div><div className={`v${cls?' '+cls:''}`}>{v}</div></div>
                 ))}
               </div>
-              <div className="sec-label" style={{marginTop:8}}>Skills</div>
+              <div className="sec-label" style={{marginTop:8}}>Kỹ năng</div>
               <div className="cdc-skills">{c.skills.map(s=><div key={s} className="skill-tag">{s}</div>)}</div>
-              <div className="sec-label">Learning Outcomes</div>
+              <div className="sec-label">Kết quả học tập</div>
               <div className="vr-outcomes">{c.outcomes.map(o=><div key={o} className="vr-outcome" style={{fontSize:12}}>{o}</div>)}</div>
-              <div className="sec-label">Verification History</div>
+              <div className="sec-label">Lịch sử Xác minh</div>
               <div className="ver-hist">
                 {c.verifications>0?[
-                  { who:'Employer verification', when:'23 Apr 2026, 14:11' },
-                  { who:'University admissions check', when:'18 Apr 2026, 09:32' },
-                  { who:'Learner self-check', when:'15 May 2026, 11:00' },
+                  { who:'Xác minh bởi nhà tuyển dụng', when:'23 Apr 2026, 14:11' },
+                  { who:'Kiểm tra tuyển sinh đại học', when:'18 Apr 2026, 09:32' },
+                  { who:'Học viên tự kiểm tra', when:'15 May 2026, 11:00' },
                 ].slice(0,c.verifications).map((v,i)=>(
                   <div key={i} className="ver-event"><span className="who">{v.who}</span><span className="when">{v.when}</span></div>
-                )):<div style={{fontSize:13,color:'var(--mute)',padding:'12px 0'}}>No verifications yet.</div>}
+                )):<div style={{fontSize:13,color:'var(--mute)',padding:'12px 0'}}>Chưa có lượt xác minh nào.</div>}
               </div>
             </div>
           </div>
@@ -2350,20 +2350,20 @@ function CMSCredentialDetail({ credId, setCmsPage }) {
 
         <div style={{display:'flex',flexDirection:'column',gap:16}}>
           <div className="panel" style={{padding:20}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Actions</div>
+            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Thao tác</div>
             <div className="cdc-actions">
-              <button className="cdc-action-btn"><Icon n="eye" size={16}/> View Public Verification</button>
-              <button className="cdc-action-btn"><Icon n="copy" size={16}/> Copy Verification Link</button>
-              <button className="cdc-action-btn"><Icon n="download" size={16}/> Download Certificate PDF</button>
-              <button className="cdc-action-btn"><Icon n="edit" size={16}/> Correct Credential</button>
-              <button className="cdc-action-btn"><Icon n="rotate" size={16}/> Reissue Credential</button>
-              {c.status==='Issued'&&<button className="cdc-action-btn danger"><Icon n="slash" size={16}/> Revoke Credential</button>}
+              <button className="cdc-action-btn"><Icon n="eye" size={16}/> Xem Xác minh Công khai</button>
+              <button className="cdc-action-btn"><Icon n="copy" size={16}/> Sao chép Liên kết Xác minh</button>
+              <button className="cdc-action-btn"><Icon n="download" size={16}/> Tải xuống PDF Chứng chỉ</button>
+              <button className="cdc-action-btn"><Icon n="edit" size={16}/> Chỉnh sửa Chứng chỉ</button>
+              <button className="cdc-action-btn"><Icon n="rotate" size={16}/> Cấp lại Chứng chỉ</button>
+              {c.status==='Issued'&&<button className="cdc-action-btn danger"><Icon n="slash" size={16}/> Thu hồi Chứng chỉ</button>}
             </div>
           </div>
           <div className="panel" style={{padding:20,textAlign:'center'}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>QR Code</div>
+            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Mã QR</div>
             <QRCode size={120}/>
-            <div style={{fontSize:11,color:'var(--mute)',marginTop:8}}>Scan to verify this credential</div>
+            <div style={{fontSize:11,color:'var(--mute)',marginTop:8}}>Quét để xác minh chứng chỉ này</div>
           </div>
         </div>
       </div>
@@ -2374,26 +2374,26 @@ function CMSCredentialDetail({ credId, setCmsPage }) {
 function CMSProfile() {
   return (
     <div style={{maxWidth:760}}>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Institution Profile</h1><p>Manage your institution's public profile and settings.</p></div><button className="btn btn-ember">Save Changes</button></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Hồ sơ Tổ chức</h1><p>Quản lý hồ sơ công khai và cài đặt của tổ chức bạn.</p></div><button className="btn btn-ember">Lưu thay đổi</button></div>
       <div className="panel" style={{padding:28}}>
-        <div className="field"><label>Institution Name *</label><input defaultValue="Bern University of Applied Sciences"/></div>
+        <div className="field"><label>Tên Tổ chức *</label><input defaultValue="Bern University of Applied Sciences"/></div>
         <div className="field-row">
-          <div className="field"><label>Institution Code</label><input defaultValue="BFH"/></div>
-          <div className="field"><label>Country</label><select defaultValue="ch"><option value="ch">Switzerland</option><option value="de">Germany</option></select></div>
+          <div className="field"><label>Mã Tổ chức</label><input defaultValue="BFH"/></div>
+          <div className="field"><label>Quốc gia</label><select defaultValue="ch"><option value="ch">Switzerland</option><option value="de">Germany</option></select></div>
         </div>
         <div className="field-row">
-          <div className="field"><label>Website URL</label><input defaultValue="www.bfh.ch"/></div>
+          <div className="field"><label>URL Website</label><input defaultValue="www.bfh.ch"/></div>
           <div className="field"><label>Email *</label><input defaultValue="contact@bfh.ch"/></div>
         </div>
-        <div className="field"><label>Location</label><input defaultValue="Bern, Switzerland"/></div>
-        <div className="field"><label>Accreditation Info</label><input defaultValue="Swiss Accreditation Council (AAQ)"/></div>
-        <div className="field"><label>Institution Tagline</label><input defaultValue="Applied Sciences. Applied Impact."/></div>
-        <div className="field"><label>Departments</label><input defaultValue="Business, Engineering, Health, Architecture, ICT"/></div>
-        <div className="field"><label>LinkedIn Organization ID</label><input placeholder="Your LinkedIn organization ID for credential sharing"/></div>
-        <div className="field"><label>Base Credential URL</label><input defaultValue="credentials.m-cred.ch/bfh"/></div>
+        <div className="field"><label>Địa điểm</label><input defaultValue="Bern, Switzerland"/></div>
+        <div className="field"><label>Thông tin Công nhận</label><input defaultValue="Swiss Accreditation Council (AAQ)"/></div>
+        <div className="field"><label>Khẩu hiệu Tổ chức</label><input defaultValue="Applied Sciences. Applied Impact."/></div>
+        <div className="field"><label>Các Khoa/Bộ phận</label><input defaultValue="Business, Engineering, Health, Architecture, ICT"/></div>
+        <div className="field"><label>ID Tổ chức LinkedIn</label><input placeholder="ID tổ chức LinkedIn của bạn để chia sẻ chứng chỉ"/></div>
+        <div className="field"><label>URL Chứng chỉ Cơ sở</label><input defaultValue="credentials.m-cred.ch/bfh"/></div>
         <div style={{marginTop:16,padding:16,background:'var(--paper)',borderRadius:10,border:'1px solid var(--line)',display:'flex',justifyContent:'space-between'}}>
-          <span style={{fontSize:13,color:'var(--mute)'}}>LinkedIn Integration</span>
-          <label style={{display:'flex',alignItems:'center',gap:8,fontSize:13}}><input type="checkbox" defaultChecked/> Enabled</label>
+          <span style={{fontSize:13,color:'var(--mute)'}}>Tích hợp LinkedIn</span>
+          <label style={{display:'flex',alignItems:'center',gap:8,fontSize:13}}><input type="checkbox" defaultChecked/> Đã bật</label>
         </div>
       </div>
     </div>
@@ -2403,18 +2403,18 @@ function CMSProfile() {
 function CMSDesign() {
   return (
     <div style={{maxWidth:760}}>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Design</h1><p>Upload your logo and configure certificate templates.</p></div><button className="btn btn-ember">Save</button></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Thiết kế</h1><p>Tải lên logo và cấu hình các mẫu chứng chỉ.</p></div><button className="btn btn-ember">Lưu</button></div>
       <div className="panel" style={{padding:28,marginBottom:20}}>
-        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Institution Logo</div>
+        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Logo Tổ chức</div>
         <div style={{border:'2px dashed var(--line)',borderRadius:12,padding:32,textAlign:'center',cursor:'pointer',background:'var(--paper-2)'}}>
-          <Icon n="import" size={28}/><div style={{fontSize:14,fontWeight:600,marginTop:12,marginBottom:4}}>Upload Institution Logo</div><div style={{fontSize:12,color:'var(--mute)'}}>PNG or SVG · Minimum 400px × 200px</div>
-          <button className="btn btn-ghost btn-sm" style={{marginTop:12}}>Browse Files</button>
+          <Icon n="import" size={28}/><div style={{fontSize:14,fontWeight:600,marginTop:12,marginBottom:4}}>Tải lên Logo Tổ chức</div><div style={{fontSize:12,color:'var(--mute)'}}>PNG hoặc SVG · Tối thiểu 400px × 200px</div>
+          <button className="btn btn-ghost btn-sm" style={{marginTop:12}}>Duyệt Tệp</button>
         </div>
       </div>
       <div className="panel" style={{padding:28,marginBottom:20}}>
-        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Email Templates</div>
-        <div className="field"><label>Subject Line</label><input defaultValue="Congratulations on Earning Your Credential from {{institution}}"/></div>
-        <div className="field"><label>Email Body</label><textarea defaultValue={`Dear {{learner_name}},\n\nWe are delighted to inform you that you have successfully received your credential from {{institution}}.\n\nYour credential: {{credential_title}}\nCredential ID: {{credential_id}}\nVerification Link: {{verification_link}}\n\nBest regards,\n{{institution}}`} style={{minHeight:160}}/></div>
+        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Mẫu Email</div>
+        <div className="field"><label>Dòng Tiêu đề</label><input defaultValue="Chúc mừng bạn đã nhận được Chứng chỉ từ {{institution}}"/></div>
+        <div className="field"><label>Nội dung Email</label><textarea defaultValue={`Kính gửi {{learner_name}},\n\nChúng tôi vui mừng thông báo rằng bạn đã nhận được chứng chỉ từ {{institution}}.\n\nChứng chỉ của bạn: {{credential_title}}\nMã Chứng chỉ: {{credential_id}}\nLiên kết Xác minh: {{verification_link}}\n\nTrân trọng,\n{{institution}}`} style={{minHeight:160}}/></div>
       </div>
     </div>
   );
@@ -2423,12 +2423,12 @@ function CMSDesign() {
 function CMSLayout() {
   return (
     <div style={{maxWidth:760}}>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Certificate Layout</h1><p>Configure how your credential certificates are formatted and displayed.</p></div><button className="btn btn-ember">Save Layout</button></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Bố cục Chứng chỉ</h1><p>Cấu hình cách định dạng và hiển thị chứng chỉ của bạn.</p></div><button className="btn btn-ember">Lưu Bố cục</button></div>
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
         <div className="panel" style={{padding:28}}>
-          <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Layout Options</div>
+          <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Tùy chọn Bố cục</div>
           <div style={{display:'flex',flexDirection:'column',gap:12}}>
-            {[['Center logo','Centres the institution logo on the certificate'],['Vertical spacing','Adds extra vertical padding between sections'],['Show QR code','Displays QR code on the certificate PDF'],['Show verification URL','Prints the verification link on the certificate']].map(([t,d])=>(
+            {[['Căn giữa logo','Căn giữa logo tổ chức trên chứng chỉ'],['Khoảng cách dọc','Thêm khoảng đệm dọc giữa các phần'],['Hiển thị mã QR','Hiển thị mã QR trên PDF chứng chỉ'],['Hiển thị URL xác minh','In liên kết xác minh trên chứng chỉ']].map(([t,d])=>(
               <label key={t} style={{display:'flex',alignItems:'flex-start',gap:12,cursor:'pointer',padding:'10px 0',borderBottom:'1px solid var(--line-2)'}}>
                 <input type="checkbox" defaultChecked={t.includes('logo')||t.includes('QR')} style={{marginTop:2}}/>
                 <div><div style={{fontSize:13,fontWeight:600}}>{t}</div><div style={{fontSize:12,color:'var(--mute)',marginTop:2}}>{d}</div></div>
@@ -2437,16 +2437,16 @@ function CMSLayout() {
           </div>
         </div>
         <div className="panel" style={{padding:28}}>
-          <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Certificate Preview</div>
+          <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Xem trước Chứng chỉ</div>
           <div className="cred-preview-full" style={{transform:'scale(.85)',transformOrigin:'top left',width:'118%'}}>
             <div className="cpf-header" style={{padding:20}}><div className="seal" style={{width:40,height:40,fontSize:18}}>B</div><div><div className="issuer-name" style={{fontSize:11}}>Bern University of Applied Sciences</div><div className="cred-type" style={{fontSize:9}}>MICROCREDENTIAL</div></div></div>
-            <div className="cpf-body" style={{padding:20}}><div className="cred-title" style={{fontSize:18}}>Course Title Here</div><div className="awarded-to" style={{fontSize:11}}>Awarded to</div><div className="student-big" style={{fontSize:16}}>Learner Name</div><div className="cpf-skills">{['Skill 1','Skill 2','Skill 3'].map(s=><div key={s} className="cpf-skill" style={{fontSize:10}}>{s}</div>)}</div></div>
-            <div className="cpf-footer" style={{padding:'12px 20px'}}><span className="cred-id">MCRED-BFH-2026-XXXXX</span><span className="valid-badge" style={{fontSize:10}}><Icon n="verify" size={10}/> Verifiable</span></div>
+            <div className="cpf-body" style={{padding:20}}><div className="cred-title" style={{fontSize:18}}>Tên Khóa học</div><div className="awarded-to" style={{fontSize:11}}>Cấp cho</div><div className="student-big" style={{fontSize:16}}>Tên Học viên</div><div className="cpf-skills">{['Skill 1','Skill 2','Skill 3'].map(s=><div key={s} className="cpf-skill" style={{fontSize:10}}>{s}</div>)}</div></div>
+            <div className="cpf-footer" style={{padding:'12px 20px'}}><span className="cred-id">MCRED-BFH-2026-XXXXX</span><span className="valid-badge" style={{fontSize:10}}><Icon n="verify" size={10}/> Có thể Xác minh</span></div>
           </div>
         </div>
       </div>
       <div className="panel" style={{padding:28,marginTop:20}}>
-        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Titles & Footers by Language</div>
+        <div style={{fontSize:15,fontWeight:700,marginBottom:16}}>Tiêu đề & Chân trang theo Ngôn ngữ</div>
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
           {[['English','Title','Footer'],['German','Titel','Fußzeile'],['French','Titre','Pied de page'],['Italian','Titolo','Piè di pagina']].map(([lang,t,f])=>(
             <div key={lang}>
@@ -2465,24 +2465,24 @@ function CMSSettings() {
   const [active, setActive] = useState('general');
   return (
     <div>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Settings</h1></div></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Cài đặt</h1></div></div>
       <div className="settings-grid">
         <div className="settings-nav">
-          {[['general','General','settings'],['notifications','Notifications','mail'],['security','Security & Access','shield'],['api','API & Integrations','link'],['billing','Plan & Billing','award']].map(([id,l,ic])=>(
+          {[['general','Chung','settings'],['notifications','Thông báo','mail'],['security','Bảo mật & Quyền truy cập','shield'],['api','API & Tích hợp','link'],['billing','Gói & Thanh toán','award']].map(([id,l,ic])=>(
             <div key={id} className={`settings-nav-item${active===id?' active':''}`} onClick={()=>setActive(id)}><Icon n={ic} size={15}/>{l}</div>
           ))}
         </div>
         <div className="settings-panel">
-          <h2>General Settings</h2>
-          <div className="field"><label>Platform Language</label><select><option>English</option><option>German</option><option>French</option></select></div>
-          <div className="field"><label>Default Credential Validity</label><select><option>3 years</option><option>2 years</option><option>1 year</option><option>No expiry</option></select></div>
-          <div className="field"><label>Credential ID Prefix</label><input defaultValue="MCRED-BFH"/></div>
+          <h2>Cài đặt Chung</h2>
+          <div className="field"><label>Ngôn ngữ Nền tảng</label><select><option>English</option><option>German</option><option>French</option></select></div>
+          <div className="field"><label>Hiệu lực Chứng chỉ Mặc định</label><select><option>3 năm</option><option>2 năm</option><option>1 năm</option><option>Không hết hạn</option></select></div>
+          <div className="field"><label>Tiền tố Mã Chứng chỉ</label><input defaultValue="MCRED-BFH"/></div>
           <div style={{padding:'16px',background:'var(--paper)',border:'1px solid var(--line)',borderRadius:10,marginBottom:16}}>
-            <div style={{fontSize:13,fontWeight:600,marginBottom:4}}>Approval Workflow</div>
-            <div style={{fontSize:12,color:'var(--mute)',marginBottom:8}}>Require admin approval before credentials are issued</div>
-            <label style={{display:'flex',alignItems:'center',gap:8,fontSize:13}}><input type="checkbox"/> Enable approval workflow</label>
+            <div style={{fontSize:13,fontWeight:600,marginBottom:4}}>Quy trình Phê duyệt</div>
+            <div style={{fontSize:12,color:'var(--mute)',marginBottom:8}}>Yêu cầu phê duyệt của quản trị viên trước khi cấp phát chứng chỉ</div>
+            <label style={{display:'flex',alignItems:'center',gap:8,fontSize:13}}><input type="checkbox"/> Bật quy trình phê duyệt</label>
           </div>
-          <button className="btn btn-ember">Save Settings</button>
+          <button className="btn btn-ember">Lưu Cài đặt</button>
         </div>
       </div>
     </div>
@@ -2493,7 +2493,7 @@ function CMSFaq() {
   const [open, setOpen] = useState(0);
   return (
     <div style={{maxWidth:760}}>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>FAQ</h1><p>Frequently asked questions about the M-CRED platform.</p></div></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>FAQ</h1><p>Các câu hỏi thường gặp về nền tảng M-CRED.</p></div></div>
       <div className="panel" style={{padding:'0 28px'}}>
         {FAQ_ITEMS.map((item,i)=>(
           <div key={i} className="faq-item">
@@ -2516,22 +2516,22 @@ function CMSUsersRoles({ role }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Users & Roles</h1><p>Manage who has access to the M-CRED CMS and what they can do.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Người dùng & Vai trò</h1><p>Quản lý ai có quyền truy cập vào M-CRED CMS và những gì họ có thể làm.</p></div>
         <div className="right">
-          <button className="btn btn-ember"><Icon n="plus" size={14}/> Invite User</button>
+          <button className="btn btn-ember"><Icon n="plus" size={14}/> Mời Người dùng</button>
         </div>
       </div>
       <div className="panel">
         <table className="data-table">
           <thead>
             <tr>
-              <th>User</th>
-              <th>Role</th>
-              <th>Department</th>
-              <th>Assigned To</th>
-              <th>Last Login</th>
-              <th>Status</th>
-              <th>Actions</th>
+              <th>Người dùng</th>
+              <th>Vai trò</th>
+              <th>Khoa/Bộ phận</th>
+              <th>Được phân công</th>
+              <th>Đăng nhập lần cuối</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
             </tr>
           </thead>
           <tbody>
@@ -2553,8 +2553,8 @@ function CMSUsersRoles({ role }) {
                 <td><StatusPill status={u.status}/></td>
                 <td>
                   <div className="actions-cell">
-                    <button className="btn btn-ghost btn-sm">Change Role</button>
-                    <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Deactivate</button>
+                    <button className="btn btn-ghost btn-sm">Đổi Vai trò</button>
+                    <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Vô hiệu hóa</button>
                   </div>
                 </td>
               </tr>
@@ -2563,13 +2563,13 @@ function CMSUsersRoles({ role }) {
         </table>
       </div>
       <div style={{marginTop:24,padding:20,background:'var(--white)',border:'1px solid var(--line)',borderRadius:12}}>
-        <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:16}}>Role Permissions Summary</div>
+        <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:16}}>Tóm tắt Quyền Vai trò</div>
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16}}>
           {[
-            {role:'Lecturer',color:'#3C6E47',perms:['View assigned courses & classes','Enter scores & grades','View own credential history']},
-            {role:'Secretariat',color:'#B88A2B',perms:['Create & edit courses/classes','Import students (CSV)','Issue credentials','View all credentials']},
-            {role:'Admin',color:'#C8421E',perms:['Manage users & roles','Approve courses','Configure institution','Revoke/reissue credentials']},
-            {role:'Developer',color:'#2563EB',perms:['Full platform access','System logs & integrations','Schema import/export','Debug & developer tools']},
+            {role:'Lecturer',color:'#3C6E47',perms:['Xem khóa học & lớp học được phân công','Nhập điểm số & đánh giá','Xem lịch sử chứng chỉ của mình']},
+            {role:'Secretariat',color:'#B88A2B',perms:['Tạo & chỉnh sửa khóa học/lớp học','Nhập học viên (CSV)','Cấp phát chứng chỉ','Xem tất cả chứng chỉ']},
+            {role:'Admin',color:'#C8421E',perms:['Quản lý người dùng & vai trò','Phê duyệt khóa học','Cấu hình tổ chức','Thu hồi/cấp lại chứng chỉ']},
+            {role:'Developer',color:'#2563EB',perms:['Toàn quyền truy cập nền tảng','Nhật ký hệ thống & tích hợp','Nhập/xuất Schema','Gỡ lỗi & công cụ nhà phát triển']},
           ].map(({role:r,color,perms})=>(
             <div key={r} style={{padding:16,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:10}}>
               <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
@@ -2590,17 +2590,17 @@ function CMSScores({ role, setCmsPage }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Scores / Completion</h1><p>Enter student scores and mark completion status before credentials can be issued.</p></div>
-        <div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Issue Credentials</button></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Điểm số / Hoàn thành</h1><p>Nhập điểm số học viên và đánh dấu trạng thái hoàn thành trước khi cấp phát chứng chỉ.</p></div>
+        <div className="right"><button className="btn btn-ember" onClick={()=>setCmsPage('issue-credential')}><Icon n="award" size={14}/> Cấp Chứng chỉ</button></div>
       </div>
       <RoleBanner role={role}/>
       <div style={{padding:14,background:'var(--amber-soft)',border:'1px solid rgba(184,138,43,.25)',borderRadius:10,marginBottom:20,fontSize:13,color:'var(--amber)',display:'flex',alignItems:'center',gap:10}}>
-        <Icon n="star" size={15}/> <strong>Workflow:</strong> Mark students as "Completed" and set readiness for credential issuing. The Secretariat will then be able to issue credentials for completed students.
+        <Icon n="star" size={15}/> <strong>Quy trình:</strong> Đánh dấu học viên là "Hoàn thành" và thiết lập trạng thái sẵn sàng để cấp phát chứng chỉ. Ban thư ký sau đó sẽ có thể cấp chứng chỉ cho các học viên đã hoàn thành.
       </div>
       <div className="panel">
         <table className="data-table">
           <thead>
-            <tr><th>Student</th><th>Class</th><th>Course</th><th>Score / Grade</th><th>Completion</th><th>Lecturer Comment</th><th>Ready for Credential</th></tr>
+            <tr><th>Học viên</th><th>Lớp học</th><th>Khóa học</th><th>Điểm số / Đánh giá</th><th>Hoàn thành</th><th>Nhận xét Giảng viên</th><th>Sẵn sàng nhận Chứng chỉ</th></tr>
           </thead>
           <tbody>
             {scores.map((s,i)=>(
@@ -2615,8 +2615,8 @@ function CMSScores({ role, setCmsPage }) {
                 <td style={{fontSize:12,color:'var(--mute)',maxWidth:200}}>{s.comment||<span style={{fontStyle:'italic',color:'var(--mute)'}}>—</span>}</td>
                 <td>
                   {s.readyForCredential
-                    ? <span className="pill pill-issued"><span className="pill-dot" style={{background:'#3C6E47'}}/> Ready</span>
-                    : <button className="btn btn-ghost btn-sm" style={{fontSize:11}} onClick={()=>{const ns=[...scores];ns[i]={...ns[i],completion:'Completed',readyForCredential:true};setScores(ns);}}>Mark Ready</button>
+                    ? <span className="pill pill-issued"><span className="pill-dot" style={{background:'#3C6E47'}}/> Sẵn sàng</span>
+                    : <button className="btn btn-ghost btn-sm" style={{fontSize:11}} onClick={()=>{const ns=[...scores];ns[i]={...ns[i],completion:'Completed',readyForCredential:true};setScores(ns);}}>Đánh dấu Sẵn sàng</button>
                   }
                 </td>
               </tr>
@@ -2632,8 +2632,8 @@ function CMSCourseProposals({ role, setCmsPage }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Course Proposals</h1><p>Propose new courses for review and approval by an Admin.</p></div>
-        <div className="right"><button className="btn btn-ember"><Icon n="plus" size={14}/> New Proposal</button></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Đề xuất Khóa học</h1><p>Đề xuất các khóa học mới để Quản trị viên xem xét và phê duyệt.</p></div>
+        <div className="right"><button className="btn btn-ember"><Icon n="plus" size={14}/> Đề xuất Mới</button></div>
       </div>
       <RoleBanner role={role}/>
       {[
@@ -2644,14 +2644,14 @@ function CMSCourseProposals({ role, setCmsPage }) {
         <div key={i} className="approval-card">
           <div style={{flex:1}}>
             <div className="ac-title">{p.title}</div>
-            <div className="ac-sub">{p.dept} · Submitted {p.submitted}</div>
+            <div className="ac-sub">{p.dept} · Đã gửi {p.submitted}</div>
             <div style={{fontSize:12,color:'var(--mute)',marginTop:8,maxWidth:560}}>{p.notes}</div>
           </div>
           <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end',gap:8,flexShrink:0}}>
             <StatusPill status={p.status==='Pending'?'Pending':p.status==='Rejected'?'Revoked':'Active'}/>
             <div className="ac-actions">
-              <button className="btn btn-ghost btn-sm"><Icon n="edit" size={12}/> Edit</button>
-              {p.status==='Pending'&&<button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Withdraw</button>}
+              <button className="btn btn-ghost btn-sm"><Icon n="edit" size={12}/> Chỉnh sửa</button>
+              {p.status==='Pending'&&<button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Rút lại</button>}
             </div>
           </div>
         </div>
@@ -2664,10 +2664,10 @@ function CMSCourseApprovals({ setCmsPage }) {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Course Approvals</h1><p>Review and approve course proposals submitted by lecturers.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Phê duyệt Khóa học</h1><p>Xem xét và phê duyệt các đề xuất khóa học do giảng viên gửi.</p></div>
       </div>
       <div style={{padding:14,background:'var(--ember-soft)',border:'1px solid rgba(200,66,30,.2)',borderRadius:10,marginBottom:20,fontSize:13,display:'flex',alignItems:'center',gap:10}}>
-        <Icon n="verify" size={15}/><span style={{color:'var(--ember)'}}><strong>2 proposals</strong> awaiting your review.</span>
+        <Icon n="verify" size={15}/><span style={{color:'var(--ember)'}}><strong>2 đề xuất</strong> đang chờ bạn xem xét.</span>
       </div>
       {[
         {title:'AI in Healthcare Management',lecturer:'Dr. Priya Sharma',dept:'ICT',eqf:6,ects:4,submitted:'Today',notes:'New interdisciplinary course combining AI tools with healthcare workflows.'},
@@ -2677,15 +2677,15 @@ function CMSCourseApprovals({ setCmsPage }) {
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:12}}>
             <div>
               <div className="ac-title">{p.title}</div>
-              <div className="ac-sub">Proposed by {p.lecturer} · {p.dept} · EQF {p.eqf} · {p.ects} ECTS · Submitted {p.submitted}</div>
+              <div className="ac-sub">Đề xuất bởi {p.lecturer} · {p.dept} · EQF {p.eqf} · {p.ects} ECTS · Đã gửi {p.submitted}</div>
             </div>
             <StatusPill status="Pending"/>
           </div>
           <p style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.6}}>{p.notes}</p>
           <div className="ac-actions">
-            <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff'}}><Icon n="check" size={13}/> Approve</button>
-            <button className="btn btn-ghost btn-sm">Request Changes</button>
-            <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Reject</button>
+            <button className="btn btn-sm" style={{background:'var(--sage)',color:'#fff'}}><Icon n="check" size={13}/> Phê duyệt</button>
+            <button className="btn btn-ghost btn-sm">Yêu cầu Chỉnh sửa</button>
+            <button className="btn btn-ghost btn-sm" style={{color:'var(--ember)'}}>Từ chối</button>
           </div>
         </div>
       ))}
@@ -2697,27 +2697,27 @@ function CMSImportStudents({ setCmsPage }) {
   return (
     <div style={{maxWidth:720}}>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Import Students</h1><p>Upload a CSV file to add multiple students at once.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Nhập Học viên</h1><p>Tải lên tệp CSV để thêm nhiều học viên cùng lúc.</p></div>
       </div>
       <div className="panel" style={{padding:28,marginBottom:20}}>
-        <div style={{fontSize:15,fontWeight:600,marginBottom:16}}>Upload CSV File</div>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:16}}>Tải lên Tệp CSV</div>
         <div style={{border:'2px dashed var(--line)',borderRadius:12,padding:40,textAlign:'center',cursor:'pointer',background:'var(--paper-2)'}}>
           <Icon n="import" size={32}/>
-          <div style={{fontSize:15,fontWeight:600,marginTop:14,marginBottom:6}}>Drag & drop your CSV file here</div>
-          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16}}>or click to browse — max 5 MB</div>
-          <button className="btn btn-ghost">Browse Files</button>
+          <div style={{fontSize:15,fontWeight:600,marginTop:14,marginBottom:6}}>Kéo & thả tệp CSV của bạn vào đây</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16}}>hoặc nhấp để duyệt — tối đa 5 MB</div>
+          <button className="btn btn-ghost">Duyệt Tệp</button>
         </div>
       </div>
       <div className="panel" style={{padding:28}}>
-        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>CSV Format Requirements</div>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>Yêu cầu Định dạng CSV</div>
         <div style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,color:'var(--ink-3)',lineHeight:1.8}}>
           first_name, last_name, email, student_id, class_id<br/>
           Sarah, Keller, sarah.keller@student.bfh.ch, STU-2026-001, CL001<br/>
           Luca, Meier, luca.meier@student.bfh.ch, STU-2026-002, CL001
         </div>
         <div style={{marginTop:16,display:'flex',gap:12}}>
-          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Download Template</button>
-          <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('students')}><Icon n="users" size={13}/> View All Students</button>
+          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Tải xuống Mẫu</button>
+          <button className="btn btn-ghost btn-sm" onClick={()=>setCmsPage('students')}><Icon n="users" size={13}/> Xem tất cả Học viên</button>
         </div>
       </div>
     </div>
@@ -2728,15 +2728,15 @@ function CMSIntegrations() {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Integrations</h1><p>Connect M-CRED with external platforms and services.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Tích hợp</h1><p>Kết nối M-CRED với các nền tảng và dịch vụ bên ngoài.</p></div>
       </div>
       {[
-        {name:'LinkedIn',desc:'Allow learners to add credentials directly to their LinkedIn profile.',icon:'linkedin',status:'Connected'},
-        {name:'Campusonline',desc:'Sync student and course data from Campusonline.',icon:'link',status:'Connected'},
-        {name:'Microsoft Teams',desc:'Send credential notifications directly via Teams.',icon:'mail',status:'Not connected'},
-        {name:'Zapier',desc:'Automate credential workflows with Zapier triggers.',icon:'rotate',status:'Not connected'},
-        {name:'REST API',desc:'Use the M-CRED REST API to integrate with your own systems.',icon:'link',status:'Active'},
-        {name:'Webhook',desc:'Receive event-based notifications for credential lifecycle events.',icon:'share',status:'Not connected'},
+        {name:'LinkedIn',desc:'Cho phép học viên thêm chứng chỉ trực tiếp vào hồ sơ LinkedIn của họ.',icon:'linkedin',status:'Connected'},
+        {name:'Campusonline',desc:'Đồng bộ dữ liệu học viên và khóa học từ Campusonline.',icon:'link',status:'Connected'},
+        {name:'Microsoft Teams',desc:'Gửi thông báo chứng chỉ trực tiếp qua Teams.',icon:'mail',status:'Not connected'},
+        {name:'Zapier',desc:'Tự động hóa quy trình chứng chỉ với các trigger Zapier.',icon:'rotate',status:'Not connected'},
+        {name:'REST API',desc:'Sử dụng REST API của M-CRED để tích hợp với hệ thống của bạn.',icon:'link',status:'Active'},
+        {name:'Webhook',desc:'Nhận thông báo dựa trên sự kiện cho vòng đời chứng chỉ.',icon:'share',status:'Not connected'},
       ].map((int,i)=>(
         <div key={i} className="panel" style={{padding:22,marginBottom:12,display:'flex',alignItems:'center',gap:20}}>
           <div style={{width:44,height:44,borderRadius:12,background:'var(--paper)',border:'1px solid var(--line)',display:'grid',placeItems:'center',color:'var(--ember)',flexShrink:0}}><Icon n={int.icon} size={20}/></div>
@@ -2745,7 +2745,7 @@ function CMSIntegrations() {
             <div style={{fontSize:13,color:'var(--mute)'}}>{int.desc}</div>
           </div>
           <StatusPill status={int.status==='Connected'||int.status==='Active'?'Active':'Draft'}/>
-          <button className="btn btn-ghost btn-sm">{int.status==='Connected'||int.status==='Active'?'Configure':'Connect'}</button>
+          <button className="btn btn-ghost btn-sm">{int.status==='Connected'||int.status==='Active'?'Cấu hình':'Kết nối'}</button>
         </div>
       ))}
     </div>
@@ -2767,12 +2767,12 @@ function CMSSystemLogs() {
   return (
     <div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>System Logs</h1><p>Full audit trail of platform events and system activity.</p></div>
-        <div className="right"><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export Logs</button></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Nhật ký Hệ thống</h1><p>Nhật ký kiểm tra đầy đủ về các sự kiện nền tảng và hoạt động hệ thống.</p></div>
+        <div className="right"><button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Xuất Nhật ký</button></div>
       </div>
       <div className="panel">
         <table className="data-table">
-          <thead><tr><th>Level</th><th>Message</th><th>User</th><th>Timestamp</th></tr></thead>
+          <thead><tr><th>Mức độ</th><th>Thông điệp</th><th>Người dùng</th><th>Thời điểm</th></tr></thead>
           <tbody>
             {logs.map((l,i)=>(
               <tr key={i}>
@@ -2793,22 +2793,22 @@ function CMSSchema() {
   return (
     <div style={{maxWidth:760}}>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Schema Import / Export</h1><p>Import or export credential schemas, course templates, and data definitions.</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Nhập / Xuất Schema</h1><p>Nhập hoặc xuất các schema chứng chỉ, mẫu khóa học và định nghĩa dữ liệu.</p></div>
       </div>
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:20}}>
         <div className="panel" style={{padding:24}}>
-          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Import Schema</div>
-          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Upload a JSON or YAML credential schema file to use as a template for new courses.</div>
+          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Nhập Schema</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Tải lên tệp schema chứng chỉ JSON hoặc YAML để dùng làm mẫu cho các khóa học mới.</div>
           <div style={{border:'2px dashed var(--line)',borderRadius:10,padding:24,textAlign:'center',marginBottom:12,cursor:'pointer'}}>
             <Icon n="import" size={24}/>
-            <div style={{fontSize:13,marginTop:8,color:'var(--mute)'}}>Drop JSON / YAML here</div>
+            <div style={{fontSize:13,marginTop:8,color:'var(--mute)'}}>Thả JSON / YAML vào đây</div>
           </div>
-          <button className="btn btn-ghost btn-sm" style={{width:'100%',justifyContent:'center'}}>Browse Files</button>
+          <button className="btn btn-ghost btn-sm" style={{width:'100%',justifyContent:'center'}}>Duyệt Tệp</button>
         </div>
         <div className="panel" style={{padding:24}}>
-          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Export Schema</div>
-          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Export current credential schemas and course data for backup or migration.</div>
-          {[['Credential Schema (JSON)','json'],['Course Data (CSV)','csv'],['All Platform Data (ZIP)','zip']].map(([label,fmt])=>(
+          <div style={{fontSize:15,fontWeight:600,marginBottom:8}}>Xuất Schema</div>
+          <div style={{fontSize:13,color:'var(--mute)',marginBottom:16,lineHeight:1.5}}>Xuất các schema chứng chỉ và dữ liệu khóa học hiện tại để sao lưu hoặc di chuyển.</div>
+          {[['Schema Chứng chỉ (JSON)','json'],['Dữ liệu Khóa học (CSV)','csv'],['Toàn bộ Dữ liệu Nền tảng (ZIP)','zip']].map(([label,fmt])=>(
             <button key={fmt} className="btn btn-ghost btn-sm" style={{display:'flex',justifyContent:'space-between',width:'100%',marginBottom:8}}>
               <span><Icon n="download" size={13}/> {label}</span>
               <span style={{fontFamily:'monospace',fontSize:10,color:'var(--mute)'}}>.{fmt}</span>
@@ -2817,7 +2817,7 @@ function CMSSchema() {
         </div>
       </div>
       <div className="panel" style={{padding:24}}>
-        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>Current Credential Schema</div>
+        <div style={{fontSize:15,fontWeight:600,marginBottom:12}}>Schema Chứng chỉ Hiện tại</div>
         <pre style={{fontFamily:'monospace',fontSize:11,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,overflowX:'auto',color:'var(--ink-3)',lineHeight:1.7}}>{`{
   "@context": ["https://www.w3.org/2018/credentials/v1"],
   "type": ["VerifiableCredential", "MicrocredentialCertificate"],
@@ -2866,28 +2866,28 @@ function CMSLog({ role, setCmsPage, setSelectedLogId }) {
   const showTechMeta = role === 'developer';
 
   const objectTypes = ['All','Credential','Course','Class','Student','User','Template','Institution Profile','Layout','Settings'];
-  const actionGroups = ['All','Issued','Created','Edited','Revoked','Added','Changed','Approved','Invited'];
+  const actionGroups = ['Tất cả','Đã cấp','Đã tạo','Đã chỉnh sửa','Đã thu hồi','Đã thêm','Đã thay đổi','Đã phê duyệt','Đã mời'];
 
   return (
     <div>
       <div className="page-head">
         <div className="page-title-block">
-          <h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Log</h1>
-          <p>Immutable audit trail of all institutional actions in M-CRED.</p>
+          <h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Nhật ký</h1>
+          <p>Nhật ký kiểm tra bất biến của tất cả các hành động tổ chức trong M-CRED.</p>
         </div>
         <div className="right">
           {canExport && <>
-            <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Export CSV</button>
-            <button className="btn btn-ghost btn-sm"><Icon n="pdf" size={13}/> Export PDF</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Xuất CSV</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="pdf" size={13}/> Xuất PDF</button>
           </>}
         </div>
       </div>
 
       <div className="log-immutable-notice">
-        <span className="notice-badge">Immutable</span>
-        <span>Log entries cannot be edited, deleted, or cleared. This record is permanent and tamper-evident.
-          {role==='lecturer'&&' You are viewing entries related to your assigned courses and students only.'}
-          {role==='secretariat'&&' You are viewing operational entries for courses, classes, students, and credentials.'}
+        <span className="notice-badge">Bất biến</span>
+        <span>Các mục nhật ký không thể chỉnh sửa, xóa hoặc xóa sạch. Hồ sơ này là vĩnh viễn và chống giả mạo.
+          {role==='lecturer'&&' Bạn đang xem các mục liên quan đến khóa học và học viên được phân công của bạn.'}
+          {role==='secretariat'&&' Bạn đang xem các mục hoạt động cho khóa học, lớp học, học viên và chứng chỉ.'}
         </span>
       </div>
 
@@ -2895,11 +2895,11 @@ function CMSLog({ role, setCmsPage, setSelectedLogId }) {
       <div className="log-filter-row">
         <div className="cms-search" style={{width:280,flexShrink:0}}>
           <Icon n="eye" size={14}/>
-          <input placeholder="Search by user, student, action, ID…" value={search} onChange={e=>setSearch(e.target.value)}/>
+          <input placeholder="Tìm kiếm theo người dùng, học viên, hành động, ID…" value={search} onChange={e=>setSearch(e.target.value)}/>
         </div>
         {(role==='admin'||role==='developer')&&(
           <select value={filterRole} onChange={e=>setFilterRole(e.target.value)}>
-            <option>All</option><option>Lecturer</option><option>Secretariat</option><option>Admin</option><option>Developer</option>
+            <option>Tất cả</option><option>Giảng viên</option><option>Ban thư ký</option><option>Quản trị viên</option><option>Nhà phát triển</option>
           </select>
         )}
         <select value={filterType} onChange={e=>setFilterType(e.target.value)}>
@@ -2908,29 +2908,29 @@ function CMSLog({ role, setCmsPage, setSelectedLogId }) {
         <select value={filterAction} onChange={e=>setFilterAction(e.target.value)}>
           {actionGroups.map(a=><option key={a}>{a}</option>)}
         </select>
-        <span style={{fontSize:12,color:'var(--mute)',marginLeft:'auto'}}>{filtered.length} entr{filtered.length===1?'y':'ies'}</span>
+        <span style={{fontSize:12,color:'var(--mute)',marginLeft:'auto'}}>{filtered.length} mục</span>
       </div>
 
       <div className="panel">
         <table className="data-table">
           <thead>
             <tr>
-              <th>Timestamp</th>
-              <th>User</th>
-              <th>Role</th>
-              <th>Action</th>
-              <th>Object Type</th>
-              <th>Object</th>
-              <th>Prev Value</th>
-              <th>New Value</th>
-              <th>Status</th>
-              {showTechMeta && <th>Session / IP</th>}
+              <th>Thời điểm</th>
+              <th>Người dùng</th>
+              <th>Vai trò</th>
+              <th>Hành động</th>
+              <th>Loại Đối tượng</th>
+              <th>Đối tượng</th>
+              <th>Giá trị cũ</th>
+              <th>Giá trị mới</th>
+              <th>Trạng thái</th>
+              {showTechMeta && <th>Phiên / IP</th>}
               <th></th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 && (
-              <tr><td colSpan={showTechMeta?11:10} style={{textAlign:'center',padding:'40px',color:'var(--mute)',fontSize:13}}>No log entries match your filters.</td></tr>
+              <tr><td colSpan={showTechMeta?11:10} style={{textAlign:'center',padding:'40px',color:'var(--mute)',fontSize:13}}>Không có mục nhật ký nào khớp với bộ lọc của bạn.</td></tr>
             )}
             {filtered.map(e=>(
               <tr key={e.id} className="log-row" onClick={()=>{setSelectedLogId(e.id);setCmsPage('log-detail')}}>
@@ -2950,7 +2950,7 @@ function CMSLog({ role, setCmsPage, setSelectedLogId }) {
                 <td className="log-val-cell">{e.newValue ? (e.newValue.length>30?e.newValue.slice(0,30)+'…':e.newValue) : <span style={{color:'var(--line)',fontFamily:'monospace'}}>—</span>}</td>
                 <td><StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/></td>
                 {showTechMeta && <td style={{fontSize:10,fontFamily:'monospace',color:'var(--mute)'}}>{e.sessionId}<br/>{e.ip}</td>}
-                <td><button className="btn btn-ghost btn-sm" onClick={ev=>{ev.stopPropagation();setSelectedLogId(e.id);setCmsPage('log-detail');}}>Detail</button></td>
+                <td><button className="btn btn-ghost btn-sm" onClick={ev=>{ev.stopPropagation();setSelectedLogId(e.id);setCmsPage('log-detail');}}>Chi tiết</button></td>
               </tr>
             ))}
           </tbody>
@@ -2967,7 +2967,7 @@ function CMSLogDetail({ logId, role, setCmsPage }) {
 
   return (
     <div style={{maxWidth:800}}>
-      <div className="back-btn" onClick={()=>setCmsPage('log')}><Icon n="back" size={14}/> Back to Log</div>
+      <div className="back-btn" onClick={()=>setCmsPage('log')}><Icon n="back" size={14}/> Quay lại Nhật ký</div>
 
       <div style={{display:'flex',alignItems:'flex-start',justifyContent:'space-between',marginBottom:24,gap:20}}>
         <div>
@@ -2979,54 +2979,54 @@ function CMSLogDetail({ logId, role, setCmsPage }) {
           </div>
         </div>
         <div className="log-immutable-notice" style={{margin:0,width:'auto',flexShrink:0}}>
-          <span className="notice-badge">Immutable</span>
-          <span style={{fontSize:11}}>Entry cannot be modified</span>
+          <span className="notice-badge">Bất biến</span>
+          <span style={{fontSize:11}}>Mục này không thể chỉnh sửa</span>
         </div>
       </div>
 
       <div style={{display:'flex',flexDirection:'column',gap:16}}>
 
         <div className="panel" style={{overflow:'visible'}}>
-          <div className="panel-head"><h3>Event Details</h3></div>
+          <div className="panel-head"><h3>Chi tiết Sự kiện</h3></div>
           <div style={{padding:20}}>
             <div className="log-detail-grid">
-              <div className="log-detail-field"><div className="ldf-label">Log ID</div><div className="ldf-value mono">{e.id}</div></div>
-              <div className="log-detail-field"><div className="ldf-label">Timestamp</div><div className="ldf-value mono">{e.ts}</div></div>
-              <div className="log-detail-field"><div className="ldf-label">Action</div><div className="ldf-value">{e.action}</div></div>
-              <div className="log-detail-field"><div className="ldf-label">Status</div><div className="ldf-value"><StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/></div></div>
-              <div className="log-detail-field"><div className="ldf-label">Object Type</div><div className="ldf-value"><span className={`log-action-tag ${typeColors[e.objectType]||'settings'}`}>{e.objectType}</span></div></div>
-              <div className="log-detail-field"><div className="ldf-label">Object ID</div><div className="ldf-value mono">{e.objectId}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Mã Nhật ký</div><div className="ldf-value mono">{e.id}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Thời điểm</div><div className="ldf-value mono">{e.ts}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Hành động</div><div className="ldf-value">{e.action}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Trạng thái</div><div className="ldf-value"><StatusPill status={e.status==='Success'?'Active':e.status==='Pending'?'Pending':'Revoked'}/></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Loại Đối tượng</div><div className="ldf-value"><span className={`log-action-tag ${typeColors[e.objectType]||'settings'}`}>{e.objectType}</span></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Mã Đối tượng</div><div className="ldf-value mono">{e.objectId}</div></div>
             </div>
             <div className="log-detail-field" style={{marginTop:12}}>
-              <div className="ldf-label">Object Name</div>
+              <div className="ldf-label">Tên Đối tượng</div>
               <div className="ldf-value">{e.objectName}</div>
             </div>
           </div>
         </div>
 
         <div className="panel" style={{overflow:'visible'}}>
-          <div className="panel-head"><h3>Actor</h3></div>
+          <div className="panel-head"><h3>Người thực hiện</h3></div>
           <div style={{padding:20}}>
             <div className="log-detail-grid">
-              <div className="log-detail-field"><div className="ldf-label">User Name</div><div className="ldf-value">{e.user}</div></div>
-              <div className="log-detail-field"><div className="ldf-label">User Email</div><div className="ldf-value mono">{e.email}</div></div>
-              <div className="log-detail-field"><div className="ldf-label">Role</div><div className="ldf-value"><span className={`role-badge ${e.role.toLowerCase()}`}>{e.role}</span></div></div>
-              <div className="log-detail-field"><div className="ldf-label">Scope</div><div className="ldf-value" style={{textTransform:'capitalize'}}>{e.scope}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Tên Người dùng</div><div className="ldf-value">{e.user}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Email Người dùng</div><div className="ldf-value mono">{e.email}</div></div>
+              <div className="log-detail-field"><div className="ldf-label">Vai trò</div><div className="ldf-value"><span className={`role-badge ${e.role.toLowerCase()}`}>{e.role}</span></div></div>
+              <div className="log-detail-field"><div className="ldf-label">Phạm vi</div><div className="ldf-value" style={{textTransform:'capitalize'}}>{e.scope}</div></div>
             </div>
           </div>
         </div>
 
         <div className="panel" style={{overflow:'visible'}}>
-          <div className="panel-head"><h3>Change Record</h3></div>
+          <div className="panel-head"><h3>Hồ sơ Thay đổi</h3></div>
           <div style={{padding:20,display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
             <div>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>Previous Value</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>Giá trị cũ</div>
               <pre style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,margin:0,lineHeight:1.6,color:e.prevValue?'var(--ember)':'var(--mute)',whiteSpace:'pre-wrap',wordBreak:'break-word',minHeight:80}}>
-                {e.prevValue || '— (no previous value)'}
+                {e.prevValue || '— (không có giá trị trước)'}
               </pre>
             </div>
             <div>
-              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>New Value</div>
+              <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:8}}>Giá trị mới</div>
               <pre style={{fontFamily:'monospace',fontSize:12,background:'var(--paper-2)',border:'1px solid var(--line)',borderRadius:8,padding:16,margin:0,lineHeight:1.6,color:e.newValue?'var(--sage)':'var(--mute)',whiteSpace:'pre-wrap',wordBreak:'break-word',minHeight:80}}>
                 {e.newValue || '—'}
               </pre>
@@ -3035,7 +3035,7 @@ function CMSLogDetail({ logId, role, setCmsPage }) {
           {e.reason && (
             <div style={{padding:'0 20px 20px'}}>
               <div className="log-detail-field">
-                <div className="ldf-label">Reason / Comment</div>
+                <div className="ldf-label">Lý do / Nhận xét</div>
                 <div className="ldf-value">{e.reason}</div>
               </div>
             </div>
@@ -3044,13 +3044,13 @@ function CMSLogDetail({ logId, role, setCmsPage }) {
 
         {showTechMeta && (
           <div className="panel" style={{overflow:'visible'}}>
-            <div className="panel-head"><h3>Technical Metadata <span className={`role-badge developer`} style={{marginLeft:8}}>Developer Only</span></h3></div>
+            <div className="panel-head"><h3>Metadata Kỹ thuật <span className={`role-badge developer`} style={{marginLeft:8}}>Chỉ dành cho Nhà phát triển</span></h3></div>
             <div style={{padding:20}}>
               <div className="log-detail-grid">
-                <div className="log-detail-field"><div className="ldf-label">Session ID</div><div className="ldf-value mono">{e.sessionId}</div></div>
-                <div className="log-detail-field"><div className="ldf-label">IP Address</div><div className="ldf-value mono">{e.ip}</div></div>
-                <div className="log-detail-field"><div className="ldf-label">System Event ID</div><div className="ldf-value mono">EVT-{e.id.replace('LOG-','')}</div></div>
-                <div className="log-detail-field"><div className="ldf-label">Platform Version</div><div className="ldf-value mono">v2.4.1</div></div>
+                <div className="log-detail-field"><div className="ldf-label">ID Phiên</div><div className="ldf-value mono">{e.sessionId}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">Địa chỉ IP</div><div className="ldf-value mono">{e.ip}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">ID Sự kiện Hệ thống</div><div className="ldf-value mono">EVT-{e.id.replace('LOG-','')}</div></div>
+                <div className="log-detail-field"><div className="ldf-label">Phiên bản Nền tảng</div><div className="ldf-value mono">v2.4.1</div></div>
               </div>
             </div>
           </div>
@@ -3075,14 +3075,14 @@ function WalletApp({ walletPage, setWalletPage, setMode, setPublicPage }) {
             <div><div className="name">Sarah Keller</div><div className="role">Learner · BFH</div></div>
           </div>
           <div className="wallet-tabs">
-            {[['dashboard','My Wallet'],['all','All Credentials'],['shared','Shared']].map(([id,l])=>(
+            {[['dashboard','Ví của tôi'],['all','Tất cả Chứng chỉ'],['shared','Đã chia sẻ']].map(([id,l])=>(
               <div key={id} className={`wallet-tab${walletPage===id?' active':''}`} onClick={()=>setWalletPage(id)}>{l}</div>
             ))}
           </div>
         </div>
         <div style={{display:'flex',gap:10,alignItems:'center'}}>
-          <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('public');setPublicPage('verify')}}>Verify a Credential</button>
-          <button className="btn btn-ghost btn-sm" onClick={()=>setMode('public')}>← Public Site</button>
+          <button className="btn btn-ghost btn-sm" onClick={()=>{setMode('public');setPublicPage('verify')}}>Xác minh Chứng chỉ</button>
+          <button className="btn btn-ghost btn-sm" onClick={()=>setMode('public')}>← Trang Công khai</button>
         </div>
       </div>
 
@@ -3103,19 +3103,19 @@ function WalletDashboard({ setWalletPage, setSelectedCred }) {
     <div>
       <div className="page-head">
         <div className="left">
-          <h1>My Wallet</h1>
-          <p>Your verified credentials from Bern University of Applied Sciences.</p>
+          <h1>Ví của tôi</h1>
+          <p>Chứng chỉ đã xác minh của bạn từ Bern University of Applied Sciences.</p>
         </div>
-        <button className="btn btn-ember" onClick={()=>setWalletPage('all')}><Icon n="wallet" size={14}/> All Credentials</button>
+        <button className="btn btn-ember" onClick={()=>setWalletPage('all')}><Icon n="wallet" size={14}/> Tất cả Chứng chỉ</button>
       </div>
 
       <div className="kpi-row" style={{gridTemplateColumns:"repeat(3,1fr)"}}>
-        <div className="kpi"><div className="label">Credentials</div><div className="value">{myCreds.length}</div><div className="delta">All verified</div></div>
-        <div className="kpi"><div className="label">Total Verifications</div><div className="value">{myCreds.reduce((a,c)=>a+c.verifications,0)}</div><div className="delta">By employers</div></div>
-        <div className="kpi"><div className="label">Wallet Status</div><div className="value" style={{fontSize:20,paddingTop:4}}><StatusPill status="Active"/></div><div className="delta">Linked to BFH</div></div>
+        <div className="kpi"><div className="label">Chứng chỉ</div><div className="value">{myCreds.length}</div><div className="delta">Tất cả đã xác minh</div></div>
+        <div className="kpi"><div className="label">Tổng lượt Xác minh</div><div className="value">{myCreds.reduce((a,c)=>a+c.verifications,0)}</div><div className="delta">Bởi nhà tuyển dụng</div></div>
+        <div className="kpi"><div className="label">Trạng thái Ví</div><div className="value" style={{fontSize:20,paddingTop:4}}><StatusPill status="Active"/></div><div className="delta">Liên kết với BFH</div></div>
       </div>
 
-      <div className="sec-label">My Credentials</div>
+      <div className="sec-label">Chứng chỉ của tôi</div>
       <div className="wallet-cred-grid">
         {myCreds.map((c,i)=>(
           <div key={c.id} className="wallet-cred-card" onClick={()=>{setSelectedCred(c);setWalletPage('detail')}}>
@@ -3128,7 +3128,7 @@ function WalletDashboard({ setWalletPage, setSelectedCred }) {
                 <h4>{c.title}</h4>
                 <StatusPill status={c.status}/>
               </div>
-              <div className="date">Issued {c.issued} · Expires {c.expiry}</div>
+              <div className="date">Đã cấp {c.issued} · Hết hạn {c.expiry}</div>
               <div style={{display:'flex',gap:6,flexWrap:'wrap',marginTop:10}}>
                 {c.skills.slice(0,3).map(s=><div key={s} className="tag" style={{fontSize:10,padding:'3px 8px'}}>{s}</div>)}
               </div>
@@ -3143,7 +3143,7 @@ function WalletDashboard({ setWalletPage, setSelectedCred }) {
           </div>
         ))}
         <div style={{border:'1.5px dashed var(--line)',borderRadius:14,display:'grid',placeItems:'center',minHeight:180,padding:24,textAlign:'center',cursor:'pointer'}} onClick={()=>setWalletPage('all')}>
-          <div><div style={{fontSize:32,marginBottom:8}}>+</div><div style={{fontSize:13,fontWeight:600,marginBottom:4}}>Add Credential</div><div style={{fontSize:11,color:'var(--mute)'}}>Accept a pending credential</div></div>
+          <div><div style={{fontSize:32,marginBottom:8}}>+</div><div style={{fontSize:13,fontWeight:600,marginBottom:4}}>Thêm Chứng chỉ</div><div style={{fontSize:11,color:'var(--mute)'}}>Chấp nhận chứng chỉ đang chờ</div></div>
         </div>
       </div>
     </div>
@@ -3154,14 +3154,14 @@ function WalletAll({ setWalletPage, setSelectedCred }) {
   const allCreds = CREDENTIALS.filter(c=>c.studentId==='STU-2026-001');
   return (
     <div>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>All Credentials</h1><p>{allCreds.length} credentials in your wallet</p></div></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Tất cả Chứng chỉ</h1><p>{allCreds.length} chứng chỉ trong ví của bạn</p></div></div>
       <div className="wallet-cred-grid">
         {allCreds.map(c=>(
           <div key={c.id} className="wallet-cred-card" onClick={()=>{setSelectedCred(c);setWalletPage('detail')}}>
             <div className="wcc-header"><div className="seal">B</div><div><div className="issuer">{c.institution}</div></div></div>
             <div className="wcc-body">
               <div style={{display:'flex',justifyContent:'space-between',marginBottom:6}}><h4>{c.title}</h4><StatusPill status={c.status}/></div>
-              <div className="date">Issued {c.issued}</div>
+              <div className="date">Đã cấp {c.issued}</div>
               <div style={{display:'flex',gap:6,marginTop:8,flexWrap:'wrap'}}>{c.skills.slice(0,3).map(s=><div key={s} className="tag" style={{fontSize:10,padding:'3px 8px'}}>{s}</div>)}</div>
             </div>
             <div className="wcc-footer">
@@ -3181,10 +3181,10 @@ function WalletAll({ setWalletPage, setSelectedCred }) {
 function WalletShared({ setWalletPage, setSelectedCred }) {
   return (
     <div>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Shared Credentials</h1><p>Credentials you've shared with employers or institutions.</p></div></div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Chứng chỉ đã Chia sẻ</h1><p>Các chứng chỉ bạn đã chia sẻ với nhà tuyển dụng hoặc tổ chức.</p></div></div>
       <div className="panel">
         <table className="data-table">
-          <thead><tr><th>Credential</th><th>Shared With</th><th>Shared On</th><th>Views</th><th>Actions</th></tr></thead>
+          <thead><tr><th>Chứng chỉ</th><th>Chia sẻ với</th><th>Ngày chia sẻ</th><th>Lượt xem</th><th>Thao tác</th></tr></thead>
           <tbody>
             {[['Digital Marketing Fundamentals','Accenture Switzerland','12 May 2026',2],['Digital Marketing Fundamentals','University of Zurich','8 Apr 2026',1]].map(([t,w,d,v])=>(
               <tr key={t+w}>
@@ -3192,7 +3192,7 @@ function WalletShared({ setWalletPage, setSelectedCred }) {
                 <td>{w}</td>
                 <td className="mono">{d}</td>
                 <td>{v}</td>
-                <td><button className="btn btn-ghost btn-sm"><Icon n="copy" size={12}/> Copy Link</button></td>
+                <td><button className="btn btn-ghost btn-sm"><Icon n="copy" size={12}/> Sao chép Liên kết</button></td>
               </tr>
             ))}
           </tbody>
@@ -3206,12 +3206,12 @@ function WalletCredDetail({ cred, setWalletPage, setMode, setPublicPage }) {
   const c = cred||CREDENTIALS[0];
   return (
     <div>
-      <div className="back-btn" onClick={()=>setWalletPage('dashboard')}><Icon n="back" size={14}/> Back to Wallet</div>
+      <div className="back-btn" onClick={()=>setWalletPage('dashboard')}><Icon n="back" size={14}/> Quay lại Ví</div>
       <div className="page-head">
-        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{c.title}</h1><p>Issued by {c.institution}</p></div>
+        <div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>{c.title}</h1><p>Được cấp bởi {c.institution}</p></div>
         <div style={{display:'flex',gap:10}}>
-          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Certificate PDF</button>
-          <button className="btn btn-ember" onClick={()=>setWalletPage('share')}><Icon n="share" size={13}/> Share</button>
+          <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> PDF Chứng chỉ</button>
+          <button className="btn btn-ember" onClick={()=>setWalletPage('share')}><Icon n="share" size={13}/> Chia sẻ</button>
         </div>
       </div>
 
@@ -3221,17 +3221,17 @@ function WalletCredDetail({ cred, setWalletPage, setMode, setPublicPage }) {
             <div className="cdc-header">
               <div className="issuer"><div style={{width:20,height:20,borderRadius:'50%',background:'var(--ember)',display:'grid',placeItems:'center',flexShrink:0}}><Icon n="verify" size={10}/></div>{c.institution}</div>
               <div className="title">{c.title}</div>
-              <div className="student">Awarded to {c.student}</div>
+              <div className="student">Cấp cho {c.student}</div>
             </div>
             <div className="cdc-body">
               <div className="cdc-field-grid">
-                {[['Credential ID',c.id,'mono'],['Issue Date',c.issued,''],['Expiry Date',c.expiry,''],['EQF Level',c.eqf,''],['ECTS Credits',c.ects,''],['Status',c.status,'']].map(([l,v,cls],i)=>(
-                  <div key={i} className="cdc-field"><div className="l">{l}</div><div className={`v${cls?' '+cls:''}`}>{l==='Status'?<StatusPill status={v}/>:v}</div></div>
+                {[['Mã Chứng chỉ',c.id,'mono'],['Ngày cấp',c.issued,''],['Ngày hết hạn',c.expiry,''],['Cấp độ EQF',c.eqf,''],['Tín chỉ ECTS',c.ects,''],['Trạng thái',c.status,'']].map(([l,v,cls],i)=>(
+                  <div key={i} className="cdc-field"><div className="l">{l}</div><div className={`v${cls?' '+cls:''}`}>{l==='Trạng thái'?<StatusPill status={v}/>:v}</div></div>
                 ))}
               </div>
-              <div className="sec-label">Skills & Competencies</div>
+              <div className="sec-label">Kỹ năng & Năng lực</div>
               <div className="cdc-skills">{c.skills.map(s=><div key={s} className="skill-tag">{s}</div>)}</div>
-              <div className="sec-label">Learning Outcomes</div>
+              <div className="sec-label">Kết quả học tập</div>
               <div className="vr-outcomes">{c.outcomes.map(o=><div key={o} className="vr-outcome" style={{fontSize:12}}>{o}</div>)}</div>
             </div>
           </div>
@@ -3239,19 +3239,19 @@ function WalletCredDetail({ cred, setWalletPage, setMode, setPublicPage }) {
 
         <div style={{display:'flex',flexDirection:'column',gap:16}}>
           <div className="panel" style={{padding:20}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:14}}>Share This Credential</div>
+            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:14}}>Chia sẻ Chứng chỉ này</div>
             <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              <button className="cdc-action-btn" onClick={()=>setWalletPage('share')}><Icon n="share" size={16}/> Share Credential</button>
-              <button className="cdc-action-btn"><Icon n="copy" size={16}/> Copy Verification Link</button>
-              <button className="cdc-action-btn"><Icon n="download" size={16}/> Download Certificate PDF</button>
-              <button className="cdc-action-btn"><Icon n="linkedin" size={16}/> Add to LinkedIn</button>
-              <button className="cdc-action-btn" onClick={()=>{setMode('public');setPublicPage('verify-result')}}><Icon n="verify" size={16}/> View Public Verification</button>
+              <button className="cdc-action-btn" onClick={()=>setWalletPage('share')}><Icon n="share" size={16}/> Chia sẻ Chứng chỉ</button>
+              <button className="cdc-action-btn"><Icon n="copy" size={16}/> Sao chép Liên kết Xác minh</button>
+              <button className="cdc-action-btn"><Icon n="download" size={16}/> Tải xuống PDF Chứng chỉ</button>
+              <button className="cdc-action-btn"><Icon n="linkedin" size={16}/> Thêm vào LinkedIn</button>
+              <button className="cdc-action-btn" onClick={()=>{setMode('public');setPublicPage('verify-result')}}><Icon n="verify" size={16}/> Xem Xác minh Công khai</button>
             </div>
           </div>
           <div className="panel" style={{padding:20,textAlign:'center'}}>
-            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>QR Code</div>
+            <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:12}}>Mã QR</div>
             <QRCode size={120}/>
-            <div style={{fontSize:11,color:'var(--mute)',marginTop:8}}>Scan to verify this credential</div>
+            <div style={{fontSize:11,color:'var(--mute)',marginTop:8}}>Quét để xác minh chứng chỉ này</div>
           </div>
         </div>
       </div>
@@ -3263,61 +3263,61 @@ function WalletShare({ cred, setWalletPage, setMode, setPublicPage }) {
   const c = cred||CREDENTIALS[0];
   return (
     <div>
-      <div className="back-btn" onClick={()=>setWalletPage('detail')}><Icon n="back" size={14}/> Back to Credential</div>
-      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Share Credential</h1><p>{c.title}</p></div></div>
+      <div className="back-btn" onClick={()=>setWalletPage('detail')}><Icon n="back" size={14}/> Quay lại Chứng chỉ</div>
+      <div className="page-head"><div className="page-title-block"><h1 style={{fontFamily:"var(--sans)",fontWeight:400,fontSize:48,letterSpacing:"-0.02em",margin:"0 0 8px",lineHeight:1}}>Chia sẻ Chứng chỉ</h1><p>{c.title}</p></div></div>
       <div className="share-layout">
         <div>
           <div className="qr-display">
-            <div style={{fontSize:14,fontWeight:600,marginBottom:4}}>Verification QR Code</div>
-            <div style={{fontSize:12,color:'var(--mute)',marginBottom:12}}>Scan to instantly verify this credential</div>
+            <div style={{fontSize:14,fontWeight:600,marginBottom:4}}>Mã QR Xác minh</div>
+            <div style={{fontSize:12,color:'var(--mute)',marginBottom:12}}>Quét để xác minh chứng chỉ này ngay lập tức</div>
             <div className="qr-svg-wrap"><QRCode size={160}/></div>
             <div style={{fontFamily:'monospace',fontSize:11,color:'var(--mute)',marginBottom:16}}>{c.id}</div>
-            <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Download QR Code</button>
+            <button className="btn btn-ghost btn-sm"><Icon n="download" size={13}/> Tải xuống Mã QR</button>
           </div>
         </div>
 
         <div>
-          <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:14}}>Share Options</div>
+          <div style={{fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--mute)',marginBottom:14}}>Tùy chọn Chia sẻ</div>
           <div className="share-options">
             <div className="share-option-btn">
               <div className="sic" style={{background:'var(--paper)',border:'1px solid var(--line)'}}><Icon n="link" size={18}/></div>
               <div>
-                <div className="stitle">Copy Verification Link</div>
+                <div className="stitle">Sao chép Liên kết Xác minh</div>
                 <div className="sdesc">m-cred.ch/verify/{c.id}</div>
               </div>
-              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Copy</button>
+              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Sao chép</button>
             </div>
             <div className="share-option-btn">
               <div className="sic" style={{background:'var(--paper)',border:'1px solid var(--line)'}}><Icon n="pdf" size={18}/></div>
               <div>
-                <div className="stitle">Download Certificate PDF</div>
-                <div className="sdesc">Formatted PDF for applications</div>
+                <div className="stitle">Tải xuống PDF Chứng chỉ</div>
+                <div className="sdesc">PDF được định dạng cho hồ sơ xin việc</div>
               </div>
-              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Download</button>
+              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Tải xuống</button>
             </div>
             <div className="share-option-btn" style={{cursor:'pointer'}}>
               <div className="sic" style={{background:'#0A66C2',color:'#fff'}}><Icon n="linkedin" size={18}/></div>
               <div>
-                <div className="stitle">Add to LinkedIn Profile</div>
-                <div className="sdesc">Display in your Certifications section</div>
+                <div className="stitle">Thêm vào Hồ sơ LinkedIn</div>
+                <div className="sdesc">Hiển thị trong mục Chứng chỉ của bạn</div>
               </div>
-              <button className="btn btn-sm" style={{background:'#0A66C2',color:'#fff',marginLeft:'auto',flexShrink:0}}>Add</button>
+              <button className="btn btn-sm" style={{background:'#0A66C2',color:'#fff',marginLeft:'auto',flexShrink:0}}>Thêm</button>
             </div>
             <div className="share-option-btn" onClick={()=>{setMode('public');setPublicPage('verify-result')}}>
               <div className="sic" style={{background:'var(--sage-soft)',border:'1px solid var(--sage-soft)'}}><Icon n="verify" size={18}/></div>
               <div>
-                <div className="stitle">View Public Verification Page</div>
-                <div className="sdesc">See what employers see when they verify</div>
+                <div className="stitle">Xem Trang Xác minh Công khai</div>
+                <div className="sdesc">Xem những gì nhà tuyển dụng thấy khi xác minh</div>
               </div>
               <Icon n="arrow" size={14}/>
             </div>
             <div className="share-option-btn">
               <div className="sic" style={{background:'var(--paper)',border:'1px solid var(--line)'}}><Icon n="mail" size={18}/></div>
               <div>
-                <div className="stitle">Send by Email</div>
-                <div className="sdesc">Email credential details directly</div>
+                <div className="stitle">Gửi qua Email</div>
+                <div className="sdesc">Gửi trực tiếp thông tin chứng chỉ qua email</div>
               </div>
-              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Send</button>
+              <button className="btn btn-ghost btn-sm" style={{marginLeft:'auto',flexShrink:0}}>Gửi</button>
             </div>
           </div>
         </div>
